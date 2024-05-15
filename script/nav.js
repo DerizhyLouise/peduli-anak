@@ -7,7 +7,7 @@ const showNavbar = () => {
   navbar.innerHTML = `
         <div class="w-3/12">
             <a href="#">
-                <img src="../assets/logo.png" alt="logo" class="h-20 w-auto hover:text-green-500 duration-200 py-4">
+                <img src="../assets/img/logo.png" alt="logo" class="h-20 w-auto hover:text-green-500 duration-200 py-4">
             </a>
         </div>
 
