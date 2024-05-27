@@ -17,7 +17,7 @@ const showNavbar = () => {
             <ul class="flex items-center">
                 <li id="beranda"
                     class="p-2 xl:p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                    <a href="">Beranda</a>
+                    <a href="./">Beranda</a>
                 </li>
                 <li id="kalkulator"
                     class="p-2 xl:p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
@@ -29,7 +29,7 @@ const showNavbar = () => {
                 </li>
                 <li id="edukasi"
                     class="p-2 xl:p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                    <a href="">Edukasi</a>
+                    <a href="./education.html">Edukasi</a>
                 </li>
                 <li id="publikasi"
                     class="p-2 xl:p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
