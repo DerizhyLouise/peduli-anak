@@ -67,8 +67,11 @@ const showNavbar = () => {
             <a href="./auth/login.html" class="text-2xl hover:text-green-500 duration-200">
                 <i class="fa-solid fa-right-to-bracket"></i>
             </a>
-            <a href="" class="text-2xl hover:text-green-500 duration-200">
+            <a href="#" class="text-2xl hover:text-green-500 duration-200">
                 <i class="fa-solid fa-gear"></i>
+            </a>
+            <a href="#" class="">
+                <img class="w-8 h-8 rounded-full" src="../assets/img/avatar1.jpg" alt="Avatar">
             </a>
         </div>
     `;
