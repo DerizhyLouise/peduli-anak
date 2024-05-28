@@ -56,7 +56,7 @@ const showNavbar = () => {
                             <a href="#" class="block px-4 py-2 hover:bg-green-500">Diskusi</a>
                         </li>
                         <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-green-500">Edukasi</a>
+                            <a href="./education.html" class="block px-4 py-2 hover:bg-green-500">Edukasi</a>
                         </li>
                         <li>
                             <a href="#" class="block px-4 py-2 hover:bg-green-500">Publikasi</a>
@@ -64,7 +64,7 @@ const showNavbar = () => {
                     </ul>
                 </div>
             </nav>
-            <a href="" class="text-2xl hover:text-green-500 duration-200">
+            <a href="./auth/login.html" class="text-2xl hover:text-green-500 duration-200">
                 <i class="fa-solid fa-right-to-bracket"></i>
             </a>
             <a href="" class="text-2xl hover:text-green-500 duration-200">
