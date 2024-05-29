@@ -7,7 +7,7 @@ const showNavbar = () => {
 
   navbar.innerHTML = `
         <div class="w=4/12 md:w-3/12">
-            <a href="#">
+            <a href="./index.html">
                 <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto hover:text-green-500 duration-200 py-4 hidden xl:block">
                 <img src="../assets/svg/logo_bawah.svg" alt="logo" class="h-20 w-auto hover:text-green-500 duration-200 py-4 block xl:hidden">
             </a>
@@ -21,7 +21,7 @@ const showNavbar = () => {
                 </li>
                 <li id="kalkulator"
                     class="p-2 xl:p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                    <a href="">Kalkulator</a>
+                    <a href="./calculator.html">Kalkulator</a>
                 </li>
                 <li id="diskusi"
                     class="p-2 xl:p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
@@ -47,10 +47,10 @@ const showNavbar = () => {
                 <div id="dropdown" class="hidden bg-black divide-y divide-gray-100 rounded-lg shadow w-28">
                     <ul class="py-2 text-sm text-white" aria-labelledby="dropdownDefaultButton">
                         <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-green-500">Beranda</a>
+                            <a href="./" class="block px-4 py-2 hover:bg-green-500">Beranda</a>
                         </li>
                         <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-green-500">Kalkulator</a>
+                            <a href="./calculator.html" class="block px-4 py-2 hover:bg-green-500">Kalkulator</a>
                         </li>
                         <li>
                             <a href="#" class="block px-4 py-2 hover:bg-green-500">Diskusi</a>
