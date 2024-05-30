@@ -15,20 +15,14 @@
 <body class="bg-gray-200">
     <div class="h-20"></div>
     <div class="mt-24">
-
         <section class="flex flex-col justify-center antialiased h-full my-12">
-            <!-- Card -->
             <div class="w-8/12 lg:w-6/12 mx-auto">
                 <div class="bg-white shadow-lg rounded-lg mt-9">
-                    <!-- Card header -->
                     <header class="text-center px-5 pb-5">
-                        <!-- Avatar -->
                         <img class="inline-flex -mt-9 w-[72px] h-[72px] fill-current rounded-full border-4 border-white box-content shadow mb-3"
                             src="../assets/img/avatar1.jpg" alt="avatar">
-                        <!-- Card name -->
                         <h3 class="text-xl font-bold text-gray-900 mb-1">Kalkulator Stunting</h3>
                     </header>
-                    <!-- Card body -->
                     <form class="w-8/12 lg:w-6/12 mx-auto flex flex-col gap-4 pb-8">
                         <div>
                             <label for="age" class="block mb-2 text-sm font-semibold text-gray-900">Jenis
@@ -116,7 +110,7 @@
                             </div>
                         </div>
                         <div class="flex gap-4 mt-4 max-md:flex-col">
-                            <button type="button"
+                            <button type="button" onclick="my_modal_1.showModal()"
                                 class="w-full md:w-6/12 text-gray-900 bg-white border border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Kalkulasi</button>
                             <button type="button"
                                 class="w-full md:w-6/12 text-gray-900 bg-white border border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Bersihkan</button>
@@ -126,6 +120,18 @@
             </div>
         </section>
     </div>
+    <dialog id="my_modal_1" class="modal rounded-lg">
+        <div class="modal-box p-6">
+            <h3 class="font-bold text-lg">Anak teridentifikasi Stunting!</h3>
+            <p class="py-4">Tekan berangkat untuk mencari tahu cara melawan stunting.</p>
+            <div class="modal-action w-full">
+                <form method="dialog" class="w-full flex justify-center gap-4">
+                    <button class="w-full md:w-6/12 text-gray-900 bg-white border border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2" onclick="window.location.href = './education-detail.html'">Berangkat</button>
+                    <button class="w-full md:w-6/12 text-gray-900 bg-white border border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Tutup</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
     <script src="../script/nav.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
