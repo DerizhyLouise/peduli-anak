@@ -36,165 +36,130 @@
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <!-- Floating Rectangle -->
             <div class="p-4 bg-white shadow-md rounded-lg">
-                <div class="text-center">
+                <div class="text-center mt-4">
                     <!-- Profile Photo -->
                     <img class="w-24 h-24 rounded-full mx-auto" src="../../assets/img/avatar1.jpg" alt="Profile Photo">
                     <!-- User Name -->
-                    <h2 class="mt-4 text-xl font-semibold">Pengguna Peduli Anak</h2>
+                    <h2 class="mt-4 text-xl font-semibold uppercase">User 123</h2>
                 </div>
                 <!-- Menu -->
-                <div class="mt-6">
+                <div class="my-6">
                     <ul class="space-y-2">
                         <li><a href="#"
-                                class="block p-2 rounded-md text-center bg-green-500 text-white menu-link active"
+                                class="block mx-4 lg:mx-16 p-2 rounded-md text-center bg-green-500 text-white menu-link active"
                                 onclick="showDetail('menu1')">Data Diri</a></li>
-                        <li><a href="#" class="block p-2 rounded-md text-center bg-green-500 text-white menu-link"
+                        <li><a href="#"
+                                class="block mx-4 lg:mx-16 p-2 rounded-md text-center bg-green-500 text-white menu-link"
                                 onclick="showDetail('menu2')">Data Tenaga Kesehatan</a></li>
-                        <li><a href="#" class="block p-2 rounded-md text-center bg-green-500 text-white menu-link"
+                        <li><a href="#"
+                                class="block mx-4 lg:mx-16 p-2 rounded-md text-center bg-green-500 text-white menu-link"
                                 onclick="showDetail('menu3')">Ubah Password</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Content Detail -->
-            <div class="p-4 bg-white shadow-md rounded-lg">
+            <div class="p-12 bg-white shadow-md rounded-lg">
                 <!-- Menu 1 Content -->
                 <div id="menu1-detail" class="menu-detail">
                     <h2 class="text-2xl font-semibold mb-4">Data Diri</h2>
                     <div class="space-y-4">
                         <div>
-                            <label for="nama" class="block text-sm font-semibold text-gray-600">Nama</label>
-                            <input type="text" id="nama" class="w-full p-2 border rounded-md" placeholder="Nama">
+                            <label for="nama" class="block text-sm font-semibold text-gray-600 mb-1">Nama</label>
+                            <input type="text" id="nama"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Nama">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-semibold text-gray-600">Alamat Email</label>
-                            <input type="email" id="email" class="w-full p-2 border rounded-md"
+                            <label for="email" class="block text-sm font-semibold text-gray-600 mb-1">Alamat
+                                Email</label>
+                            <input type="email" id="email"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
                                 placeholder="Alamat Email">
                         </div>
                         <div>
-                            <label for="telepon" class="block text-sm font-semibold text-gray-600">Nomor Telepon</label>
-                            <input type="tel" id="telepon" class="w-full p-2 border rounded-md"
+                            <label for="telepon" class="block text-sm font-semibold text-gray-600 mb-1">Nomor
+                                Telepon</label>
+                            <input type="tel" id="telepon"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
                                 placeholder="Nomor Telepon">
                         </div>
                         <div>
-                            <label for="tanggal_lahir" class="block text-sm font-semibold text-gray-600">Tanggal
+                            <label for="tanggal_lahir" class="block text-sm font-semibold text-gray-600 mb-1">Tanggal
                                 Lahir</label>
-                            <input type="date" id="tanggal_lahir" class="w-full p-2 border rounded-md">
+                            <input type="date" id="tanggal_lahir"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5">
                         </div>
                         <div>
-                            <span class="block text-sm font-semibold text-gray-600">Jenis Kelamin</span>
+                            <span class="block text-sm font-semibold text-gray-600 mb-1">Jenis Kelamin</span>
                             <div class="mt-2">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" class="form-radio" name="jenis_kelamin" value="laki-laki">
+                                    <input type="radio"
+                                        class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2"
+                                        name="jenis_kelamin" value="laki-laki">
                                     <span class="ml-2">Laki-laki</span>
                                 </label>
                                 <label class="inline-flex items-center ml-6">
-                                    <input type="radio" class="form-radio" name="jenis_kelamin" value="perempuan">
+                                    <input type="radio"
+                                        class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2"
+                                        name="jenis_kelamin" value="perempuan">
                                     <span class="ml-2">Perempuan</span>
                                 </label>
                             </div>
                         </div>
                         <div>
-                            <label for="alamat" class="block text-sm font-semibold text-gray-600">Alamat</label>
-                            <textarea id="alamat" class="w-full p-2 border rounded-md" placeholder="Alamat"></textarea>
+                            <label for="alamat" class="block text-sm font-semibold text-gray-600 mb-1">Alamat</label>
+                            <textarea id="alamat"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Alamat"></textarea>
                         </div>
                     </div>
                     <!-- Tombol Simpan dan Batal -->
-                    <div class="flex justify-end mt-4">
-                        <button id="btnBatal" class="px-4 py-2 mr-2 bg-gray-300 text-gray-700 rounded-md">Batal</button>
-                        <button id="btnSimpan" class="px-4 py-2 bg-green-500 text-white rounded-md">Simpan</button>
+                    <div class="flex gap-4 mt-6">
+                        <button id="btnBatal"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Batal</button>
+                        <button id="btnSimpan"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Simpan</button>
                     </div>
                 </div>
 
                 <!-- Menu 2 Content -->
                 <div id="menu2-detail" class="menu-detail hidden">
-                    <h2 class="text-2xl font-semibold mb-4">Data Orang Tua</h2>
+                    <h2 class="text-2xl font-semibold mb-4">Data Tenaga Kesehatan</h2>
                     <div class="space-y-4">
-                        <!-- Accordion item untuk data Ayah -->
-                        <div x-data="{ open: false }" class="mb-4">
-                            <button @click="open = !open"
-                                class="w-full p-2 border rounded-md flex justify-between items-center bg-gray-100">
-                                <span class="font-semibold">Data Ayah</span>
-                                <svg :class="{ 'transform rotate-180': open }" class="h-6 w-6" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div x-show="open" class="p-4 bg-white shadow-md rounded-lg">
-                                <!-- Input data untuk Ayah -->
-                                <div class="mt-4 mb-4">
-                                    <label for="nama_ayah" class="block text-sm font-semibold text-gray-600">Nama
-                                        Ayah</label>
-                                    <input type="text" id="nama_ayah" class="w-full p-2 border rounded-md"
-                                        placeholder="Nama Ayah">
-                                </div>
-                                <div class="mt-4 mb-4">
-                                    <label for="tanggal_lahir_ayah"
-                                        class="block text-sm font-semibold text-gray-600">Tanggal Lahir Ayah</label>
-                                    <input type="date" id="tanggal_lahir_ayah" class="w-full p-2 border rounded-md">
-                                </div>
-                                <div class="mt-4 mb-4">
-                                    <label for="pekerjaan_ayah"
-                                        class="block text-sm font-semibold text-gray-600">Pekerjaan Ayah</label>
-                                    <input type="text" id="pekerjaan_ayah" class="w-full p-2 border rounded-md"
-                                        placeholder="Pekerjaan Ayah">
-                                </div>
-                                <div class="mt-4 mb-4">
-                                    <label for="telepon_ayah" class="block text-sm font-semibold text-gray-600">Nomor
-                                        Telepon Ayah</label>
-                                    <input type="tel" id="telepon_ayah" class="w-full p-2 border rounded-md"
-                                        placeholder="Nomor Telepon Ayah">
-                                </div>
-                                <!-- Tambahkan data-data lain untuk Ayah sesuai kebutuhan -->
-                            </div>
+                        <div>
+                            <label for="nama" class="block text-sm font-semibold text-gray-600 mb-1">Nama</label>
+                            <input type="text" id="nama"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Nama">
                         </div>
-                        <!-- Accordion item untuk data Ibu -->
-                        <div x-data="{ open: false }" class="mb-4">
-                            <button @click="open = !open"
-                                class="w-full p-2 border rounded-md flex justify-between items-center bg-gray-100">
-                                <span class="font-semibold">Data Ibu</span>
-                                <svg :class="{ 'transform rotate-180': open }" class="h-6 w-6" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div x-show="open" class="p-4 bg-white shadow-md rounded-lg">
-                                <!-- Input data untuk Ibu -->
-                                <div class="mt-4 mb-4">
-                                    <label for="nama_ibu" class="block text-sm font-semibold text-gray-600">Nama
-                                        Ibu</label>
-                                    <input type="text" id="nama_ibu" class="w-full p-2 border rounded-md"
-                                        placeholder="Nama Ibu">
-                                </div>
-                                <div class="mt-4 mb-4">
-                                    <label for="tanggal_lahir_ibu"
-                                        class="block text-sm font-semibold text-gray-600">Tanggal Lahir Ibu</label>
-                                    <input type="date" id="tanggal_lahir_ibu" class="w-full p-2 border rounded-md">
-                                </div>
-                                <div class="mt-4 mb-4">
-                                    <label for="pekerjaan_ibu"
-                                        class="block text-sm font-semibold text-gray-600">Pekerjaan Ibu</label>
-                                    <input type="text" id="pekerjaan_ibu" class="w-full p-2 border rounded-md"
-                                        placeholder="Pekerjaan Ibu">
-                                </div>
-                                <div class="mt-4 mb-4">
-                                    <label for="telepon_ibu" class="block text-sm font-semibold text-gray-600">Nomor
-                                        Telepon Ibu</label>
-                                    <input type="tel" id="telepon_ibu" class="w-full p-2 border rounded-md"
-                                        placeholder="Nomor Telepon Ibu">
-                                </div>
-                                <!-- Tambahkan data-data lain untuk Ibu sesuai kebutuhan -->
-                            </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-600 mb-1">Alamat
+                                Email</label>
+                            <input type="email" id="email"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Alamat Email">
                         </div>
-
+                        <div>
+                            <label for="telepon" class="block text-sm font-semibold text-gray-600 mb-1">Nomor
+                                Telepon</label>
+                            <input type="tel" id="telepon"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Nomor Telepon">
+                        </div>
+                        <div>
+                            <label for="alamat" class="block text-sm font-semibold text-gray-600 mb-1">Alamat</label>
+                            <textarea id="alamat"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Alamat"></textarea>
+                        </div>
                     </div>
                     <!-- Tombol Simpan dan Batal -->
-                    <div class="flex justify-end mt-4">
-                        <button id="btnBatal" class="px-4 py-2 mr-2 bg-gray-300 text-gray-700 rounded-md">Batal</button>
-                        <button id="btnSimpan" class="px-4 py-2 bg-green-500 text-white rounded-md"
-                            disabled>Simpan</button>
+                    <div class="flex gap-4 mt-6">
+                        <button id="btnBatal"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Batal</button>
+                        <button id="btnSimpan"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Simpan</button>
                     </div>
                 </div>
 
@@ -205,35 +170,39 @@
                     <h2 class="text-2xl font-semibold mb-4">Ubah Password</h2>
                     <div class="space-y-4">
                         <div>
-                            <label for="password_lama" class="block text-sm font-semibold text-gray-600">Password
+                            <label for="password_lama" class="block text-sm font-semibold text-gray-600 mb-1">Password
                                 Lama:</label>
-                            <input type="password" id="password_lama" class="w-full p-2 border rounded-md"
+                            <input type="password" id="password_lama"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
                                 placeholder="Password Lama">
                         </div>
                         <div>
-                            <label for="password_baru" class="block text-sm font-semibold text-gray-600">Password
+                            <label for="password_baru" class="block text-sm font-semibold text-gray-600 mb-1">Password
                                 Baru:</label>
-                            <input type="password" id="password_baru" class="w-full p-2 border rounded-md"
+                            <input type="password" id="password_baru"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
                                 placeholder="Password Baru">
                         </div>
                         <div>
                             <label for="konfirmasi_password"
-                                class="block text-sm font-semibold text-gray-600">Konfirmasi Password Baru:</label>
-                            <input type="password" id="konfirmasi_password" class="w-full p-2 border rounded-md"
+                                class="block text-sm font-semibold text-gray-600 mb-1">Konfirmasi Password Baru:</label>
+                            <input type="password" id="konfirmasi_password"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
                                 placeholder="Konfirmasi Password Baru">
                         </div>
                     </div>
                     <!-- Tombol Simpan dan Batal -->
-                    <div class="flex justify-end mt-4">
-                        <button id="btnBatal" class="px-4 py-2 mr-2 bg-gray-300 text-gray-700 rounded-md">Batal</button>
-                        <button id="btnSimpan" class="px-4 py-2 bg-green-500 text-white rounded-md"
-                            disabled>Simpan</button>
+                    <div class="flex gap-4 mt-6">
+                        <button id="btnBatal"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Batal</button>
+                        <button id="btnSimpan"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Simpan</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script src="../script/nav.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
