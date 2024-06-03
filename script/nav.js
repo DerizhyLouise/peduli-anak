@@ -19,7 +19,7 @@ const showNavbar = () => {
         </div>
 
         <div class="w-4/12 flex justify-end">
-            <a href="#" class="">
+            <a href="./profile.html" class="">
                 <img class="w-12 h-12 border-2 border-green-500 rounded-full" src="../assets/img/avatar1.jpg" alt="Avatar">
             </a>
         </div>
