@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peduli Anak - Daftar</title>
+    <meta name="author" content="Dandy Fadillah, Louise Derizhy">
+    <meta name="description" content="">
+
+    <!-- Tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="h-screen">
+
+    <div class="flex flex-wrap">
+        <!-- Image Section -->
+        <div class="hidden lg:block w-1/2 h-screen px-6 bg-gray-200 shadow-2xl"><img src="../assets/svg/logo_bawah.svg"
+                class="w-full h-full">
+        </div>
+        <!-- Register Section -->
+        <div class="w-full lg:w-1/2">
+            <div class="flex flex-col justify-center items-center h-screen">
+                <div class="mb-4">
+                    <img src="../assets/svg/logo_bawah.svg">
+                </div>
+                <p class="text-center text-2xl md:text-3xl font-bold uppercase">Bergabung Dengan Kami</p>
+                <form class="flex flex-col mt-4 w-7/12" onsubmit="event.preventDefault();">
+                    <div class="relative z-0 w-full mb-5">
+                        <input type="text" name="name" placeholder="Nama" required
+                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-green-500 border-gray-300" />
+                    </div>
+                    <div class="relative z-0 w-full mb-5">
+                        <input type="email" name="email" placeholder="Email" required
+                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-green-500 border-gray-300" />
+                    </div>
+                    <div class="relative z-0 w-full mb-5">
+                        <input type="password" name="pass" placeholder="Kata Sandi" required
+                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-green-500 border-gray-300" />
+                    </div>
+                    <div class="relative z-0 w-full mb-5">
+                        <input type="password" name="confirm-password" id="confirm-password"
+                            placeholder="Konfirmasi Kata Sandi" required
+                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-green-500 border-gray-300" />
+                    </div>
+
+                    <button type="submit" onclick="window.location.href = './login.html'"
+                        class="w-full text-gray-900 text-center bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 my-2 uppercase font-bold">Daftar</button>
+                </form>
+                <div class="text-center mt-4">
+                    <p>Sudah punya akun? <a href="login.html" class="underline font-semibold">Masuk di sini</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

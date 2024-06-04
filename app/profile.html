@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peduli Anak - Profil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        /* Warna menu saat di-hover */
+        .menu-link:hover {
+            background-color: #38a169 !important;
+        }
+
+        /* Warna menu yang aktif */
+        .menu-link.active,
+        .menu-link.active:hover {
+            background-color: #16a34a !important;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="h-20"></div>
+
+    <!-- Main Content -->
+    <div class="mt-6 mx-6 mb-6">
+        <h1
+            class="mb-6 text-4xl font-extrabold leading-none tracking-tight text-gray-700 text-center md:text-4xl lg:text-5xl uppercase">
+            PENGATURAN PROFIL</h1>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <!-- Floating Rectangle -->
+            <div class="p-4 bg-white shadow-md rounded-lg">
+                <div class="text-center mt-4">
+                    <!-- Profile Photo -->
+                    <img class="w-24 h-24 rounded-full mx-auto" src="../../assets/img/avatar1.jpg" alt="Profile Photo">
+                    <!-- User Name -->
+                    <h2 class="mt-4 text-xl font-semibold uppercase">User 123</h2>
+                </div>
+                <!-- Menu -->
+                <div class="my-6">
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="block mx-4 lg:mx-16 p-2 rounded-md text-center bg-green-500 text-white menu-link active"
+                                onclick="showDetail('menu1')">Data Diri</a></li>
+                        <li><a href="#"
+                                class="block mx-4 lg:mx-16 p-2 rounded-md text-center bg-green-500 text-white menu-link"
+                                onclick="showDetail('menu2')">Data Tenaga Kesehatan</a></li>
+                        <li><a href="#"
+                                class="block mx-4 lg:mx-16 p-2 rounded-md text-center bg-green-500 text-white menu-link"
+                                onclick="showDetail('menu3')">Ubah Password</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Content Detail -->
+            <div class="p-12 bg-white shadow-md rounded-lg">
+                <!-- Menu 1 Content -->
+                <div id="menu1-detail" class="menu-detail">
+                    <h2 class="text-2xl font-semibold mb-4">Data Diri</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="nama" class="block text-sm font-semibold text-gray-600 mb-1">Nama</label>
+                            <input type="text" id="nama"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Nama">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-600 mb-1">Alamat
+                                Email</label>
+                            <input type="email" id="email"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Alamat Email">
+                        </div>
+                        <div>
+                            <label for="telepon" class="block text-sm font-semibold text-gray-600 mb-1">Nomor
+                                Telepon</label>
+                            <input type="tel" id="telepon"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Nomor Telepon">
+                        </div>
+                        <div>
+                            <label for="tanggal_lahir" class="block text-sm font-semibold text-gray-600 mb-1">Tanggal
+                                Lahir</label>
+                            <input type="date" id="tanggal_lahir"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5">
+                        </div>
+                        <div>
+                            <span class="block text-sm font-semibold text-gray-600 mb-1">Jenis Kelamin</span>
+                            <div class="mt-2">
+                                <label class="inline-flex items-center">
+                                    <input type="radio"
+                                        class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2"
+                                        name="jenis_kelamin" value="laki-laki">
+                                    <span class="ml-2">Laki-laki</span>
+                                </label>
+                                <label class="inline-flex items-center ml-6">
+                                    <input type="radio"
+                                        class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2"
+                                        name="jenis_kelamin" value="perempuan">
+                                    <span class="ml-2">Perempuan</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="alamat" class="block text-sm font-semibold text-gray-600 mb-1">Alamat</label>
+                            <textarea id="alamat"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Alamat"></textarea>
+                        </div>
+                    </div>
+                    <!-- Tombol Simpan dan Batal -->
+                    <div class="flex gap-4 mt-6">
+                        <button id="btnBatal"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Batal</button>
+                        <button id="btnSimpan"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Simpan</button>
+                    </div>
+                </div>
+
+                <!-- Menu 2 Content -->
+                <div id="menu2-detail" class="menu-detail hidden">
+                    <h2 class="text-2xl font-semibold mb-4">Data Tenaga Kesehatan</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="nama" class="block text-sm font-semibold text-gray-600 mb-1">Nama</label>
+                            <input type="text" id="nama"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Nama">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-600 mb-1">Alamat
+                                Email</label>
+                            <input type="email" id="email"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Alamat Email">
+                        </div>
+                        <div>
+                            <label for="telepon" class="block text-sm font-semibold text-gray-600 mb-1">Nomor
+                                Telepon</label>
+                            <input type="tel" id="telepon"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Nomor Telepon">
+                        </div>
+                        <div>
+                            <label for="alamat" class="block text-sm font-semibold text-gray-600 mb-1">Alamat</label>
+                            <textarea id="alamat"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Alamat"></textarea>
+                        </div>
+                    </div>
+                    <!-- Tombol Simpan dan Batal -->
+                    <div class="flex gap-4 mt-6">
+                        <button id="btnBatal"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Batal</button>
+                        <button id="btnSimpan"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Simpan</button>
+                    </div>
+                </div>
+
+                <!-- Menu 3 Content -->
+
+                <!-- Menu 4 Content -->
+                <div id="menu3-detail" class="menu-detail hidden">
+                    <h2 class="text-2xl font-semibold mb-4">Ubah Password</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="password_lama" class="block text-sm font-semibold text-gray-600 mb-1">Password
+                                Lama:</label>
+                            <input type="password" id="password_lama"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Password Lama">
+                        </div>
+                        <div>
+                            <label for="password_baru" class="block text-sm font-semibold text-gray-600 mb-1">Password
+                                Baru:</label>
+                            <input type="password" id="password_baru"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Password Baru">
+                        </div>
+                        <div>
+                            <label for="konfirmasi_password"
+                                class="block text-sm font-semibold text-gray-600 mb-1">Konfirmasi Password Baru:</label>
+                            <input type="password" id="konfirmasi_password"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                placeholder="Konfirmasi Password Baru">
+                        </div>
+                    </div>
+                    <!-- Tombol Simpan dan Batal -->
+                    <div class="flex gap-4 mt-6">
+                        <button id="btnBatal"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Batal</button>
+                        <button id="btnSimpan"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Simpan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/nav.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        // Function to show menu detail
+        function showDetail(menuId) {
+            // Hide all menu details
+            document.querySelectorAll('.menu-detail').forEach(function (detail) {
+                detail.classList.add('hidden');
+            });
+            // Remove 'active' class from all menu links
+            document.querySelectorAll('.menu-link').forEach(function (link) {
+                link.classList.remove('active');
+            });
+            // Show the selected menu detail
+            document.getElementById(menuId + '-detail').classList.remove('hidden');
+            // Add 'active' class to the clicked menu link
+            document.getElementById(menuId).classList.add('active');
+        }
+
+        // Show default menu detail
+        document.getElementById('menu1-detail').classList.remove('hidden');
+    </script>
+</body>
+
+</html>
