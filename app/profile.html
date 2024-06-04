@@ -53,7 +53,7 @@
                                 onclick="showDetail('menu2')">Data Tenaga Kesehatan</a></li>
                         <li><a href="#"
                                 class="block mx-4 lg:mx-16 p-2 rounded-md text-center bg-green-500 text-white menu-link"
-                                onclick="showDetail('menu3')">Ubah Password</a></li>
+                                onclick="showDetail('menu3')">Ubah Kata Sandi</a></li>
                     </ul>
                 </div>
             </div>
@@ -122,9 +122,9 @@
                     </div>
                     <!-- Tombol Simpan dan Batal -->
                     <div class="flex gap-4 mt-6">
-                        <button id="btnBatal"
+                        <button id="btnBatal" onclick="window.location.href = './index.html'"
                             class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Batal</button>
-                        <button id="btnSimpan"
+                        <button id="btnSimpan" onclick="my_modal_1.showModal()"
                             class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Simpan</button>
                     </div>
                 </div>
@@ -155,9 +155,9 @@
                     </div>
                     <!-- Tombol Simpan dan Batal -->
                     <div class="flex gap-4 mt-6">
-                        <button id="btnBatal"
+                        <button id="btnBatal" onclick="window.location.href = './index.html'"
                             class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Batal</button>
-                        <button id="btnSimpan"
+                        <button id="btnSimpan" onclick="my_modal_1.showModal()"
                             class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Simpan</button>
                     </div>
                 </div>
@@ -166,41 +166,66 @@
 
                 <!-- Menu 4 Content -->
                 <div id="menu3-detail" class="menu-detail hidden">
-                    <h2 class="text-2xl font-semibold mb-4">Ubah Password</h2>
+                    <h2 class="text-2xl font-semibold mb-4">Ubah Kata Sandi</h2>
                     <div class="space-y-4">
                         <div>
-                            <label for="password_lama" class="block text-sm font-semibold text-gray-600 mb-1">Password
+                            <label for="password_lama" class="block text-sm font-semibold text-gray-600 mb-1">Kata Sandi
                                 Lama:</label>
                             <input type="password" id="password_lama"
                                 class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
-                                placeholder="Password Lama">
+                                placeholder="Kata Sandi Lama">
                         </div>
                         <div>
-                            <label for="password_baru" class="block text-sm font-semibold text-gray-600 mb-1">Password
+                            <label for="password_baru" class="block text-sm font-semibold text-gray-600 mb-1">Kata Sandi
                                 Baru:</label>
                             <input type="password" id="password_baru"
                                 class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
-                                placeholder="Password Baru">
+                                placeholder="Kata Sandi Baru">
                         </div>
                         <div>
                             <label for="konfirmasi_password"
-                                class="block text-sm font-semibold text-gray-600 mb-1">Konfirmasi Password Baru:</label>
+                                class="block text-sm font-semibold text-gray-600 mb-1">Konfirmasi Kata Sandi Baru:</label>
                             <input type="password" id="konfirmasi_password"
                                 class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
-                                placeholder="Konfirmasi Password Baru">
+                                placeholder="Konfirmasi Kata Sandi Baru">
                         </div>
                     </div>
                     <!-- Tombol Simpan dan Batal -->
                     <div class="flex gap-4 mt-6">
-                        <button id="btnBatal"
+                        <button id="btnBatal" onclick="window.location.href = './index.html'"
                             class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Batal</button>
-                        <button id="btnSimpan"
+                        <button id="btnSimpan" onclick="my_modal_1.showModal()"
                             class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Simpan</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <dialog id="my_modal_2" class="modal shadow-lg rounded-lg w-3/12">
+        <div class="modal-box p-6">
+            <h3 class="font-bold text-lg text-center">Perubahan Data Anda Berhasil Disimpan!</h3>
+            <div class="modal-action w-full">
+                <form method="dialog" class="mt-4 w-full flex flex-col sm:flex-row sm:justify-center gap-4">
+                    <button
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Selesai</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="my_modal_1" class="modal shadow-lg rounded-lg w-3/12">
+        <div class="modal-box p-6">
+            <h3 class="font-bold text-lg text-center">Apakah Anda yakin untuk melakukan perubahan?</h3>
+            <div class="modal-action w-full">
+                <form method="dialog" class="mt-4 w-full flex flex-col sm:flex-row sm:justify-center gap-4">
+                    <button
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Tidak</button>
+                    <button onclick="my_modal_2.showModal()"
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Ya</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 
     <script src="../script/main.js"></script>
     <script src="../script/nav.js"></script>
