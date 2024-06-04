@@ -44,6 +44,23 @@
                             placeholder="Konfirmasi Kata Sandi" required
                             class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-green-500 border-gray-300" />
                     </div>
+                    <div class="mb-2">
+                        <span class="block text-sm font-semibold text-gray-600">Jenis Akun</span>
+                        <div class="flex flex-col sm:block">
+                            <label class="inline-flex items-center">
+                                <input type="radio"
+                                    class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2"
+                                    name="jenis_akun" value="user">
+                                <span class="ml-2">Personal</span>
+                            </label>
+                            <label class="inline-flex items-center sm:ml-6">
+                                <input type="radio"
+                                    class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2"
+                                    name="jenis_akun" value="nakes">
+                                <span class="ml-2">Tenaga Kesehatan</span>
+                            </label>
+                        </div>
+                    </div>
 
                     <button type="submit" onclick="window.location.href = './login.html'"
                         class="w-full text-gray-900 text-center bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 my-2 uppercase font-bold">Daftar</button>
