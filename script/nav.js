@@ -9,22 +9,46 @@ const showNavbar = () => {
 		"w-full h-20 top-0 bg-white shadow-md flex items-center justify-between px-8 py-02 fixed";
 
 	header.innerHTML = `
-        <div class="w-8/12  md:w-9/12 flex gap-6">
-            <button class="text-2xl hover:text-green-500 duration-200" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="w=8/12">
-                <a href="./index.html">
-                    <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto duration-200 py-4">
-                </a>
-            </div>
-        </div>
-
-        <div class="w-4/12 flex justify-end">
-            <a href="./profile.html" class="">
-                <img class="w-12 h-12 border-2 border-green-500 rounded-full" src="../assets/img/avatar1.jpg" alt="Avatar">
+        <div class="w=4/12">
+            <a href="./index.html">
+                <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto duration-200 py-4">
             </a>
         </div>
+
+        <nav class="font-semibold text-lg justify-self-end md:w-8/12 hidden md:block">
+            <ul class="flex justify-end gap-4 lg:gap-12">
+                <li id="beranda"
+                    class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                    <a href="./">Beranda</a>
+                </li>
+                <li id="kalkulator"
+                    class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                    <a href="./calculator.html">Kalkulator</a>
+                </li>
+                <li id="diskusi"
+                    class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                    <a href="">Diskusi</a>
+                </li>
+                <li id="edukasi"
+                    class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                    <a href="./education.html">Edukasi</a>
+                </li>
+                <li id="publikasi"
+                    class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                    <a href="">Publikasi</a>
+                </li>
+                <li class="flex items-center ml-4">
+                    <a href="./profile.html" class="">
+                        <img class="w-12 h-12 border-2 border-green-500 rounded-full" src="../assets/img/avatar1.jpg" alt="Avatar">
+                    </a>
+                </li>   
+            </ul>
+        </nav>
+        
+        <button class="text-2xl hover:text-green-500 duration-200 md:hidden" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
     `;
 
 	if (role != "admin" && role != "nakes") {
