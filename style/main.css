@@ -3,3 +3,13 @@
 h1, h2, h3, h4, h5, span, p {
     font-family: Poppins;
 }
+
+.invisible-side {
+    width: calc(100vw - 296px);
+}
+
+@media only screen and (max-width: 1024px) {
+    .invisible-side {
+        width: 100vw;
+    }
+}
