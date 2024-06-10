@@ -121,16 +121,83 @@
                     </div>
                     <div class="flex gap-4 mt-4 max-md:flex-col">
                         <button type="button"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Bersihkan</button>
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Bersihkan Form</button>
                         <button type="button" onclick="submitResult()"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Kalkulasi</button>
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Hitung</button>
                     </div>
                 </form>
-                <div id="calculatorResult" class="w-8/12 lg:w-6/12 mx-auto flex flex-col gap-4 pb-8 hidden">
+                <div id="calculatorResult" class="w-11/12 mx-auto flex flex-col gap-4 pb-8 hidden">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Perbandingan Data Anak Berjenis Kelamin
+                            Laki-Laki dengan Referensi WHO</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mb-4">
+                                <thead class="bg-green-500 text-white">
+                                    <tr>
+                                        <th class="w-1/6 py-2 px-4">Parameter</th>
+                                        <th class="w-1/6 py-2 px-4">Data Anak</th>
+                                        <th class="w-1/6 py-2 px-4">Rata-rata Referensi WHO</th>
+                                        <th class="w-1/6 py-2 px-4">Standar Deviasi</th>
+                                        <th class="w-1/6 py-2 px-4">Z-score</th>
+                                        <th class="w-1/6 py-2 px-4">Kesimpulan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-gray-100">
+                                        <td class="py-2 px-4 border-b border-gray-200">Berat Badan (kg)</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">10</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">11,3</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">1,1</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">-1,18</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Berat badan di bawah
+                                            rata-rata</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-gray-200">Tinggi Badan (cm)</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">75</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">82,3</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">3,1</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">-2,35</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Stunting</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="h-full bg-blue-500/30 shadow-lg rounded-lg my-6 px-4 py-6">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Berat Anak: <span
+                                    class="text-red-500">10kg, Berat Badan Kurang</span></h3>
+                            <p class="mb-4">Berat badan anak di bawah rata-rata. Anak perlu diberi asupan gizi yang
+                                lebih untuk
+                                menaikkan berat badan.</p>
+                            <a href="./education-detail.html"
+                                class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">
+                                Pelajari
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="h-full bg-blue-500/30 shadow-lg rounded-lg my-6 px-4 py-6">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Tinggi Anak: <span
+                                    class="text-red-500">75cm, Teridentifikasi Stunting</span></h3>
+                            <p class="mb-4">Tinggi badan anak masih kurang. Anak memerlukan asupan gizi yang cukup untuk meningkatkan pertumbuhan tinggi badan anak.</p>
+                            <a href="./education-detail.html"
+                                class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">
+                                Pelajari
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                     <div class="flex justify-center mt-4 max-md:flex-col">
                         <button type="button" onclick="calcAgain()"
                             class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Hitung
-                            ulang</button>
+                            ulang?</button>
                     </div>
                 </div>
             </div>
@@ -161,79 +228,6 @@
             title.innerHTML = `Kalkulator Stunting`;
 
             window.location.href = "#";
-        }
-
-
-        const options = {
-            chart: {
-                height: "100%",
-                maxWidth: "100%",
-                type: "area",
-                fontFamily: "Inter, sans-serif",
-                dropShadow: {
-                    enabled: false,
-                },
-                toolbar: {
-                    show: false,
-                },
-            },
-            tooltip: {
-                enabled: true,
-                x: {
-                    show: false,
-                },
-            },
-            fill: {
-                type: "gradient",
-                gradient: {
-                    opacityFrom: 0.55,
-                    opacityTo: 0,
-                    shade: "#1C64F2",
-                    gradientToColors: ["#1C64F2"],
-                },
-            },
-            dataLabels: {
-                enabled: false,
-            },
-            stroke: {
-                width: 6,
-            },
-            grid: {
-                show: false,
-                strokeDashArray: 4,
-                padding: {
-                    left: 2,
-                    right: 2,
-                    top: 0
-                },
-            },
-            series: [
-                {
-                    name: "New users",
-                    data: [6500, 6418, 6456, 6526, 6356, 6456],
-                    color: "#1A56DB",
-                },
-            ],
-            xaxis: {
-                categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
-                labels: {
-                    show: false,
-                },
-                axisBorder: {
-                    show: false,
-                },
-                axisTicks: {
-                    show: false,
-                },
-            },
-            yaxis: {
-                show: false,
-            },
-        }
-
-        if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
-            const chart = new ApexCharts(document.getElementById("area-chart"), options);
-            chart.render();
         }
     </script>
 
