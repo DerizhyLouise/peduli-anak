@@ -40,162 +40,268 @@
         </div>
     </div>
 
-    <div class="mt-4 mx-2 mb-2">
-        <div class="flex justify-center mt-4">
-            <div
-                class="w-9/12 md:w-6/12 bg-white border border-gray-200 rounded-lg shadow-lg flex h-full flex flex-col">
-                <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-500 gap-2">
-                    <div class="flex items-start gap-2.5">
-                        <img class="w-12 h-12 rounded-full" src="../assets/img/avatar2.jpg" alt="avatar">
-                        <div class="flex flex-col">
-                            <span class="text-xl font-semibold text-gray-900">dr. Derizheese</span>
-                            <span class="text-sm font-normal text-gray-500">CEO of PT Peduli Anak Tbk</span>
-                        </div>
+    <div class="mb-8 mt-16 xl:mt-8">
+        <div class="mt-4 mx-2 mb-2">
+            <div class="flex justify-center mt-4">
+                <div class="w-9/12 md:w-6/12 bg-white rounded-lg shadow-lg flex h-full flex flex-col">
+                    <div class="flex justify-center">
+                        <img class="inline-flex -mt-9 w-[72px] h-[72px] fill-current rounded-full border-4 border-white box-content shadow xl:hidden"
+                            src="../assets/img/avatar1.jpg" alt="avatar">
                     </div>
-                    <h2 class="font-semibold">
-                        Mengapa Deteksi Dini Stunting Pada Anak itu Sangat Penting?
-                    </h2>
-                    <p class="ellipsis-text">
-                        Deteksi dini stunting pada anak itu sangat penting karena stunting dalam jangka panjang
-                        berdampak buruk tidak hanya terhadap tumbuh kembang anak tetapi juga terhadap perkembangan emosi
-                        yang berakibat pada kerugian ekonomi. Mulai dari pemenuhan gizi yang baik selama 1000 hari
-                        pertama kehidupan anak hingga menjaga lingkungan agar tetap bersih dan sehat.
-                    </p>
-                    <div class="flex flex-row space-x-2">
-                        <div
-                            class="shadow-sm shadow-green-600 cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row hover:bg-green-500">
-                            <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024" class="text-xl"
-                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z">
-                                </path>
-                            </svg>
-                            <span>3</span>
+                    <div class="flex w-full p-4">
+                        <img class="w-12 h-12 rounded-full hidden xl:block" src="../assets/img/avatar1.jpg" alt="Avatar">
+                        <div class="flex flex-col flex-grow xl:ml-4 gap-4">
+                            <div class="flex">
+                                <input type="text" id="title"
+                                    class="rounded-sm border-2 border-green-500 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                    placeholder="Judul/Topik">
+                            </div>
+                            <div class="flex flex-col flex-grow w-full">
+                                <textarea type="text" id="title"
+                                    class="rounded-sm border-2 border-green-500 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                    placeholder="Komentar..."></textarea>
+                                <div class="flex flex-col xl:flex-row xl:justify-between mt-2 gap-2">
+                                    <input
+                                        class="block w-full xl:w-80 text-sm text-gray-900 border border-green-500 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-4 focus:ring-green-300"
+                                        id="multiple_files" type="file" multiple>
+                                    <button type="button"
+                                        class="w-full xl:w-40 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1">Unggah
+                                        Komentar</button>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="shadow-sm shadow-red-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-red-500">
-                            <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024" class="text-xl"
-                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M885.9 490.3c3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-51.6-30.7-98.1-78.3-118.4a66.1 66.1 0 0 0-26.5-5.4H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h129.3l85.8 310.8C372.9 889 418.9 924 470.9 924c29.7 0 57.4-11.8 77.9-33.4 20.5-21.5 31-49.7 29.5-79.4l-6-122.9h239.9c12.1 0 23.9-3.2 34.3-9.3 40.4-23.5 65.5-66.1 65.5-111 0-28.3-9.3-55.5-26.1-77.7zM184 456V172h81v284h-81zm627.2 160.4H496.8l9.6 198.4c.6 11.9-4.7 23.1-14.6 30.5-6.1 4.5-13.6 6.8-21.1 6.7a44.28 44.28 0 0 1-42.2-32.3L329 459.2V172h415.4a56.85 56.85 0 0 1 33.6 51.8c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-14 25.5 21.9 19a56.76 56.76 0 0 1 19.6 43c0 19.1-11 37.5-28.8 48.4z">
-                                </path>
-                            </svg>
-                            <span>0</span>
-                        </div>
-                        <a href="./discussion-detail.html"
-                            class="shadow-sm shadow-yellow-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-yellow-500">
-                            <svg stroke="black" fill="black" stroke-width="0" aria-hidden="true" class="text-xl w-5 h-5"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
-                                <path
-                                    d="M5 0C2.24 0 0 2.24 0 5v5c0 2.76 2.24 5 5 5h1v3l4-3h5c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5H5zm10 2c1.66 0 3 1.34 3 3v5c0 1.66-1.34 3-3 3H9l-3 3v-3H5c-1.66 0-3-1.34-3-3V5c0-1.66 1.34-3 3-3h10z" />
-                            </svg>
-                            <span>4</span>
-                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-500 gap-2">
-                    <div class="flex items-start gap-2.5">
-                        <img class="w-12 h-12 rounded-full" src="../assets/img/avatar3.jpg" alt="avatar">
-                        <div class="flex flex-col">
-                            <span class="text-xl font-semibold text-gray-900">Jessica</span>
-                            <span class="text-sm font-normal text-gray-500">Ibu Rumah Tangga Beranak 2</span>
-                        </div>
-                    </div>
-                    <h2 class="font-semibold">
-                        Cara Mencegah Stunting pada Anak
-                    </h2>
-                    <p class="ellipsis-text">
-                        Berikut adalah cara mencegah stunting pada anak:</br>
-                        1. Memberikan ASI eksklusif pada bayi hingga berusia 6 bulan.</br>
-                        2. Memantau perkembangan anak dan membawa ke posyandu secara berkala.</br>
-                        3. Mengkonsumsi secara rutin Tablet tambah Darah (TTD)</br>
-                        4. Memberikan MPASI yang begizi dan kaya protein hewani untuk bayi yang berusia diatas 6
-                        bulan.</br></br>
-                        Kira-kira ada tambahan?
-                    </p>
-                    <div>
-                        <img src="../assets/img/edukasi1.jpg" alt="Diskusi">
-                    </div>
+            </div>
+        </div>
 
-                    <div class="flex flex-row space-x-2">
-                        <div
-                            class="shadow-sm shadow-green-600 cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row hover:bg-green-500">
-                            <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024" class="text-xl"
-                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z">
-                                </path>
-                            </svg>
-                            <span>6</span>
+        <div class="mt-4 mx-2 mb-2">
+            <div class="flex justify-center mt-4">
+                <div class="w-9/12 md:w-6/12 bg-white rounded-lg shadow-lg flex h-full flex flex-col">
+                    <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-500 gap-2">
+                        <div class="flex items-start gap-2.5 w-full">
+                            <img class="w-12 h-12 rounded-full" src="../assets/img/avatar2.jpg" alt="avatar">
+                            <div class="flex flex-col">
+                                <span class="text-xl font-semibold text-gray-900">dr. Derizheese</span>
+                                <span class="text-sm font-normal text-gray-500">Satu hari lalu</span>
+                            </div>
+                            <div class="ml-auto">
+                                <button id="dropdownMenuIconButton1" data-dropdown-toggle="dropdownDots1"
+                                    data-dropdown-placement="bottom-start"
+                                    class="inline-flex p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-50"
+                                    type="button">
+                                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
+                                        <path
+                                            d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                                    </svg>
+                                </button>
+                                <div id="dropdownDots1"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownMenuIconButton1">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-green-300">Lapor</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-green-300">Hapus</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="shadow-sm shadow-red-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-red-500">
-                            <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024" class="text-xl"
-                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M885.9 490.3c3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-51.6-30.7-98.1-78.3-118.4a66.1 66.1 0 0 0-26.5-5.4H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h129.3l85.8 310.8C372.9 889 418.9 924 470.9 924c29.7 0 57.4-11.8 77.9-33.4 20.5-21.5 31-49.7 29.5-79.4l-6-122.9h239.9c12.1 0 23.9-3.2 34.3-9.3 40.4-23.5 65.5-66.1 65.5-111 0-28.3-9.3-55.5-26.1-77.7zM184 456V172h81v284h-81zm627.2 160.4H496.8l9.6 198.4c.6 11.9-4.7 23.1-14.6 30.5-6.1 4.5-13.6 6.8-21.1 6.7a44.28 44.28 0 0 1-42.2-32.3L329 459.2V172h415.4a56.85 56.85 0 0 1 33.6 51.8c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-14 25.5 21.9 19a56.76 56.76 0 0 1 19.6 43c0 19.1-11 37.5-28.8 48.4z">
-                                </path>
-                            </svg>
-                            <span>3</span>
+                        <h2 class="font-semibold">
+                            Mengapa Deteksi Dini Stunting Pada Anak itu Sangat Penting?
+                        </h2>
+                        <p class="ellipsis-text">
+                            Deteksi dini stunting pada anak itu sangat penting karena stunting dalam jangka panjang
+                            berdampak buruk tidak hanya terhadap tumbuh kembang anak tetapi juga terhadap perkembangan
+                            emosi
+                            yang berakibat pada kerugian ekonomi. Mulai dari pemenuhan gizi yang baik selama 1000 hari
+                            pertama kehidupan anak hingga menjaga lingkungan agar tetap bersih dan sehat.
+                        </p>
+                        <div class="flex flex-row space-x-2">
+                            <div
+                                class="shadow-sm shadow-green-600 cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row hover:bg-green-500">
+                                <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024"
+                                    class="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z">
+                                    </path>
+                                </svg>
+                                <span>3</span>
+                            </div>
+                            <div
+                                class="shadow-sm shadow-red-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-red-500">
+                                <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024"
+                                    class="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M885.9 490.3c3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-51.6-30.7-98.1-78.3-118.4a66.1 66.1 0 0 0-26.5-5.4H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h129.3l85.8 310.8C372.9 889 418.9 924 470.9 924c29.7 0 57.4-11.8 77.9-33.4 20.5-21.5 31-49.7 29.5-79.4l-6-122.9h239.9c12.1 0 23.9-3.2 34.3-9.3 40.4-23.5 65.5-66.1 65.5-111 0-28.3-9.3-55.5-26.1-77.7zM184 456V172h81v284h-81zm627.2 160.4H496.8l9.6 198.4c.6 11.9-4.7 23.1-14.6 30.5-6.1 4.5-13.6 6.8-21.1 6.7a44.28 44.28 0 0 1-42.2-32.3L329 459.2V172h415.4a56.85 56.85 0 0 1 33.6 51.8c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-14 25.5 21.9 19a56.76 56.76 0 0 1 19.6 43c0 19.1-11 37.5-28.8 48.4z">
+                                    </path>
+                                </svg>
+                                <span>0</span>
+                            </div>
+                            <a href="./discussion-detail.html"
+                                class="shadow-sm shadow-yellow-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-yellow-500">
+                                <svg stroke="black" fill="black" stroke-width="0" aria-hidden="true"
+                                    class="text-xl w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                    <path
+                                        d="M5 0C2.24 0 0 2.24 0 5v5c0 2.76 2.24 5 5 5h1v3l4-3h5c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5H5zm10 2c1.66 0 3 1.34 3 3v5c0 1.66-1.34 3-3 3H9l-3 3v-3H5c-1.66 0-3-1.34-3-3V5c0-1.66 1.34-3 3-3h10z" />
+                                </svg>
+                                <span>4</span>
+                            </a>
                         </div>
-                        <a href="./discussion-detail.html"
-                            class="shadow-sm shadow-yellow-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-yellow-500">
-                            <svg stroke="black" fill="black" stroke-width="0" aria-hidden="true" class="text-xl w-5 h-5"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
-                                <path
-                                    d="M5 0C2.24 0 0 2.24 0 5v5c0 2.76 2.24 5 5 5h1v3l4-3h5c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5H5zm10 2c1.66 0 3 1.34 3 3v5c0 1.66-1.34 3-3 3H9l-3 3v-3H5c-1.66 0-3-1.34-3-3V5c0-1.66 1.34-3 3-3h10z" />
-                            </svg>
-                            <span>7</span>
-                        </a>
                     </div>
-                </div>
-                <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-500 gap-2">
-                    <div class="flex items-start gap-2.5">
-                        <img class="w-12 h-12 rounded-full" src="../assets/img/avatar2.jpg" alt="avatar">
-                        <div class="flex flex-col">
-                            <span class="text-xl font-semibold text-gray-900">dr. Derizheese</span>
-                            <span class="text-sm font-normal text-gray-500">CEO of PT Peduli Anak Tbk</span>
+                    <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-500 gap-2">
+                        <div class="flex items-start gap-2.5 w-full">
+                            <img class="w-12 h-12 rounded-full" src="../assets/img/avatar3.jpg" alt="avatar">
+                            <div class="flex flex-col">
+                                <span class="text-xl font-semibold text-gray-900">Jessica</span>
+                                <span class="text-sm font-normal text-gray-500">4 hari lalu</span>
+                            </div>
+                            <div class="ml-auto">
+                                <button id="dropdownMenuIconButton2" data-dropdown-toggle="dropdownDots2"
+                                    data-dropdown-placement="bottom-start"
+                                    class="inline-flex p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-50"
+                                    type="button">
+                                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
+                                        <path
+                                            d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                                    </svg>
+                                </button>
+                                <div id="dropdownDots2"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownMenuIconButton2">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-green-300">Lapor</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-green-300">Hapus</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="font-semibold">
+                            Cara Mencegah Stunting pada Anak
+                        </h2>
+                        <p class="ellipsis-text">
+                            Berikut adalah cara mencegah stunting pada anak:</br>
+                            1. Memberikan ASI eksklusif pada bayi hingga berusia 6 bulan.</br>
+                            2. Memantau perkembangan anak dan membawa ke posyandu secara berkala.</br>
+                            3. Mengkonsumsi secara rutin Tablet tambah Darah (TTD)</br>
+                            4. Memberikan MPASI yang begizi dan kaya protein hewani untuk bayi yang berusia diatas 6
+                            bulan.</br></br>
+                            Kira-kira ada tambahan?
+                        </p>
+                        <div>
+                            <img src="../assets/img/edukasi1.jpg" alt="Diskusi">
+                        </div>
+
+                        <div class="flex flex-row space-x-2">
+                            <div
+                                class="shadow-sm shadow-green-600 cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row hover:bg-green-500">
+                                <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024"
+                                    class="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z">
+                                    </path>
+                                </svg>
+                                <span>6</span>
+                            </div>
+                            <div
+                                class="shadow-sm shadow-red-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-red-500">
+                                <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024"
+                                    class="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M885.9 490.3c3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-51.6-30.7-98.1-78.3-118.4a66.1 66.1 0 0 0-26.5-5.4H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h129.3l85.8 310.8C372.9 889 418.9 924 470.9 924c29.7 0 57.4-11.8 77.9-33.4 20.5-21.5 31-49.7 29.5-79.4l-6-122.9h239.9c12.1 0 23.9-3.2 34.3-9.3 40.4-23.5 65.5-66.1 65.5-111 0-28.3-9.3-55.5-26.1-77.7zM184 456V172h81v284h-81zm627.2 160.4H496.8l9.6 198.4c.6 11.9-4.7 23.1-14.6 30.5-6.1 4.5-13.6 6.8-21.1 6.7a44.28 44.28 0 0 1-42.2-32.3L329 459.2V172h415.4a56.85 56.85 0 0 1 33.6 51.8c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-14 25.5 21.9 19a56.76 56.76 0 0 1 19.6 43c0 19.1-11 37.5-28.8 48.4z">
+                                    </path>
+                                </svg>
+                                <span>3</span>
+                            </div>
+                            <a href="./discussion-detail.html"
+                                class="shadow-sm shadow-yellow-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-yellow-500">
+                                <svg stroke="black" fill="black" stroke-width="0" aria-hidden="true"
+                                    class="text-xl w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                    <path
+                                        d="M5 0C2.24 0 0 2.24 0 5v5c0 2.76 2.24 5 5 5h1v3l4-3h5c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5H5zm10 2c1.66 0 3 1.34 3 3v5c0 1.66-1.34 3-3 3H9l-3 3v-3H5c-1.66 0-3-1.34-3-3V5c0-1.66 1.34-3 3-3h10z" />
+                                </svg>
+                                <span>7</span>
+                            </a>
                         </div>
                     </div>
-                    <h2 class="font-semibold">
-                        Mengapa Deteksi Dini Stunting Pada Anak itu Sangat Penting?
-                    </h2>
-                    <p class="ellipsis-text">
-                        Deteksi dini stunting pada anak itu sangat penting karena stunting dalam jangka panjang
-                        berdampak buruk tidak hanya terhadap tumbuh kembang anak tetapi juga terhadap perkembangan emosi
-                        yang berakibat pada kerugian ekonomi. Mulai dari pemenuhan gizi yang baik selama 1000 hari
-                        pertama kehidupan anak hingga menjaga lingkungan agar tetap bersih dan sehat.
-                    </p>
-                    <div class="flex flex-row space-x-2">
-                        <div
-                            class="shadow-sm shadow-green-600 cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row hover:bg-green-500">
-                            <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024" class="text-xl"
-                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z">
-                                </path>
-                            </svg>
-                            <span>3</span>
+                    <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-500 gap-2">
+                        <div class="flex items-start gap-2.5 w-full">
+                            <img class="w-12 h-12 rounded-full" src="../assets/img/avatar2.jpg" alt="avatar">
+                            <div class="flex flex-col">
+                                <span class="text-xl font-semibold text-gray-900">dr. Derizheese</span>
+                                <span class="text-sm font-normal text-gray-500">2 minggu lalu</span>
+                            </div>
+                            <div class="ml-auto">
+                                <button id="dropdownMenuIconButton3" data-dropdown-toggle="dropdownDots3"
+                                    data-dropdown-placement="bottom-start"
+                                    class="inline-flex p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-50"
+                                    type="button">
+                                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
+                                        <path
+                                            d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                                    </svg>
+                                </button>
+                                <div id="dropdownDots3"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40">
+                                    <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownMenuIconButton3">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-green-300">Lapor</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-green-300">Hapus</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="shadow-sm shadow-red-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-red-500">
-                            <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024" class="text-xl"
-                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M885.9 490.3c3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-51.6-30.7-98.1-78.3-118.4a66.1 66.1 0 0 0-26.5-5.4H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h129.3l85.8 310.8C372.9 889 418.9 924 470.9 924c29.7 0 57.4-11.8 77.9-33.4 20.5-21.5 31-49.7 29.5-79.4l-6-122.9h239.9c12.1 0 23.9-3.2 34.3-9.3 40.4-23.5 65.5-66.1 65.5-111 0-28.3-9.3-55.5-26.1-77.7zM184 456V172h81v284h-81zm627.2 160.4H496.8l9.6 198.4c.6 11.9-4.7 23.1-14.6 30.5-6.1 4.5-13.6 6.8-21.1 6.7a44.28 44.28 0 0 1-42.2-32.3L329 459.2V172h415.4a56.85 56.85 0 0 1 33.6 51.8c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-14 25.5 21.9 19a56.76 56.76 0 0 1 19.6 43c0 19.1-11 37.5-28.8 48.4z">
-                                </path>
-                            </svg>
-                            <span>0</span>
+                        <h2 class="font-semibold">
+                            Mengapa Deteksi Dini Stunting Pada Anak itu Sangat Penting?
+                        </h2>
+                        <p class="ellipsis-text">
+                            Deteksi dini stunting pada anak itu sangat penting karena stunting dalam jangka panjang
+                            berdampak buruk tidak hanya terhadap tumbuh kembang anak tetapi juga terhadap perkembangan
+                            emosi
+                            yang berakibat pada kerugian ekonomi. Mulai dari pemenuhan gizi yang baik selama 1000 hari
+                            pertama kehidupan anak hingga menjaga lingkungan agar tetap bersih dan sehat.
+                        </p>
+                        <div class="flex flex-row space-x-2">
+                            <div
+                                class="shadow-sm shadow-green-600 cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row hover:bg-green-500">
+                                <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024"
+                                    class="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z">
+                                    </path>
+                                </svg>
+                                <span>3</span>
+                            </div>
+                            <div
+                                class="shadow-sm shadow-red-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-red-500">
+                                <svg stroke="black" fill="black" stroke-width="0" viewBox="0 0 1024 1024"
+                                    class="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M885.9 490.3c3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-28.3-9.3-55.5-26.1-77.7 3.6-12 5.4-24.4 5.4-37 0-51.6-30.7-98.1-78.3-118.4a66.1 66.1 0 0 0-26.5-5.4H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h129.3l85.8 310.8C372.9 889 418.9 924 470.9 924c29.7 0 57.4-11.8 77.9-33.4 20.5-21.5 31-49.7 29.5-79.4l-6-122.9h239.9c12.1 0 23.9-3.2 34.3-9.3 40.4-23.5 65.5-66.1 65.5-111 0-28.3-9.3-55.5-26.1-77.7zM184 456V172h81v284h-81zm627.2 160.4H496.8l9.6 198.4c.6 11.9-4.7 23.1-14.6 30.5-6.1 4.5-13.6 6.8-21.1 6.7a44.28 44.28 0 0 1-42.2-32.3L329 459.2V172h415.4a56.85 56.85 0 0 1 33.6 51.8c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-13.9 25.4 21.9 19a56.76 56.76 0 0 1 19.6 43c0 9.7-2.3 18.9-6.9 27.3l-14 25.5 21.9 19a56.76 56.76 0 0 1 19.6 43c0 19.1-11 37.5-28.8 48.4z">
+                                    </path>
+                                </svg>
+                                <span>0</span>
+                            </div>
+                            <a href="./discussion-detail.html"
+                                class="shadow-sm shadow-yellow-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-yellow-500">
+                                <svg stroke="black" fill="black" stroke-width="0" aria-hidden="true"
+                                    class="text-xl w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                    <path
+                                        d="M5 0C2.24 0 0 2.24 0 5v5c0 2.76 2.24 5 5 5h1v3l4-3h5c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5H5zm10 2c1.66 0 3 1.34 3 3v5c0 1.66-1.34 3-3 3H9l-3 3v-3H5c-1.66 0-3-1.34-3-3V5c0-1.66 1.34-3 3-3h10z" />
+                                </svg>
+                                <span>4</span>
+                            </a>
                         </div>
-                        <a href="./discussion-detail.html"
-                            class="shadow-sm shadow-yellow-600 cursor-pointer px-3 py-2 text-center justify-center items-center rounded-xl flex space-x-2 flex-row hover:bg-yellow-500">
-                            <svg stroke="black" fill="black" stroke-width="0" aria-hidden="true" class="text-xl w-5 h-5"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
-                                <path
-                                    d="M5 0C2.24 0 0 2.24 0 5v5c0 2.76 2.24 5 5 5h1v3l4-3h5c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5H5zm10 2c1.66 0 3 1.34 3 3v5c0 1.66-1.34 3-3 3H9l-3 3v-3H5c-1.66 0-3-1.34-3-3V5c0-1.66 1.34-3 3-3h10z" />
-                            </svg>
-                            <span>4</span>
-                        </a>
                     </div>
                 </div>
             </div>

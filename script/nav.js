@@ -35,10 +35,10 @@ const showNavbar = () => {
                     <a href="./publication.html">Publikasi</a>
                 </li>
                 <li class="flex items-center ml-4">
-                    <a href="./profile.html" class="">
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button">
                         <img class="w-12 h-12 border-2 border-green-500 rounded-full"
                             src="../assets/img/avatar1.jpg" alt="Avatar">
-                    </a>
+                    </button>
                 </li>
             </ul>
         </nav>
@@ -50,6 +50,31 @@ const showNavbar = () => {
             </button>
         </div>
     `;
+
+    if (role) {
+        header.innerHTML += `
+            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-20">
+                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+                    <li>
+                        <a href="./profile.html" class="block px-4 py-2 hover:bg-gray-100">Profil</a>
+                    </li>
+                    <li>
+                        <a href="./login.html" class="block px-4 py-2 hover:bg-gray-100">Keluar</a>
+                    </li>
+                </ul>
+            </div>
+        `
+    } else {
+        header.innerHTML += `
+            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-20">
+                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+                    <li>
+                        <a href="./login.html" class="block px-4 py-2 hover:bg-gray-100">Masuk</a>
+                    </li>
+                </ul>
+            </div>
+        `
+    }
 
 	if (role != "admin" && role != "nakes") {
 		navbar.innerHTML = `
@@ -233,8 +258,8 @@ const showNavbar = () => {
                                         class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Edukasi</a>
                                 </li>
                                 <li>
-                                    <a href="#"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Unggah Konten Edukasi</a>
+                                    <a href="./education-dashboard.html"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Dasbor Edukasi</a>
                                 </li>
                             </ul>
                         </li>
