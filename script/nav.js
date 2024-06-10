@@ -24,7 +24,7 @@ const showNavbar = () => {
                 </li>
                 <li id="diskusi"
                     class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                    <a href="">Diskusi</a>
+                    <a href="./discussion.html">Diskusi</a>
                 </li>
                 <li id="edukasi"
                     class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
@@ -32,7 +32,7 @@ const showNavbar = () => {
                 </li>
                 <li id="publikasi"
                     class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                    <a href="">Publikasi</a>
+                    <a href="./publication.html">Publikasi</a>
                 </li>
                 <li class="flex items-center ml-4">
                     <a href="./profile.html" class="">
