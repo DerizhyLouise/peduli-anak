@@ -13,320 +13,219 @@
 </head>
 
 <body>
-    <div class="fixed top-5 bg-[url('../assets/img/bg.jpg')] bg-cover -z-10 w-screen h-screen"></div>
-    <div id="header">
-        <header class="fixed top-0 w-screen bg-blue-200 z-20 flex">
-            <div class="ml-8 lg:hidden">
-                <a href="./index.html">
-                    <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto duration-200">
-                </a>
-            </div>
-            <div class="w-screen h-20 flex items-center justify-end gap-6 px-8 py-2">
-                <a href="./profile.html">
-                    <img class="w-12 h-12 border-2 border-black rounded-full" src="../assets/img/avatar1.jpg"
-                        alt="Avatar">
-                </a>
-                <button class="text-2xl lg:hidden hover:text-green-500 duration-200" type="button"
-                    onclick="toggleNavbar()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </header>
-        <div class="w-full bg-blue-200">
-            <div class="mt-20 h-40 ml-20 lg:ml-80 xl:mr-20 xl:ml-96 text-content header-title transition-opacity z-30">
-                <h1 class="mb-4 text-xl md:text-4xl xl:text-5xl font-extrabold tracking-tight leading-none">
-                    Selamat Datang di Peduli Anak
-                </h1>
-                <p class="mb-8 text-lg font-normal lg:text-xl z-30">
-                    Aplikasi Web untuk memberantas stunting!
-                </p>
-            </div>
+    <div
+        class="fixed top-5 bg-[url('../assets/img/bg.jpg')] bg-gray-600 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
+    </div>
+    <header id="topHeader" class="w-full h-20 top-0 bg-blue-200 flex items-center justify-between px-8 py-2 fixed z-30">
+    </header>
+    <div class="w-full bg-blue-200">
+        <div class="mt-20 h-80 ml-20 lg:ml-40 xl:mr-20 2xl:ml-96 text-content header-title transition-opacity z-30">
+            <h1 class="mb-4 text-xl md:text-5xl font-extrabold tracking-tight leading-none">
+                Selamat Datang di Peduli Anak
+            </h1>
+            <p class="mb-8 text-lg font-normal lg:text-xl z-30">
+                Aplikasi Web untuk memberantas stunting!
+            </p>
         </div>
     </div>
 
-    <div class="flex">
-        <div class="w-[296px] h-screen hidden lg:block"></div>
-        <div class="invisible-side flex flex-col">
-            <div class="flex justify-center lg:gap-6 mt-10 flex-wrap">
-                <div class="mx-6 mb-2 h-96 w-[432px]">
-                    <div id="default-carousel" class="relative w-full" data-carousel="slide">
-                        <div class="relative h-96 overflow-hidden z-0 rounded-3xl border-4 border-black">
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="../assets/img/slide1.jpeg"
-                                    class="object-cover absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 -z-10"
-                                    alt="...">
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="../assets/img/slide2.jpg"
-                                    class="object-cover absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 -z-10"
-                                    alt="...">
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="../assets/img/slide3.jpeg"
-                                    class="object-cover absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 -z-10"
-                                    alt="...">
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="../assets/img/slide4.jpeg"
-                                    class="object-cover absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 -z-10"
-                                    alt="...">
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="../assets/svg/carousel.svg"
-                                    class="object-cover absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 -z-10"
-                                    alt="...">
-                            </div>
-                        </div>
-                        <div
-                            class="absolute z-10 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
-                                data-carousel-slide-to="0"></button>
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
-                                data-carousel-slide-to="1"></button>
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-                                data-carousel-slide-to="2"></button>
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
-                                data-carousel-slide-to="3"></button>
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
-                                data-carousel-slide-to="4"></button>
-                        </div>
-                        <button type="button"
-                            class="absolute top-0 start-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                            data-carousel-prev>
-                            <span
-                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 group-hover:bg-black/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                                <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+    <div class="flex flex-col items-center mx-8 lg:mx-20 xl:mx-40 mt-20 gap-16">
+        <div class="flex flex-col items-center">
+            <h1 class="mb-4 font-extrabold tracking-tight leading-none text-center text-white/90 text-4xl lg:text-5xl">
+                Apa saja yang dapat kami lakukan?
+            </h1>
+            <div id="default-carousel1" class="relative w-96 h-96 lg:h-[528px] lg:w-[640px]" data-carousel="slide">
+                <div class="relative w-full h-full overflow-hidden z-0 rounded-3xl shadow-lg mt-4">
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="bg-green-300/90 h-full px-16 py-8">
+                            <a href="./calculator.html"
+                                class="bg-purple-100 text-purple-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">
+                                <img src="../assets/svg/calc.svg" alt="Kalkulator" class="w-2.5 h-2.5 me-1.5">
+                                Kalkulator
+                            </a>
+                            <h2 class="text-gray-900 text-3xl font-extrabold mb-2">Deteksi Stunting pada anak Anda!</h2>
+                            <p class="text-lg font-normal text-gray-500 mb-4">Gunakan fitur unggulan kami untuk
+                                mendeteksi stunting pada anak Anda.</p>
+                            <a href="./calculator.html"
+                                class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">
+                                Kunjungi
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M5 1 1 5l4 4" />
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                                 </svg>
-                                <span class="sr-only">Previous</span>
-                            </span>
-                        </button>
-                        <button type="button"
-                            class="absolute top-0 end-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                            data-carousel-next>
-                            <span
-                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 group-hover:bg-black/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                                <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="bg-green-300/90 h-full px-16 py-8">
+                            <a href="#"
+                                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">
+                                <img src="../assets/svg/disscus.svg" alt="Diskusi" class="w-2.5 h-2.5 me-1.5">
+                                Diskusi
+                            </a>
+                            <h2 class="text-gray-900 text-3xl font-extrabold mb-2">Diskusikan Pengalaman Anda!</h2>
+                            <p class="text-lg font-normal text-gray-500 mb-4">Di sini, semuanya dapat mendiskusikan
+                                tentang stunting bersama dengan para Tenaga Kesehatan di seluruh Indonesia.</p>
+                            <a href="#"
+                                class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">
+                                Kunjungi
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 9 4-4-4-4" />
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                                 </svg>
-                                <span class="sr-only">Next</span>
-                            </span>
-                        </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="bg-green-300/90 h-full px-16 py-8">
+                            <a href="./education.html"
+                                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">
+                                <img src="../assets/svg/book.svg" alt="Edukasi" class="w-2.5 h-2.5 me-1.5">
+                                Edukasi
+                            </a>
+                            <h2 class="text-gray-900 text-3xl font-extrabold mb-2">Ketahui Lebih Lanjut tentang
+                                Stunting!</h2>
+                            <p class="text-lg font-normal text-gray-500 mb-4">Penting sekali untuk mengetahui cara
+                                pencegahan dini hingga mengatasi stunting.</p>
+                            <a href="./education.html"
+                                class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">
+                                Kunjungi
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="bg-green-300/90 h-full px-16 py-8">
+                            <a href="./publication.html"
+                                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">
+                                <img src="../assets/svg/publication.svg" alt="Publikasi" class="w-2.5 h-2.5 me-1.5">
+                                Publikasi
+                            </a>
+                            <h2 class="text-gray-900 text-3xl font-extrabold mb-2">Apa yang Ditemukan Para Ahli?</h2>
+                            <p class="text-lg font-normal text-gray-500 mb-4">Akses jurnal dan laporan dari para ahli
+                                untuk lebih mendalami tentang dunia stunting.</p>
+                            <a href="./publication.html"
+                                class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">
+                                Kunjungi
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="mx-6 mb-2 h-96 w-[432px]">
-                    <div id="default-carousel1" class="relative w-full" data-carousel="slide">
-                        <div class="relative h-96 overflow-hidden z-0 rounded-3xl border-4 border-black">
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <div class="bg-green-300 h-full p-8">
-                                    <a href="./calculator.html"
-                                        class="bg-purple-100 text-purple-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">
-                                        <img src="../assets/svg/calc.svg" alt="Kalkulator" class="w-2.5 h-2.5 me-1.5">
-                                        Kalkulator
-                                    </a>
-                                    <h2 class="text-gray-900 text-3xl font-extrabold mb-2">Deteksi Stunting pada anak
-                                        Anda!</h2>
-                                    <p class="text-lg font-normal text-gray-500 mb-4">Gunakan fitur unggulan kami untuk
-                                        mendeteksi
-                                        stunting pada anak Anda.</p>
-                                    <a href="./calculator.html"
-                                        class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">Kunjungi
-                                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <div class="bg-green-300 h-full p-8">
-                                    <a href="#"
-                                        class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">
-                                        <img src="../assets/svg/disscus.svg" alt="Diskusi" class="w-2.5 h-2.5 me-1.5">
-                                        Diskusi
-                                    </a>
-                                    <h2 class="text-gray-900 text-3xl font-extrabold mb-2">Diskusikan Pengalaman Anda!
-                                    </h2>
-                                    <p class="text-lg font-normal text-gray-500 mb-4">Di sini, semuanya dapat
-                                        mendiskusikan
-                                        tentang
-                                        stunting bersama dengan para Tenaga Kesehatan di seluruh Indonesia.</p>
-                                    <a href="#"
-                                        class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">Kunjungi
-                                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <div class="bg-green-300 h-full p-8">
-                                    <a href="./education.html"
-                                        class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">
-                                        <img src="../assets/svg/book.svg" alt="Edukasi" class="w-2.5 h-2.5 me-1.5">
-                                        Edukasi
-                                    </a>
-                                    <h2 class="text-gray-900 text-3xl font-extrabold mb-2">Ketahui Lebih Lanjut tentang
-                                        Stunting!
-                                    </h2>
-                                    <p class="text-lg font-normal text-gray-500 mb-4">Penting sekali untuk mengetahui
-                                        cara
-                                        pencegahan dini hingga mengatasi stunting.</p>
-                                    <a href="./education.html"
-                                        class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">Kunjungi
-                                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <div class="bg-green-300 h-full p-8">
-                                    <a href="./publication.html"
-                                        class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2">
-                                        <img src="../assets/svg/publication.svg" alt="Publikasi"
-                                            class="w-2.5 h-2.5 me-1.5">
-                                        Publikasi
-                                    </a>
-                                    <h2 class="text-gray-900 text-3xl font-extrabold mb-2">Apa yang Ditemukan Para Ahli?
-                                    </h2>
-                                    <p class="text-lg font-normal text-gray-500 mb-4">Akses jurnal dan laporan dari para
-                                        ahli
-                                        untuk
-                                        lebih mendalami tentang dunia stunting.</p>
-                                    <a href="./publication.html"
-                                        class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">Kunjungi
-                                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute z-10 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                            <button type="button" class="w-3 h-3 rounded-full bg-black hover:black/30"
-                                aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                            <button type="button" class="w-3 h-3 rounded-full bg-black hover:black/30"
-                                aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                            <button type="button" class="w-3 h-3 rounded-full bg-black hover:black/30"
-                                aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                            <button type="button" class="w-3 h-3 rounded-full bg-black hover:black/30"
-                                aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                        </div>
-                        <button type="button"
-                            class="absolute top-0 start-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                            data-carousel-prev>
-                            <span
-                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 group-hover:bg-black/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                                <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M5 1 1 5l4 4" />
-                                </svg>
-                                <span class="sr-only">Previous</span>
-                            </span>
-                        </button>
-                        <button type="button"
-                            class="absolute top-0 end-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                            data-carousel-next>
-                            <span
-                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 group-hover:bg-black/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-                                <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 9 4-4-4-4" />
-                                </svg>
-                                <span class="sr-only">Next</span>
-                            </span>
-                        </button>
-                    </div>
+                <div class="absolute z-10 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                    <button type="button" class="w-3 h-3 rounded-full bg-black hover:black/30" aria-current="true"
+                        aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-black hover:black/30" aria-current="false"
+                        aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-black hover:black/30" aria-current="false"
+                        aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-black hover:black/30" aria-current="false"
+                        aria-label="Slide 4" data-carousel-slide-to="3"></button>
                 </div>
+                <button type="button"
+                    class="absolute top-0 start-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 group-hover:bg-black/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 1 1 5l4 4" />
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-0 end-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 group-hover:bg-black/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
             </div>
-
-            <div>
-                <div class="px-8 mx-auto max-w-screen-xl py-6">
-                    <h1
-                        class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-700 md:text-4xl lg:text-5xl">
-                        Temukan Konten Edukasi Menarik dari Kami!</h1>
+        </div>
+        <div class="flex flex-col items-center">
+            <h1 class="mb-8 font-extrabold tracking-tight leading-none text-center text-white/90 text-4xl lg:text-5xl">
+                Temukan Konten Edukasi Menarik dari Kami!
+            </h1>
+            <div class="mb-12 flex justify-center flex-wrap gap-6">
+                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
+                    <a href="./education-detail.html">
+                        <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
+                    </a>
+                    <div class="p-5">
+                        <a href="./education-detail.html">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Apa itu Stunting?</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang stunting hingga
+                            cara mengatasinya.</p>
+                        <a href="./education-detail.html"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
+                            Pelajari
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="mb-12 mx-12 flex flex-wrap gap-6 justify-center">
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
+                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
+                    <a href="./education-detail.html">
+                        <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
+                    </a>
+                    <div class="p-5">
                         <a href="./education-detail.html">
-                            <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Apa itu Stunting?</h5>
                         </a>
-                        <div class="p-5">
-                            <a href="./education-detail.html">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Apa itu
-                                    Stunting?</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang
-                                stunting hingga cara mengatasinya.</p>
-                            <a href="./education-detail.html"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
-                                Pelajari
-                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
-                        </div>
+                        <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang stunting hingga
+                            cara mengatasinya.</p>
+                        <a href="./education-detail.html"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
+                            Pelajari
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </a>
                     </div>
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
+                </div>
+                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
+                    <a href="./education-detail.html">
+                        <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
+                    </a>
+                    <div class="p-5">
                         <a href="./education-detail.html">
-                            <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Apa itu Stunting?</h5>
                         </a>
-                        <div class="p-5">
-                            <a href="./education-detail.html">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Apa itu
-                                    Stunting?</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang
-                                stunting hingga cara mengatasinya.</p>
-                            <a href="./education-detail.html"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
-                                Pelajari
-                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
-                        <a href="./education-detail.html">
-                            <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
+                        <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang stunting hingga
+                            cara mengatasinya.</p>
+                        <a href="./education-detail.html"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
+                            Pelajari
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
                         </a>
-                        <div class="p-5">
-                            <a href="./education-detail.html">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Apa itu
-                                    Stunting?</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang
-                                stunting hingga cara mengatasinya.</p>
-                            <a href="./education-detail.html"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
-                                Pelajari
-                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
