@@ -8,7 +8,7 @@ const showNavbar = () => {
 	header.innerHTML += `
         <div class="w-40">
             <a href="./index.html">
-                <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto duration-200 py-4">
+                <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto py-4">
             </a>
         </div>
 
@@ -56,7 +56,12 @@ const showNavbar = () => {
             <div id="drawer-navigation"
                 class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
-                <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase">Menu</h5>
+                <div class="border-b-4 border-green-300 pb-2 p-2">
+                    <a href="./index.html">
+                        <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto duration-200">
+                    </a>
+                </div>
+                <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mt-4">Menu</h5>
                 <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
                     class="text-gray-400 bg-transparent hover:bg-green-500 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -157,8 +162,12 @@ const showNavbar = () => {
             <div id="drawer-navigation"
                 class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
-                <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase">Menu
-                </h5>
+                <div class="border-b-4 border-green-300 pb-2 p-2">
+                    <a href="./index.html">
+                        <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto duration-200">
+                    </a>
+                </div>
+                <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mt-4">Menu</h5>
                 <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
                     class="text-gray-400 bg-transparent hover:bg-green-500 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
