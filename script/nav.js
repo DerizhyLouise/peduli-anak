@@ -382,7 +382,7 @@ const showNavbar = () => {
 const showFooter = () => {
 	const body = document.getElementsByTagName("body")[0];
 	const footer = document.createElement("footer");
-	footer.className = "bg-white";
+	footer.className = "bg-white/80";
 
 	footer.innerHTML = `
         <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
