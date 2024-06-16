@@ -12,24 +12,28 @@
     <link rel="icon" href="../../assets/svg/logo.svg" type="image/svg+xml">
 </head>
 
-<body class="bg-gray-200">
-    <div
-        class="fixed top-5 bg-[url('../assets/img/bg.jpg')] bg-gray-600 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
+<body>
+    <div class="fixed bg-[url('../assets/img/bg.jpg')] bg-slate-300 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
     </div>
-    <header id="topHeader" class="w-full h-20 top-0 bg-blue-200 flex items-center justify-between px-8 py-2 fixed z-30">
-    </header>
-    <div class="w-screen h-screen bg-cover bg-no-repeat" style="background-image: url('../assets/img/Banner-Edukasi.png')">
-        <div class="mt-20 h-auto mx-10 sm:mx-20 lg:ml-40 2xl:ml-96 text-content header-title transition-opacity z-30 absolute top-1/2 transform -translate-y-40">
-          <h1 class="mb-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-none">
-            Edukasi
-          </h1>
-          <p class="mb-8 text-lg font-normal lg:text-xl z-30">
-            Mencegah Stunting Sejak Dini, Investasi Masa Depan
-          </p>
-        </div>
-      </div>
 
-    <div class="mt-4 mx-2 mb-2">
+    <header id="topHeader"
+        class="w-full h-20 top-0 bg-white/80 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-green-200">
+    </header>
+
+    <div class="bg-[url('../assets/img/banner.png')] h-[580px] bg-cover">
+        <div class="h-80 pt-40 mx-10 sm:ml-20 lg:ml-40 lg:mr-96 xl:mr-[640px] z-30">
+            <h1 class="mb-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-none">
+                Kalkulator Stunting
+            </h1>
+            <p class="mb-8 text-lg font-normal lg:text-xl z-30">
+                Untuk mendeteksi stunting pada anak dengan mudah hanya dengan memasukkan data antropometri anak, seperti
+                usia, jenis kelamin,
+                tinggi badan, dan berat badan.
+            </p>
+        </div>
+    </div>
+
+    <div class="mt-8 min-[430px]:-mt-64 mx-2">
         <div class="mb-12 mt-6 mx-12 flex flex-wrap gap-6 justify-center">
             <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
                 <a href="./education-detail.html">
@@ -158,12 +162,12 @@
                     </a>
                 </div>
             </div>
-            <div class="flex gap-4 mt-6">
-                <button id="btnSimpan" onclick="window.location.href = './education-detail.html'"
-                        class="text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">
-                  Lihat lebih banyak
-                </button>
-              </div>
+        </div>
+        <div class="flex justify-center mb-8">
+            <a href="./education.html"
+                class="w-44 text-gray-900 text-center bg-white border-2 border-green-400 focus:outline-none hover:bg-green-300 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-md px-5 py-2.5">
+                Lihat lebih banyak
+            </a>
         </div>
     </div>
 

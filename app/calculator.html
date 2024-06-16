@@ -13,8 +13,12 @@
 </head>
 
 <body>
+    <div
+        class="fixed bg-[url('../assets/img/bg.jpg')] bg-slate-300 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
+    </div>
+
     <header id="topHeader"
-        class="w-full h-20 top-0 bg-white/40 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-green-200">
+        class="w-full h-20 top-0 bg-white/80 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-green-200">
     </header>
 
     <div class="bg-[url('../assets/img/banner.png')] h-[580px] bg-cover">
@@ -30,9 +34,9 @@
         </div>
     </div>
 
-    <section class="flex flex-col justify-center antialiased h-full my-6">
+    <section class="flex flex-col justify-center antialiased h-full -mt-40 min-[430px]:-mt-64 mb-6">
         <div class="w-10/12 lg:w-8/12 xl:w-6/12 mx-auto">
-            <div class="bg-white shadow-lg rounded-lg my-12">
+            <div class="bg-green-100 shadow-lg rounded-xl my-12">
                 <form id="calculator" class="w-8/12 lg:w-6/12 mx-auto flex flex-col gap-4 py-8">
                     <div>
                         <label for="age" class="block mb-2 text-sm font-semibold text-gray-900">Jenis
@@ -124,7 +128,8 @@
                         </button>
                     </div>
                 </form>
-                <div id="calculatorResult" class="w-11/12 mx-auto flex flex-col gap-4 pb-8 hidden">
+                
+                <div id="calculatorResult" class="w-11/12 mx-auto flex flex-col gap-4 p-8 hidden">
                     <div>
                         <h3 class="text-lg font-semibold text-gray-900 mb-1">Perbandingan Data Anak Berjenis Kelamin
                             Laki-Laki dengan Referensi WHO</h3>
@@ -161,7 +166,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="h-full bg-blue-500/30 shadow-lg rounded-lg my-6 px-4 py-6">
+                        <div class="h-full bg-green-500/30 shadow-lg rounded-lg my-6 px-4 py-6">
                             <h3 class="text-lg font-semibold text-gray-900 mb-1">Berat Anak: <span
                                     class="text-red-500">10kg, Berat Badan Kurang</span></h3>
                             <p class="mb-4">Berat badan anak di bawah rata-rata. Anak perlu diberi asupan gizi yang
@@ -177,7 +182,7 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="h-full bg-blue-500/30 shadow-lg rounded-lg my-6 px-4 py-6">
+                        <div class="h-full bg-green-500/30 shadow-lg rounded-lg my-6 px-4 py-6">
                             <h3 class="text-lg font-semibold text-gray-900 mb-1">Tinggi Anak: <span
                                     class="text-red-500">75cm, Teridentifikasi Stunting</span></h3>
                             <p class="mb-4">Tinggi badan anak masih kurang. Anak memerlukan asupan gizi yang cukup untuk
@@ -193,7 +198,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="flex justify-center mt-4 max-md:flex-col">
+                    <div class="flex justify-center max-md:flex-col">
                         <button type="button" onclick="calcAgain()"
                             class="w-full md:w-6/12 text-gray-900 text-center bg-white/70 border-2 border-green-400 focus:outline-none hover:bg-green-300/30 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-md px-5 py-2.5">
                             Kembali
