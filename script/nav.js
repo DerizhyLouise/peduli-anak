@@ -29,7 +29,7 @@ const showNavbar = () => {
                     </li>
                     <li id="edukasi"
                         class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <a href="./education.html" class="flex items-center">
+                        <button id="dropdownEdu1" data-dropdown-toggle="dropdownEdu2" class="flex items-center">
                             Edukasi
                             <svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 10 6">
@@ -40,7 +40,7 @@ const showNavbar = () => {
                     </li>
                     <li id="publikasi"
                         class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <a href="./publication.html" class="flex items-center">
+                        <button id="dropdownPub1" data-dropdown-toggle="dropdownPub2" class="flex items-center">
                             Publikasi
                             <svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 10 6">
@@ -50,27 +50,50 @@ const showNavbar = () => {
                         </a>
                     </li>
                     <li class="flex items-center ml-4">
-                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button">
-                            <img class="w-12 h-12 border-2 border-green-500 rounded-full"
-                                src="../assets/img/avatar1.jpg" alt="Avatar">
+                        <button id="setting1" data-dropdown-toggle="dropdown2" type="button" class="text-2xl hover:text-green-500">
+                            <i class="fa-solid fa-gear"></i>
                         </button>
                     </li>
                 </ul>
             </nav>
             <div class="flex justify-end w-6/12 lg:hidden">
                 <button class="text-2xl hover:text-green-500 duration-200" type="button"
-                    data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+                    data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" data-drawer-placement="right"
                     aria-controls="drawer-navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
-            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-20">
-                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+            <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
+                <ul class="py-2 text-sm text-gray-700" aria-labelledby="setting1">
                     <li>
-                        <a href="./profile.html" class="block px-4 py-2 hover:bg-gray-100">Profil</a>
+                        <a href="./profile.html" class="block px-4 py-2 hover:bg-green-300">Pengaturan</a>
                     </li>
                     <li>
-                        <a href="./login.html" class="block px-4 py-2 hover:bg-gray-100">Keluar</a>
+                        <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-green-300">Keluar</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="dropdownEdu2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-32 mt-4">
+                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownEdu1">
+                    <li>
+                        <a href="./education.html"
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Edukasi</a>
+                    </li>
+                    <li>
+                        <a href="./education-dashboard.html"
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Dasbor Edukasi</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="dropdownPub2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-32 mt-4">
+                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownPub1">
+                    <li>
+                        <a href="./publication.html"
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Publikasi</a>
+                    </li>
+                    <li>
+                        <a href="./publication-dashboard.html"
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Dasbor Publikasi</a>
                     </li>
                 </ul>
             </div>
@@ -106,24 +129,26 @@ const showNavbar = () => {
                         <a href="./publication.html">Publikasi</a>
                     </li>
                     <li class="flex items-center ml-4">
-                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button">
-                            <img class="w-12 h-12 border-2 border-green-500 rounded-full"
-                                src="../assets/img/avatar1.jpg" alt="Avatar">
+                        <button id="setting1" data-dropdown-toggle="dropdown2" type="button" class="text-2xl hover:text-green-500">
+                            <i class="fa-solid fa-gear"></i>
                         </button>
                     </li>
                 </ul>
             </nav>
             <div class="flex justify-end w-6/12 lg:hidden">
                 <button class="text-2xl hover:text-green-500 duration-200" type="button"
-                    data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+                    data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" data-drawer-placement="right"
                     aria-controls="drawer-navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
-            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-20">
-                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+            <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
+                <ul class="py-2 text-sm text-gray-700" aria-labelledby="setting1">
                     <li>
-                        <a href="./login.html" class="block px-4 py-2 hover:bg-gray-100">Masuk</a>
+                        <a href="./profile.html" class="block px-4 py-2 hover:bg-green-300">Pengaturan</a>
+                    </li>
+                    <li>
+                        <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-green-300">Keluar</button>
                     </li>
                 </ul>
             </div>
@@ -133,7 +158,7 @@ const showNavbar = () => {
     if (role != "admin" && role != "nakes") {
         navbar.innerHTML = `
             <div id="drawer-navigation"
-                class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64"
+                class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-64"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
                 <div class="border-b-4 border-green-300 pb-2 p-2">
                     <a href="./index.html">
@@ -207,6 +232,18 @@ const showNavbar = () => {
                             </a>
                         </li>
                         <li>
+                            <a href="./profile.html"
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 512 512">
+                                    <path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/>
+                                </svg>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Pengaturan</span>
+                            </a>
+                        </li>
+
+                        <li>
                             <a href="./login.html"
                                 class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
@@ -239,7 +276,7 @@ const showNavbar = () => {
     } else {
         navbar.innerHTML = `
             <div id="drawer-navigation"
-                class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64"
+                class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-64"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
                 <div class="border-b-4 border-green-300 pb-2 p-2">
                     <a href="./index.html">
@@ -339,8 +376,8 @@ const showNavbar = () => {
                                         class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Publikasi</a>
                                 </li>
                                 <li>
-                                    <a href="#"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Unggah Publikasi</a>
+                                    <a href="./publication-dashboard.html"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Dasbor Publikasi</a>
                                 </li>
                             </ul>
                         </li>
@@ -494,6 +531,11 @@ const showFooter = () => {
 
     body.appendChild(footer);
 };
+
+const logout = () => {
+    sessionStorage.removeItem("role");
+    window.location.href = "./login.html"
+}
 
 showNavbar();
 showFooter();
