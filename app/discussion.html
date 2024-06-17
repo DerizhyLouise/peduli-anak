@@ -23,20 +23,34 @@
     </style>
 </head>
 
-<body class="bg-gray-100">
-    <div
-        class="fixed top-5 bg-[url('../assets/img/bg.jpg')] bg-gray-600 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
+<body>
+    <div class="fixed bg-[url('../assets/img/bg.jpg')] bg-slate-300 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
     </div>
-    <header id="topHeader" class="w-full h-20 top-0 bg-blue-200 flex items-center justify-between px-8 py-2 fixed z-30">
+
+    <header id="topHeader"
+        class="w-full h-20 top-0 bg-white/80 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-green-200">
     </header>
-    <div class="w-full bg-blue-200">
-        <div class="mt-20 h-40 mx-10 sm:mx-20 lg:ml-40 2xl:ml-96 text-content header-title transition-opacity z-30">
+
+    <div class="bg-[url('../assets/img/banner.png')] h-[580px] bg-cover">
+        <div class="h-80 pt-40 mx-10 sm:ml-20 lg:ml-40 lg:mr-96 xl:mr-[640px] z-30">
             <h1 class="mb-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-none">
                 Forum Diskusi
             </h1>
             <p class="mb-8 text-lg font-normal lg:text-xl z-30">
-                Mari kita saling berbagi pengalaman dan pengetahuan!
+                Mari terhubung dalam mencari informasi dan jawaban
+                dari pertanyaan terkait stunting.
             </p>
+            <div class="flex">
+                <p class="mb-2 text-lg font-normal lg:text-xl z-30">
+                    Cari topik yang Anda inginkan
+                </p>
+                <img src="../assets/svg/down-arrow.svg" class="w-4 h-4 text-black ml-2 mt-2">
+            </div>
+            <div class="flex md:w-96 ">
+                <input type="text" id="title"
+                    class="rounded-sm border-2 border-green-400 text-gray-900 focus:ring-green-500 focus:border-green-400 flex-1 min-w-0 w-full text-sm p-2.5"
+                    placeholder="Judul/Topik">
+            </div>
         </div>
     </div>
 
@@ -54,20 +68,21 @@
                         <div class="flex flex-col flex-grow xl:ml-4 gap-4">
                             <div class="flex">
                                 <input type="text" id="title"
-                                    class="rounded-sm border-2 border-green-500 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                    class="rounded-sm border-2 border-green-400 text-gray-900 focus:ring-green-500 focus:border-green-400 block flex-1 min-w-0 w-full text-sm p-2.5"
                                     placeholder="Judul/Topik">
                             </div>
                             <div class="flex flex-col flex-grow w-full">
                                 <textarea type="text" id="title"
-                                    class="rounded-sm border-2 border-green-500 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                                    class="rounded-sm border-2 border-green-400 text-gray-900 focus:ring-green-500 focus:border-green-400 block flex-1 min-w-0 w-full text-sm p-2.5"
                                     placeholder="Komentar..."></textarea>
                                 <div class="flex flex-col xl:flex-row xl:justify-between mt-2 gap-2">
                                     <input
-                                        class="block w-full xl:w-80 text-sm text-gray-900 border border-green-500 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-4 focus:ring-green-300"
+                                        class="block w-full xl:w-80 text-sm text-gray-900 border border-green-400 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-4 focus:ring-green-300"
                                         id="multiple_files" type="file" multiple>
                                     <button type="button"
-                                        class="w-full xl:w-40 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-1">Buat
-                                        Diskusi</button>
+                                        class="w-full xl:w-40 text-gray-900 text-center bg-white/70 border-2 border-green-400 focus:outline-none hover:bg-green-300/30 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-md px-5 py-1">
+                                        Kirim
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +94,7 @@
         <div class="mt-4 mx-2 mb-2">
             <div class="flex justify-center mt-4">
                 <div class="w-9/12 md:w-6/12 bg-white rounded-lg shadow-lg flex h-full flex flex-col">
-                    <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-500 gap-2">
+                    <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-400 gap-2">
                         <div class="flex items-start gap-2.5 w-full">
                             <img class="w-12 h-12 rounded-full" src="../assets/img/avatar2.jpg" alt="avatar">
                             <div class="flex flex-col">
@@ -152,7 +167,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-500 gap-2">
+                    <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-400 gap-2">
                         <div class="flex items-start gap-2.5 w-full">
                             <img class="w-12 h-12 rounded-full" src="../assets/img/avatar3.jpg" alt="avatar">
                             <div class="flex flex-col">
@@ -196,7 +211,7 @@
                             Kira-kira ada tambahan?
                         </p>
                         <div>
-                            <img src="../assets/img/edukasi1.jpg" alt="Diskusi">
+                            <img src="../assets/img/edu2.jpg" alt="Diskusi">
                         </div>
 
                         <div class="flex flex-row space-x-2">
@@ -231,7 +246,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-500 gap-2">
+                    <div class="flex flex-col items-start m-4 pb-6 border-b-2 border-green-400 gap-2">
                         <div class="flex items-start gap-2.5 w-full">
                             <img class="w-12 h-12 rounded-full" src="../assets/img/avatar2.jpg" alt="avatar">
                             <div class="flex flex-col">

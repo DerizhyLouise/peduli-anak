@@ -13,31 +13,30 @@
 </head>
 
 <body>
-    <div
-        class="fixed top-5 bg-[url('../assets/img/bg.jpg')] bg-gray-600 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
+    <div class="fixed bg-[url('../assets/img/bg.jpg')] bg-slate-300 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
     </div>
-    <header id="topHeader" class="w-full h-20 top-0 bg-blue-200 flex items-center justify-between px-8 py-2 fixed z-30">
+
+    <header id="topHeader"
+        class="w-full h-20 top-0 bg-white/80 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-green-200">
     </header>
-    <div class="w-full bg-blue-200">
-        <div class="mt-20 h-40 mx-10 sm:mx-20 lg:ml-40 2xl:ml-96 text-content header-title transition-opacity z-30">
+
+    <div class="bg-[url('../assets/img/banner.png')] h-[580px] bg-cover">
+        <div class="h-80 pt-40 mx-10 sm:ml-20 lg:ml-40 lg:mr-96 xl:mr-[640px] z-30">
             <h1 class="mb-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-none">
                 Kalkulator Stunting
             </h1>
             <p class="mb-8 text-lg font-normal lg:text-xl z-30">
-                Alat deteksi stunting pada balita!
+                Untuk mendeteksi stunting pada anak dengan mudah hanya dengan memasukkan data antropometri anak, seperti
+                usia, jenis kelamin,
+                tinggi badan, dan berat badan.
             </p>
         </div>
     </div>
 
-    <section class="flex flex-col justify-center antialiased h-full my-6">
+    <section class="flex flex-col justify-center antialiased h-full -mt-40 min-[430px]:-mt-64 mb-6">
         <div class="w-10/12 lg:w-8/12 xl:w-6/12 mx-auto">
-            <div class="bg-white shadow-lg rounded-lg my-12">
-                <header class="text-center px-5 pb-5">
-                    <img class="inline-flex -mt-9 w-[72px] h-[72px] fill-current rounded-full border-4 border-white box-content shadow mb-3"
-                        src="../assets/img/avatar1.jpg" alt="avatar">
-                    <h3 id="calcTitle" class="text-xl font-bold text-gray-900 mb-1">Kalkulator Stunting</h3>
-                </header>
-                <form id="calculator" class="w-8/12 lg:w-6/12 mx-auto flex flex-col gap-4 pb-8">
+            <div class="bg-green-100 shadow-lg rounded-xl my-12">
+                <form id="calculator" class="w-8/12 lg:w-6/12 mx-auto flex flex-col gap-4 py-8">
                     <div>
                         <label for="age" class="block mb-2 text-sm font-semibold text-gray-900">Jenis
                             Kelamin</label>
@@ -121,12 +120,15 @@
                     </div>
                     <div class="flex gap-4 mt-4 max-md:flex-col">
                         <button type="button"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Bersihkan Form</button>
+                            class="w-full md:w-6/12 text-gray-900 text-center bg-white/70 border-2 border-red-400 focus:outline-none hover:bg-red-300/30 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5">Reset</button>
                         <button type="button" onclick="submitResult()"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Hitung</button>
+                            class="w-full md:w-6/12 text-gray-900 text-center bg-white/70 border-2 border-green-400 focus:outline-none hover:bg-green-300/30 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                            Kirim
+                        </button>
                     </div>
                 </form>
-                <div id="calculatorResult" class="w-11/12 mx-auto flex flex-col gap-4 pb-8 hidden">
+
+                <div id="calculatorResult" class="w-11/12 mx-auto flex flex-col gap-4 p-8 hidden">
                     <div>
                         <h3 class="text-lg font-semibold text-gray-900 mb-1">Perbandingan Data Anak Berjenis Kelamin
                             Laki-Laki dengan Referensi WHO</h3>
@@ -163,13 +165,13 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="h-full bg-blue-500/30 shadow-lg rounded-lg my-6 px-4 py-6">
+                        <div class="h-full bg-green-500/30 shadow-lg rounded-lg my-6 px-4 py-6">
                             <h3 class="text-lg font-semibold text-gray-900 mb-1">Berat Anak: <span
                                     class="text-red-500">10kg, Berat Badan Kurang</span></h3>
                             <p class="mb-4">Berat badan anak di bawah rata-rata. Anak perlu diberi asupan gizi yang
                                 lebih untuk
                                 menaikkan berat badan.</p>
-                            <a href="./education-detail.html"
+                            <a href="./education-detail-wasting.html"
                                 class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">
                                 Pelajari
                                 <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
@@ -179,11 +181,12 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="h-full bg-blue-500/30 shadow-lg rounded-lg my-6 px-4 py-6">
+                        <div class="h-full bg-green-500/30 shadow-lg rounded-lg my-6 px-4 py-6">
                             <h3 class="text-lg font-semibold text-gray-900 mb-1">Tinggi Anak: <span
                                     class="text-red-500">75cm, Teridentifikasi Stunting</span></h3>
-                            <p class="mb-4">Tinggi badan anak masih kurang. Anak memerlukan asupan gizi yang cukup untuk meningkatkan pertumbuhan tinggi badan anak.</p>
-                            <a href="./education-detail.html"
+                            <p class="mb-4">Tinggi badan anak masih kurang. Anak memerlukan asupan gizi yang cukup untuk
+                                meningkatkan pertumbuhan tinggi badan anak.</p>
+                            <a href="./education-detail-stunting.html"
                                 class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">
                                 Pelajari
                                 <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
@@ -194,10 +197,11 @@
                             </a>
                         </div>
                     </div>
-                    <div class="flex justify-center mt-4 max-md:flex-col">
+                    <div class="flex justify-center max-md:flex-col">
                         <button type="button" onclick="calcAgain()"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Hitung
-                            ulang?</button>
+                            class="w-full md:w-6/12 text-gray-900 text-center bg-white/70 border-2 border-green-400 focus:outline-none hover:bg-green-300/30 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-md px-5 py-2.5">
+                            Kembali
+                        </button>
                     </div>
                 </div>
             </div>
