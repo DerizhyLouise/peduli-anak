@@ -13,9 +13,6 @@
 </head>
 
 <body>
-    <div class="fixed bg-[url('../assets/img/bg.jpg')] bg-slate-300 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
-    </div>
-
     <header id="topHeader"
         class="w-full h-20 top-0 bg-white/80 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-green-200">
     </header>
@@ -23,22 +20,55 @@
     <div class="bg-[url('../assets/img/banner.png')] h-[580px] bg-cover">
         <div class="h-80 pt-40 mx-10 sm:ml-20 lg:ml-40 lg:mr-96 xl:mr-[640px] z-30">
             <h1 class="mb-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-none">
-                Kalkulator Stunting
+                Edukasi
             </h1>
             <p class="mb-8 text-lg font-normal lg:text-xl z-30">
-                Untuk mendeteksi stunting pada anak dengan mudah hanya dengan memasukkan data antropometri anak, seperti
-                usia, jenis kelamin,
-                tinggi badan, dan berat badan.
+                Tiada kata terlambat untuk belajar. Temukan konten edukasi menarik untuk melawan stunting!
             </p>
+            <div class="flex">
+                <p class="mb-2 text-lg font-normal lg:text-xl z-30">
+                    Cari konten yang Anda inginkan
+                </p>
+                <img src="../assets/svg/down-arrow.svg" class="w-4 h-4 text-black ml-2 mt-2">
+            </div>
+            <div class="flex md:w-96 ">
+                <input type="text" id="title"
+                    class="rounded-sm border-2 border-green-400 text-gray-900 focus:ring-green-500 focus:border-green-400 flex-1 min-w-0 w-full text-sm p-2.5"
+                    placeholder="Judul/Topik">
+            </div>
         </div>
     </div>
 
-    <div class="mt-8 min-[430px]:-mt-64 mx-2">
+    <div class="mt-8 mt-8 mx-2">
         <div class="mb-12 mt-6 mx-12 flex flex-wrap gap-6 justify-center">
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
-                <a href="./education-detail.html">
-                    <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
-                </a>
+            <div class="w-80">
+                <div class="border border-slate-800">
+                    <a href="./education-detail.html">
+                        <img class="w-80 h-60" src="../assets/img/edu1.jpg" alt="Edukasi" />
+                    </a>
+                </div>
+                <div class="p-5">
+                    <a href="./education-detail.html">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Bahaya Stunting</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700">Kenali bahaya stunting di sini.</p>
+                    <a href="./education-detail.html"
+                        class="inline-flex items-center text-sm text-green-500 font-bold hover:text-green-700">
+                        Pelajari
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="w-80">
+                <div class="border border-slate-800">
+                    <a href="./education-detail.html">
+                        <img class="w-80 h-60" src="../assets/img/edu2.jpg" alt="Edukasi" />
+                    </a>
+                </div>
                 <div class="p-5">
                     <a href="./education-detail.html">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Apa itu
@@ -47,7 +77,7 @@
                     <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang
                         stunting hingga cara mengatasinya.</p>
                     <a href="./education-detail.html"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
+                        class="inline-flex items-center text-sm text-green-500 font-bold hover:text-green-700">
                         Pelajari
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -57,18 +87,19 @@
                     </a>
                 </div>
             </div>
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-                <a href="./education-detail.html">
-                    <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
-                </a>
+            <div class="w-80">
+                <div class="border border-slate-800">
+                    <a href="./education-detail.html">
+                        <img class="w-80 h-60" src="../assets/img/edu3.jpg" alt="Edukasi" />
+                    </a>
+                </div>
                 <div class="p-5">
                     <a href="./education-detail.html">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Penyebab Stunting</h5>
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Pertumbuhan Balita</h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang
-                        stunting hingga cara mengatasinya.</p>
+                    <p class="mb-3 font-normal text-gray-700">Petumbuhan balita terdiri dari beberapa tahap.</p>
                     <a href="./education-detail.html"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
+                        class="inline-flex items-center text-sm text-green-500 font-bold hover:text-green-700">
                         Pelajari
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -78,18 +109,21 @@
                     </a>
                 </div>
             </div>
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-                <a href="./education-detail.html">
-                    <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
-                </a>
+            <div class="w-80">
+                <div class="border border-slate-800">
+                    <a href="./education-detail.html">
+                        <img class="w-80 h-60" src="../assets/img/edu4.jpg" alt="Edukasi" />
+                    </a>
+                </div>
                 <div class="p-5">
                     <a href="./education-detail.html">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Dampak Stunting</h5>
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Pentingnya Edukasi pada Anak
+                        </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang
-                        stunting hingga cara mengatasinya.</p>
+                    <p class="mb-3 font-normal text-gray-700">Anak sangat membutuhkan edukasi. Edukasi seperti apa saja
+                        kah itu?</p>
                     <a href="./education-detail.html"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
+                        class="inline-flex items-center text-sm text-green-500 font-bold hover:text-green-700">
                         Pelajari
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -99,18 +133,20 @@
                     </a>
                 </div>
             </div>
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-                <a href="./education-detail.html">
-                    <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
-                </a>
-                <div class="p-5">
-                    <a href="./education-detail.html">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Pencegahan Stunting</h5>
+            <div class="w-80">
+                <div class="border border-slate-800">
+                    <a href="./education-detail-wasting.html">
+                        <img class="w-80 h-60" src="../assets/img/edu5.jpg" alt="Edukasi" />
                     </a>
-                    <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang
-                        stunting hingga cara mengatasinya.</p>
-                    <a href="./education-detail.html"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
+                </div>
+                <div class="p-5">
+                    <a href="./education-detail-wasting.html">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Bagaimana Cara Meningkatkan
+                            Berat Badan Anak?</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700">Berat badan anak kurang? Tenang, kami punya solusinya!</p>
+                    <a href="./education-detail-wasting.html"
+                        class="inline-flex items-center text-sm text-green-500 font-bold hover:text-green-700">
                         Pelajari
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -120,39 +156,21 @@
                     </a>
                 </div>
             </div>
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-                <a href="./education-detail.html">
-                    <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
-                </a>
-                <div class="p-5">
-                    <a href="./education-detail.html">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Penanganan Stunting</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang
-                        stunting hingga cara mengatasinya.</p>
-                    <a href="./education-detail.html"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
-                        Pelajari
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
+            <div class="w-80">
+                <div class="border border-slate-800">
+                    <a href="./education-detail-stunting.html">
+                        <img class="w-80 h-60" src="../assets/img/edu6.jpg" alt="Edukasi" />
                     </a>
                 </div>
-            </div>
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-                <a href="./education-detail.html">
-                    <img class="rounded-t-lg" src="../assets/img/edukasi1.jpg" alt="Edukasi" />
-                </a>
                 <div class="p-5">
-                    <a href="./education-detail.html">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Pencegahan Stunting</h5>
+                    <a href="./education-detail-stunting.html">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Bagaimana Cara Meningkatkan
+                            Tinggi Badan Anak?</h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang
-                        stunting hingga cara mengatasinya.</p>
-                    <a href="./education-detail.html"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
+                    <p class="mb-3 font-normal text-gray-700">Tinggi badan anak kurang? Tenang, kami punya solusinya!
+                    </p>
+                    <a href="./education-detail-stunting.html"
+                        class="inline-flex items-center text-sm text-green-500 font-bold hover:text-green-700">
                         Pelajari
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
