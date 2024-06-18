@@ -1,12 +1,12 @@
 const showNavbar = () => {
-    const role = sessionStorage.getItem("role");
+	const role = sessionStorage.getItem("role");
 
-    const body = document.getElementsByTagName("body")[0];
-    const header = document.getElementById("topHeader");
-    const navbar = document.createElement("div");
+	const body = document.getElementsByTagName("body")[0];
+	const header = document.getElementById("topHeader");
+	const navbar = document.createElement("div");
 
-    if (role && role != "user") {
-        header.innerHTML += `
+	if (role && role != "user") {
+		header.innerHTML += `
             <div class="w-40">
                 <a href="./index.html">
                     <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto py-4">
@@ -98,8 +98,8 @@ const showNavbar = () => {
                 </ul>
             </div>
         `;
-    } else {
-        header.innerHTML += `
+	} else {
+		header.innerHTML += `
             <div class="w-40">
                 <a href="./index.html">
                     <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto py-4">
@@ -153,10 +153,10 @@ const showNavbar = () => {
                 </ul>
             </div>
         `;
-    }
+	}
 
-    if (role != "admin" && role != "nakes") {
-        navbar.innerHTML = `
+	if (role != "admin" && role != "nakes") {
+		navbar.innerHTML = `
             <div id="drawer-navigation"
                 class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-64"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
@@ -273,8 +273,8 @@ const showNavbar = () => {
                 </div>
             </div>
         `;
-    } else {
-        navbar.innerHTML = `
+	} else {
+		navbar.innerHTML = `
             <div id="drawer-navigation"
                 class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-64"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
@@ -411,19 +411,19 @@ const showNavbar = () => {
                 </div>
             </div>
         `;
-    }
+	}
 
-    body.appendChild(navbar);
+	body.appendChild(navbar);
 };
 
 const showFooter = () => {
-    const body = document.getElementsByTagName("body")[0];
-    const footer = document.createElement("footer");
-    footer.className = "bg-green-50 text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left";
+	const body = document.getElementsByTagName("body")[0];
+	const footer = document.createElement("footer");
+	footer.className = "bg-green-200 text-center text-surface/75 lg:text-left";
 
-    footer.innerHTML = `
+	footer.innerHTML = `
         <div
-            class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-white/10 lg:justify-between">
+            class="flex items-center justify-center border-b-2 border-gray-600 p-6 lg:justify-between">
             <div class="me-12 hidden lg:block">
                 <span>Temukan kami pada media sosial kami:</span>
             </div>
@@ -468,7 +468,6 @@ const showFooter = () => {
             </div>
         </div>
 
-        <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
         <div class="mx-6 py-10 text-center md:text-left">
             <div class="grid-1 grid gap-8 md:grid-cols-2">
                 <div class="">
@@ -523,19 +522,19 @@ const showFooter = () => {
             </div>
         </div>
 
-        <div class="bg-green-500/5 p-6 text-center">
+        <div class="bg-green-00 p-6 text-center">
             <span>© 2024 Copyright:</span>
             <a class="font-semibold" href="#">Peduli Anak</a>
         </div>
     `;
 
-    body.appendChild(footer);
+	body.appendChild(footer);
 };
 
 const logout = () => {
-    sessionStorage.removeItem("role");
-    window.location.href = "./login.html"
-}
+	sessionStorage.removeItem("role");
+	window.location.href = "./login.html";
+};
 
 showNavbar();
 showFooter();
