@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="fixed bg-[url('../assets/img/bg.jpg')] bg-slate-300 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
+    <div class="fixed bg-[url('../assets/img/bg.jpg')] bg-slate-200 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
     </div>
 
     <header id="topHeader"
@@ -92,7 +92,7 @@
                         <h2 class="text-2xl font-bold">3 Komentar</h2>
                         <div class="flex items-center">
                             <img class="w-8 h-8 rounded-full" src="../assets/img/avatar5.jpg" alt="avatar">
-                            <input type="text" name="name" placeholder="Tulis komentar..."
+                            <input type="text" name="name" placeholder="Tulis komentar..." onclick="checkRole()"
                                 class="pt-3 pb-2 block w-full px-0 mt-0 mx-4 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-green-500 border-gray-200" />
                             <button
                                 class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-50">
@@ -282,16 +282,16 @@
                 <div class="flex xl:flex-col gap-4 justify-center xl:items-center flex-wrap">
                     <div class="w-80 border-b-2 border-green-400">
                         <div class="border border-slate-800">
-                            <a href="./education-detail.html">
+                            <a href="./education-detail-bahaya.html">
                                 <img class="w-80 h-60" src="../assets/img/edu1.jpg" alt="Edukasi" />
                             </a>
                         </div>
                         <div class="p-5">
-                            <a href="./education-detail.html">
+                            <a href="./education-detail-bahaya.html">
                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Bahaya Stunting</h5>
                             </a>
                             <p class="mb-3 font-normal text-gray-700">Kenali bahaya stunting di sini.</p>
-                            <a href="./education-detail.html"
+                            <a href="./education-detail-bahaya.html"
                                 class="inline-flex items-center text-sm text-green-500 font-bold hover:text-green-700">
                                 Pelajari
                                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
@@ -424,8 +424,17 @@
                 </div>
             </div>
         </div>
-
     </div>
+
+    <script>
+        const role = sessionStorage.getItem("role");
+
+        const checkRole = () => {
+            if (!role) {
+                window.location.href = "./login.html"
+            }
+        }
+    </script>
 
     <script src="../script/main.js"></script>
     <script src="../script/nav.js"></script>
