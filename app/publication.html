@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,44 +13,42 @@
     <link rel="icon" href="../../assets/svg/logo.svg" type="image/svg+xml">
 
     <style>
-        .ellipsis-text-title {
+        .ellipsis-text {
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 19;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: normal;
         }
 
-        .ellipsis-text-desc {
-            display: -webkit-box;
-            -webkit-line-clamp: 8;
-            -webkit-box-orient: vertical;
+        .details>p {
+            font-size: .8em;
+            margin-top: .5em;
+        }
+
+        .details>label {
+            font-weight: bold;
+        }
+
+        .details {
+            color: white;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            transition: height .5s ease-in-out;
+            padding: 0.6em;
             overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: normal;
         }
 
-        .content {
-            width: calc(100% - 240px);
-        }
-
-        @media only screen and (max-width: 640px) {
-            .ellipsis-text-desc {
-                -webkit-line-clamp: 4;
-            }
-
-            .content {
-                width: calc(100% - 144px);
-            }
+        .card:hover>.details {
+            height: 100%;
         }
     </style>
 </head>
 
 <body>
-    <div class="fixed bg-[url('../assets/img/bg.jpg')] bg-slate-200 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
-    </div>
-
     <header id="topHeader"
         class="w-full h-20 top-0 bg-white/90 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-green-200">
     </header>
@@ -68,7 +67,7 @@
                 </p>
                 <img src="../assets/svg/down-arrow.svg" class="w-4 h-4 text-black ml-2 mt-2">
             </div>
-            <div class="flex md:w-96 ">
+            <div class="flex md:w-96">
                 <input type="text" id="title"
                     class="rounded-sm border-2 border-green-400 text-gray-900 focus:ring-green-500 focus:border-green-400 flex-1 min-w-0 w-full text-sm p-2.5"
                     placeholder="Judul/Topik">
@@ -76,197 +75,121 @@
         </div>
     </div>
 
-    <div class="mt-4 mx-2 mb-2">
-        <div
-            class="mb-12 mt-6 mx-4 md:mx-24 xl:mx-64 flex flex-wrap gap-6 justify-center bg-white shadow-lg rounded-lg">
-            <div class="m-8 flex gap-8 flex-col">
-                <div class="bg-white border border-gray-200 rounded-lg shadow-lg flex h-48 sm:h-80">
-                    <div class="h-48 sm:h-80 w-36 sm:w-60">
-                        <img class="rounded-l-lg h-48 sm:h-80 w-36 sm:w-60" src="../assets/img/pub1.png"
-                            alt="Publikasi" />
-                    </div>
-                    <div class="p-2 sm:p-5 content">
-                        <h5 class="mb-2 text-md sm:text-2xl font-bold tracking-tight text-gray-900 ellipsis-text-title">
-                            Stunting
-                            dan Gangguan Gizi Lainnya</h5>
-                        <p class="mb-3 font-normal text-xs sm:text-sm text-gray-700 overflow-hidden ellipsis-text-desc">
-                            DE-Book
-                            Stunting dan Gangguan Gizi Lainnya
-                            Indonesia masih menghadapi permasalahan gizi yang berdampak serius terhadap kualitas sumber
-                            daya manusia (SDM), salah satu masalah gizi yang menjadi perhatian utama saat ini adalah
-                            masih tingginya anak balita pendek (stunting). Balita stunting dinilai berdasarkan Tinggi
-                            Badan per Umur. Hasil Riset Kesehatan Dasar tahun 2013, prevalensi stunting di Indonesia
-                            mencapai 37,2%. Berdasarkan pemantauan status gizi tahun 2016 kejadian stunting 27,5%,
-                            kejadian stunting di Indonesia ini lebih tinggi dari batasan WHO yaitu 20%, sehingga dapat
-                            diartikan bahwa pertumbuhan yang tidak maksimal dialami oleh sekitar 8,9 juta anak Indonesia
-                            atau 1 dari 3 anak Indonesia mengalami stunting.</p>
-                        <a href="../assets/pdf/blank.pdf" target="_blank"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
-                            Unduh
-                            <svg class="w-5 h-5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white border border-gray-200 rounded-lg shadow-lg flex h-48 sm:h-80">
-                    <div class="h-48 sm:h-80 w-36 sm:w-60">
-                        <img class="rounded-l-lg h-48 sm:h-80 w-36 sm:w-60" src="../assets/img/pub1.png"
-                            alt="Publikasi" />
-                    </div>
-                    <div class="p-2 sm:p-5 content">
-                        <h5 class="mb-2 text-md sm:text-2xl font-bold tracking-tight text-gray-900 ellipsis-text-title">
-                            Stunting
-                            dan Gangguan Gizi Lainnya</h5>
-                        <p class="mb-3 font-normal text-xs sm:text-sm text-gray-700 overflow-hidden ellipsis-text-desc">
-                            DE-Book
-                            Stunting dan Gangguan Gizi Lainnya
-                            Indonesia masih menghadapi permasalahan gizi yang berdampak serius terhadap kualitas sumber
-                            daya manusia (SDM), salah satu masalah gizi yang menjadi perhatian utama saat ini adalah
-                            masih tingginya anak balita pendek (stunting). Balita stunting dinilai berdasarkan Tinggi
-                            Badan per Umur. Hasil Riset Kesehatan Dasar tahun 2013, prevalensi stunting di Indonesia
-                            mencapai 37,2%. Berdasarkan pemantauan status gizi tahun 2016 kejadian stunting 27,5%,
-                            kejadian stunting di Indonesia ini lebih tinggi dari batasan WHO yaitu 20%, sehingga dapat
-                            diartikan bahwa pertumbuhan yang tidak maksimal dialami oleh sekitar 8,9 juta anak Indonesia
-                            atau 1 dari 3 anak Indonesia mengalami stunting.</p>
-                        <a href="../assets/pdf/blank.pdf" target="_blank"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
-                            Unduh
-                            <svg class="w-5 h-5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white border border-gray-200 rounded-lg shadow-lg flex h-48 sm:h-80">
-                    <div class="h-48 sm:h-80 w-36 sm:w-60">
-                        <img class="rounded-l-lg h-48 sm:h-80 w-36 sm:w-60" src="../assets/img/pub1.png"
-                            alt="Publikasi" />
-                    </div>
-                    <div class="p-2 sm:p-5 content">
-                        <h5 class="mb-2 text-md sm:text-2xl font-bold tracking-tight text-gray-900 ellipsis-text-title">
-                            Stunting
-                            dan Gangguan Gizi Lainnya</h5>
-                        <p class="mb-3 font-normal text-xs sm:text-sm text-gray-700 overflow-hidden ellipsis-text-desc">
-                            DE-Book
-                            Stunting dan Gangguan Gizi Lainnya
-                            Indonesia masih menghadapi permasalahan gizi yang berdampak serius terhadap kualitas sumber
-                            daya manusia (SDM), salah satu masalah gizi yang menjadi perhatian utama saat ini adalah
-                            masih tingginya anak balita pendek (stunting). Balita stunting dinilai berdasarkan Tinggi
-                            Badan per Umur. Hasil Riset Kesehatan Dasar tahun 2013, prevalensi stunting di Indonesia
-                            mencapai 37,2%. Berdasarkan pemantauan status gizi tahun 2016 kejadian stunting 27,5%,
-                            kejadian stunting di Indonesia ini lebih tinggi dari batasan WHO yaitu 20%, sehingga dapat
-                            diartikan bahwa pertumbuhan yang tidak maksimal dialami oleh sekitar 8,9 juta anak Indonesia
-                            atau 1 dari 3 anak Indonesia mengalami stunting.</p>
-                        <a href="../assets/pdf/blank.pdf" target="_blank"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
-                            Unduh
-                            <svg class="w-5 h-5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white border border-gray-200 rounded-lg shadow-lg flex h-48 sm:h-80">
-                    <div class="h-48 sm:h-80 w-36 sm:w-60">
-                        <img class="rounded-l-lg h-48 sm:h-80 w-36 sm:w-60" src="../assets/img/pub1.png"
-                            alt="Publikasi" />
-                    </div>
-                    <div class="p-2 sm:p-5 content">
-                        <h5 class="mb-2 text-md sm:text-2xl font-bold tracking-tight text-gray-900 ellipsis-text-title">
-                            Stunting
-                            dan Gangguan Gizi Lainnya</h5>
-                        <p class="mb-3 font-normal text-xs sm:text-sm text-gray-700 overflow-hidden ellipsis-text-desc">
-                            DE-Book
-                            Stunting dan Gangguan Gizi Lainnya
-                            Indonesia masih menghadapi permasalahan gizi yang berdampak serius terhadap kualitas sumber
-                            daya manusia (SDM), salah satu masalah gizi yang menjadi perhatian utama saat ini adalah
-                            masih tingginya anak balita pendek (stunting). Balita stunting dinilai berdasarkan Tinggi
-                            Badan per Umur. Hasil Riset Kesehatan Dasar tahun 2013, prevalensi stunting di Indonesia
-                            mencapai 37,2%. Berdasarkan pemantauan status gizi tahun 2016 kejadian stunting 27,5%,
-                            kejadian stunting di Indonesia ini lebih tinggi dari batasan WHO yaitu 20%, sehingga dapat
-                            diartikan bahwa pertumbuhan yang tidak maksimal dialami oleh sekitar 8,9 juta anak Indonesia
-                            atau 1 dari 3 anak Indonesia mengalami stunting.</p>
-                        <a href="../assets/pdf/blank.pdf" target="_blank"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
-                            Unduh
-                            <svg class="w-5 h-5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white border border-gray-200 rounded-lg shadow-lg flex h-48 sm:h-80">
-                    <div class="h-48 sm:h-80 w-36 sm:w-60">
-                        <img class="rounded-l-lg h-48 sm:h-80 w-36 sm:w-60" src="../assets/img/pub1.png"
-                            alt="Publikasi" />
-                    </div>
-                    <div class="p-2 sm:p-5 content">
-                        <h5 class="mb-2 text-md sm:text-2xl font-bold tracking-tight text-gray-900 ellipsis-text-title">
-                            Stunting
-                            dan Gangguan Gizi Lainnya</h5>
-                        <p class="mb-3 font-normal text-xs sm:text-sm text-gray-700 overflow-hidden ellipsis-text-desc">
-                            DE-Book
-                            Stunting dan Gangguan Gizi Lainnya
-                            Indonesia masih menghadapi permasalahan gizi yang berdampak serius terhadap kualitas sumber
-                            daya manusia (SDM), salah satu masalah gizi yang menjadi perhatian utama saat ini adalah
-                            masih tingginya anak balita pendek (stunting). Balita stunting dinilai berdasarkan Tinggi
-                            Badan per Umur. Hasil Riset Kesehatan Dasar tahun 2013, prevalensi stunting di Indonesia
-                            mencapai 37,2%. Berdasarkan pemantauan status gizi tahun 2016 kejadian stunting 27,5%,
-                            kejadian stunting di Indonesia ini lebih tinggi dari batasan WHO yaitu 20%, sehingga dapat
-                            diartikan bahwa pertumbuhan yang tidak maksimal dialami oleh sekitar 8,9 juta anak Indonesia
-                            atau 1 dari 3 anak Indonesia mengalami stunting.</p>
-                        <a href="../assets/pdf/blank.pdf" target="_blank"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
-                            Unduh
-                            <svg class="w-5 h-5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white border border-gray-200 rounded-lg shadow-lg flex h-48 sm:h-80">
-                    <div class="h-48 sm:h-80 w-36 sm:w-60">
-                        <img class="rounded-l-lg h-48 sm:h-80 w-36 sm:w-60" src="../assets/img/pub1.png"
-                            alt="Publikasi" />
-                    </div>
-                    <div class="p-2 sm:p-5 content">
-                        <h5 class="mb-2 text-md sm:text-2xl font-bold tracking-tight text-gray-900 ellipsis-text-title">
-                            Stunting
-                            dan Gangguan Gizi Lainnya</h5>
-                        <p class="mb-3 font-normal text-xs sm:text-sm text-gray-700 overflow-hidden ellipsis-text-desc">
-                            DE-Book
-                            Stunting dan Gangguan Gizi Lainnya
-                            Indonesia masih menghadapi permasalahan gizi yang berdampak serius terhadap kualitas sumber
-                            daya manusia (SDM), salah satu masalah gizi yang menjadi perhatian utama saat ini adalah
-                            masih tingginya anak balita pendek (stunting). Balita stunting dinilai berdasarkan Tinggi
-                            Badan per Umur. Hasil Riset Kesehatan Dasar tahun 2013, prevalensi stunting di Indonesia
-                            mencapai 37,2%. Berdasarkan pemantauan status gizi tahun 2016 kejadian stunting 27,5%,
-                            kejadian stunting di Indonesia ini lebih tinggi dari batasan WHO yaitu 20%, sehingga dapat
-                            diartikan bahwa pertumbuhan yang tidak maksimal dialami oleh sekitar 8,9 juta anak Indonesia
-                            atau 1 dari 3 anak Indonesia mengalami stunting.</p>
-                        <a href="../assets/pdf/blank.pdf" target="_blank"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">
-                            Unduh
-                            <svg class="w-5 h-5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+    <div class="mx-6 my-12 flex flex-wrap gap-14 justify-center">
+        <div class="card shadow-2xl relative w-72 h-[440px]">
+            <div class="w-full">
+                <a href="../assets/pdf/blank.pdf" target="_blank"
+                    class="z-10 bottom-0 -right-7 absolute inline-flex items-center p-2 text-white bg-green-500 rounded-full hover:bg-green-700">
+                    <svg class="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                    </svg>
+                </a>
+                <img src="../assets/img/pub1.png">
+            </div>
+            <div class="details h-16 bg-black/70">
+                <label>Stunting dan Gangguan Gizi Lainnya</label>
+                <p class="ellipsis-text">
+                    Indonesia masih menghadapi permasalahan gizi yang berdampak serius terhadap kualitas sumber
+                    daya manusia (SDM), salah satu masalah gizi yang menjadi perhatian utama saat ini adalah
+                    masih tingginya anak balita pendek (stunting). Balita stunting dinilai berdasarkan Tinggi
+                    Badan per Umur. Hasil Riset Kesehatan Dasar tahun 2013, prevalensi stunting di Indonesia
+                    mencapai 37,2%. Berdasarkan pemantauan status gizi tahun 2016 kejadian stunting 27,5%,
+                    kejadian stunting di Indonesia ini lebih tinggi dari batasan WHO yaitu 20%, sehingga dapat
+                    diartikan bahwa pertumbuhan yang tidak maksimal dialami oleh sekitar 8,9 juta anak Indonesia
+                    atau 1 dari 3 anak Indonesia mengalami stunting.
+                </p>
+            </div>
+        </div>
+        <div class="card shadow-2xl relative w-72 h-[440px]">
+            <div class="w-full">
+                <a href="../assets/pdf/blank.pdf" target="_blank"
+                    class="z-10 bottom-0 -right-7 absolute inline-flex items-center p-2 text-white bg-green-500 rounded-full hover:bg-green-700">
+                    <svg class="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                    </svg>
+                </a>
+                <img src="../assets/img/pub1.png">
+            </div>
+            <div class="details h-16 bg-black/70">
+                <label>Stunting dan Gangguan Gizi Lainnya</label>
+                <p class="ellipsis-text">
+                    Indonesia masih menghadapi permasalahan gizi yang berdampak serius terhadap kualitas sumber
+                    daya manusia (SDM), salah satu masalah gizi yang menjadi perhatian utama saat ini adalah
+                    masih tingginya anak balita pendek (stunting). Balita stunting dinilai berdasarkan Tinggi
+                    Badan per Umur. Hasil Riset Kesehatan Dasar tahun 2013, prevalensi stunting di Indonesia
+                    mencapai 37,2%. Berdasarkan pemantauan status gizi tahun 2016 kejadian stunting 27,5%,
+                    kejadian stunting di Indonesia ini lebih tinggi dari batasan WHO yaitu 20%, sehingga dapat
+                    diartikan bahwa pertumbuhan yang tidak maksimal dialami oleh sekitar 8,9 juta anak Indonesia
+                    atau 1 dari 3 anak Indonesia mengalami stunting.
+                </p>
             </div>
         </div>
 
-        <script src="../script/main.js"></script>
-        <script src="../script/nav.js"></script>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        <div class="card shadow-2xl relative w-72 h-[440px]">
+            <div class="w-full">
+                <a href="../assets/pdf/blank.pdf" target="_blank"
+                    class="z-10 bottom-0 -right-7 absolute inline-flex items-center p-2 text-white bg-green-500 rounded-full hover:bg-green-700">
+                    <svg class="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                    </svg>
+                </a>
+                <img src="../assets/img/pub1.png">
+            </div>
+            <div class="details h-16 bg-black/70">
+                <label>Stunting dan Gangguan Gizi Lainnya</label>
+                <p class="ellipsis-text">
+                    Indonesia masih menghadapi permasalahan gizi yang berdampak serius terhadap kualitas sumber
+                    daya manusia (SDM), salah satu masalah gizi yang menjadi perhatian utama saat ini adalah
+                    masih tingginya anak balita pendek (stunting). Balita stunting dinilai berdasarkan Tinggi
+                    Badan per Umur. Hasil Riset Kesehatan Dasar tahun 2013, prevalensi stunting di Indonesia
+                    mencapai 37,2%. Berdasarkan pemantauan status gizi tahun 2016 kejadian stunting 27,5%,
+                    kejadian stunting di Indonesia ini lebih tinggi dari batasan WHO yaitu 20%, sehingga dapat
+                    diartikan bahwa pertumbuhan yang tidak maksimal dialami oleh sekitar 8,9 juta anak Indonesia
+                    atau 1 dari 3 anak Indonesia mengalami stunting.
+                </p>
+            </div>
+        </div>
+        <div class="card shadow-2xl relative w-72 h-[440px]">
+            <div class="w-full">
+                <a href="../assets/pdf/pdf2.pdf" target="_blank"
+                    class="z-10 bottom-0 -right-7 absolute inline-flex items-center p-2 text-white bg-green-500 rounded-full hover:bg-green-700">
+                    <svg class="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                    </svg>
+                </a>
+                <img src="../assets/img/pub2.png">
+            </div>
+            <div class="details h-16 bg-black/70">
+                <label>Permasalahan Stunting dan Penyebabnya</label>
+                <p class="ellipsis-text">
+                    Masalah anak pendek (stunting) adalah salah satu permasalahan gizi yang menjadi fokus
+                    Pemerintah Indonesia, Stunting adalah status gizi yang didasarkan pada indeks PB/U atau TB/U
+                    dimana dalam standar antropometri penilaian status gizi anak, hasil pengukuran tersebut
+                    berada pada ambang batas (Z-Score) <-2 SD sampai dengan -3 SD (pendek) dan <-3 SD (sangat pendek).
+                        Stunting yang telah tejadi bila tidak diimbangi dengan catch-up growth (tumbuh kejar)
+                        mengakibatkan menurunnya pertumbuhan, masalah stunting merupakan masalah kesehatan masyarakat
+                        yang berhubungan dengan meningkatnya risiko kesakitan, kematian dan hambatan pada pertumbuhan
+                        baik motorik maupun mental. Melihat akan bahaya yang ditimbulkan akibat stunting, Pemerintah
+                        Indonesia berkomitmen menangani dan menurunkan Prevalensi stunting yang dibahas melalui rapat
+                        terbatas tentang Intervensi stunting yang di selenggarakan bersama ketua Tim Nasional Percepatan
+                        Penaggulangan Kemiskinan pada tahun 2017, bahwa pada rapat tersebut membahas tentang perlunya
+                        memperkuat koordinasi dan memperluas cakupan program yang dilakukan oleh Kementerian/Lembaga
+                        (K/L) terkait, untuk memperbaiki kualitas program guna menurunkan angka stunting disetiap
+                        wilayah yang sudah masuk kedalam desa prioritas. Dan juga untuk mengkaji kebijakan Fokus Gerakan
+                        perbaikan gizi ditujukan kepada kelompok 1000 hari pertama kehidupan, pada tatanan global
+                        disebut Scaling Up Nutrition (SUN).</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/main.js"></script>
+    <script src="../script/nav.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
 </html>
