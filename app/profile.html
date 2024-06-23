@@ -13,9 +13,6 @@
 </head>
 
 <body>
-    <div class="fixed bg-[url('../assets/img/bg.jpg')] bg-slate-200 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
-    </div>
-
     <header id="topHeader"
         class="w-full h-20 top-0 bg-white/90 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-green-200">
     </header>
@@ -35,7 +32,7 @@
         <div class="h-96 w-3/12 flex justify-center">
             <div class="card">
                 <div class="profile-pic">
-                    <img src="../assets/img/avatar1.jpg">
+                    <img id="pic"" src=" ../assets/img/avatar1.jpg">
                 </div>
                 <div class="bottom">
                     <div class="content">
@@ -43,13 +40,172 @@
                         <span class="about-me">Tenaga Kesehatan</span>
                     </div>
                     <div class="bottom-bottom">
-                        <button class="button">Edit Profile</button>
+                        <button class="button" onclick="changeProfile()">Ubah Profil</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="h-96 w-9/12 bg-white">
+        <div class="h-full w-9/12 flex flex-col gap-8">
+            <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-lg">
+                <div>
+                    <h2 class="text-4xl font-semibold mb-4">Data Diri</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="w-full flex">
+                                <label for="nama"
+                                    class="block text-md font-semibold text-gray-600 mb-1 w-1/4">Nama</label>
+                                <p class="profile-labels block text-md text-gray-600 mb-1 w-3/4">dr. Derizheese</label>
+                            </div>
+                            <input type="text" id="nama"
+                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                placeholder="Nama">
+                        </div>
+                        <div>
+                            <div class="w-full flex">
+                                <label for="email" class="block text-md font-semibold text-gray-600 mb-1 w-1/4">Alamat
+                                    Email</label>
+                                <p class="profile-labels block text-md text-gray-600 mb-1 w-3/4">nakes@mail.com</label>
+                            </div>
+                            <input type="email" id="email"
+                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                placeholder="Alamat Email">
+                        </div>
+                        <div>
+                            <div class="w-full flex">
+                                <label for="telepon" class="block text-md font-semibold text-gray-600 mb-1 w-1/4">Nomor
+                                    Telepon</label>
+                                <p class="profile-labels block text-md text-gray-600 mb-1 w-3/4">0899-9999-9999</label>
+                            </div>
+                            <input type="tel" id="telepon"
+                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                placeholder="Nomor Telepon">
+                        </div>
+                        <div>
+                            <div class="w-full flex">
+                                <label for="tanggal_lahir"
+                                    class="block text-md font-semibold text-gray-600 mb-1 w-1/4">Tanggal
+                                    Lahir</label>
+                                <p class="profile-labels block text-md text-gray-600 mb-1 w-3/4">01 Januari 2000</label>
+                            </div>
+                            <input type="date" id="tanggal_lahir"
+                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5">
+                        </div>
+                        <div>
+                            <div class="w-full flex">
+                                <label class="block text-md font-semibold text-gray-600 mb-1 w-1/4">Jenis
+                                    Kelamin</label>
+                                <p class="profile-labels block text-md text-gray-600 mb-1 w-3/4">Laki-laki</label>
+                            </div>
+                            <div class="profile-inputs mt-2">
+                                <label class="inline-flex items-center">
+                                    <input type="radio"
+                                        class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2"
+                                        name="jenis_kelamin" value="laki-laki">
+                                    <span class="ml-2">Laki-laki</span>
+                                </label>
+                                <label class="inline-flex items-center ml-6">
+                                    <input type="radio"
+                                        class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2"
+                                        name="jenis_kelamin" value="perempuan">
+                                    <span class="ml-2">Perempuan</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-full flex">
+                                <label for="alamat"
+                                    class="block text-md font-semibold text-gray-600 mb-1 w-1/4">Alamat</label>
+                                <p class="profile-labels block text-md text-gray-600 mb-1 w-3/4">Jl. Apa Saja
+                                    18A</label>
+                            </div>
+                            <textarea id="alamat"
+                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                placeholder="Alamat"></textarea>
+                        </div>
+                    </div>
+                    <!-- Tombol Simpan dan Batal -->
+                    <div class="profile-inputs flex gap-4 mt-6">
+                        <button id="btnBatal" onclick="showProfile()"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Batal</button>
+                        <button id="btnSimpan" onclick="my_modal_1.showModal()"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Simpan</button>
+                    </div>
+                </div>
+            </div>
 
+            <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-lg">
+                <div>
+                    <h2 class="text-4xl font-semibold mb-4">Data Tenaga Kesehatan</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="w-full flex">
+                                <label for="institut" class="block text-md font-semibold text-gray-600 mb-1 w-1/4">Nama
+                                    Institut</label>
+                                <p class="nakes-labels block text-md text-gray-600 mb-1 w-3/4">PT Peduli Anak,
+                                    Tbk</label>
+                            </div>
+                            <input type="text" id="institut"
+                                class="nakes-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                placeholder="Nama Institut">
+                        </div>
+                        <div>
+                            <div class="w-full flex">
+                                <label for="nip" class="block text-md font-semibold text-gray-600 mb-1 w-1/4">Nomor
+                                    Induk Pegawai</label>
+                                <p class="nakes-labels block text-md text-gray-600 mb-1 w-3/4">1234567890</label>
+                            </div>
+                            <input type="nip" id="nip"
+                                class="nakes-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                placeholder="NIP">
+                        </div>
+                    </div>
+                    <!-- Tombol Simpan dan Batal -->
+                    <div class="nakes-inputs flex gap-4 mt-6">
+                        <button id="btnBatal" onclick="showNakesProfile()"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Batal</button>
+                        <button id="btnSimpan" onclick="my_modal_1.showModal()"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Simpan</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-lg">
+                <div>
+                    <h2 class="text-4xl font-semibold mb-4">Ubah Kata Sandi</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="password_lama" class="block text-md font-semibold text-gray-600 mb-1">Kata
+                                Sandi
+                                Lama:</label>
+                            <input type="password" id="password_lama"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                placeholder="Kata Sandi Lama">
+                        </div>
+                        <div>
+                            <label for="password_baru" class="block text-md font-semibold text-gray-600 mb-1">Kata
+                                Sandi
+                                Baru:</label>
+                            <input type="password" id="password_baru"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                placeholder="Kata Sandi Baru">
+                        </div>
+                        <div>
+                            <label for="konfirmasi_password"
+                                class="block text-md font-semibold text-gray-600 mb-1">Konfirmasi Kata Sandi
+                                Baru:</label>
+                            <input type="password" id="konfirmasi_password"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                placeholder="Konfirmasi Kata Sandi Baru">
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-6">
+                        <button id="btnBatal"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Batal</button>
+                        <button id="btnSimpan" onclick="my_modal_1.showModal()"
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Simpan</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -58,8 +214,8 @@
             <h3 class="font-bold text-lg text-center">Perubahan Data Anda Berhasil Disimpan!</h3>
             <div class="modal-action w-full">
                 <form method="dialog" class="mt-4 w-full flex flex-col sm:flex-row sm:justify-center gap-4">
-                    <button
-                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Selesai</button>
+                    <button onclick="showProfile()"
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Selesai</button>
                 </form>
             </div>
         </div>
@@ -70,9 +226,9 @@
             <div class="modal-action w-full">
                 <form method="dialog" class="mt-4 w-full flex flex-col sm:flex-row sm:justify-center gap-4">
                     <button
-                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Tidak</button>
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Tidak</button>
                     <button onclick="my_modal_2.showModal()"
-                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 focus:outline-none hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">Ya</button>
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Ya</button>
                 </form>
             </div>
         </div>
@@ -83,34 +239,80 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script>
-        // Function to show menu detail
-        function showDetail(menuId) {
-            // Hide all menu details
-            document.querySelectorAll('.menu-detail').forEach(function (detail) {
-                detail.classList.add('hidden');
+        let mouseOverHandler, mouseOutHandler;
+
+        const changeProfile = () => {
+            const labels = document.querySelectorAll(".profile-labels");
+            labels.forEach(label => {
+                label.classList.add("hidden");
             });
-            // Remove 'active' class from all menu links
-            document.querySelectorAll('.menu-link').forEach(function (link) {
-                link.classList.remove('active');
+
+            const inputs = document.querySelectorAll(".profile-inputs");
+            inputs.forEach(input => {
+                input.classList.remove("hidden");
             });
-            // Show the selected menu detail
-            document.getElementById(menuId + '-detail').classList.remove('hidden');
-            // Add 'active' class to the clicked menu link
-            document.getElementById(menuId).classList.add('active');
+
+            const imgElement = document.getElementById("pic");
+            if (imgElement) {
+                mouseOverHandler = () => {
+                    imgElement.src = "../assets/img/avatar2.jpg";
+                };
+                mouseOutHandler = () => {
+                    imgElement.src = "../assets/img/avatar1.jpg";
+                };
+
+                imgElement.addEventListener("mouseover", mouseOverHandler);
+                imgElement.addEventListener("mouseout", mouseOutHandler);
+            }
         }
+
+        const showProfile = () => {
+            const labels = document.querySelectorAll(".profile-labels");
+            labels.forEach(label => {
+                label.classList.remove("hidden");
+            });
+
+            const inputs = document.querySelectorAll(".profile-inputs");
+            inputs.forEach(input => {
+                input.classList.add("hidden");
+            });
+
+            const imgElement = document.getElementById("pic");
+            if (imgElement) {
+                imgElement.removeEventListener("mouseover", mouseOverHandler);
+                imgElement.removeEventListener("mouseout", mouseOutHandler);
+            }
+        }
+
+        const showNakesProfile = () => {
+            const labels = document.querySelectorAll(".nakes-labels");
+            labels.forEach(label => {
+                label.classList.remove("hidden");
+            });
+
+            const inputs = document.querySelectorAll(".nakes-inputs");
+            inputs.forEach(input => {
+                input.classList.add("hidden");
+            });
+
+            const imgElement = document.getElementById("pic");
+            if (imgElement) {
+                imgElement.removeEventListener("mouseover", mouseOverHandler);
+                imgElement.removeEventListener("mouseout", mouseOutHandler);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            const inputs = document.querySelectorAll(".profile-inputs");
+            inputs.forEach(input => {
+                input.classList.add("hidden");
+            });
+        });
 
         const role = sessionStorage.getItem("role");
         if (!role) {
             window.location.href = "./login.html";
         }
-
-        const menu = document.getElementById("opMenu2");
-        if (role != "nakes") {
-            menu.className = "hidden";
-        }
-
-        // Show default menu detail
-        document.getElementById('menu1-detail').classList.remove('hidden');
     </script>
 </body>
 
