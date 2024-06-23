@@ -9,3 +9,13 @@ span,
 p {
 	font-family: Poppins;
 }
+
+
+.ellipsis-text {
+	display: -webkit-box;
+	-webkit-line-clamp: 19;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: normal;
+}
