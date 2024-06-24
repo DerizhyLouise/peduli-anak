@@ -9,7 +9,7 @@ const showNavbar = () => {
         header.innerHTML += `
             <div class="w-40">
                 <a href="./index.html">
-                    <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto py-4">
+                    <img src="../assets/img/logo_samping.png" alt="logo">
                 </a>
             </div>
 
@@ -108,7 +108,7 @@ const showNavbar = () => {
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
                 <div class="border-b-4 border-green-300 pb-2 p-2">
                     <a href="./index.html">
-                        <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto duration-200">
+                        <img src="../assets/img/logo_samping.png" alt="logo" class="h-20 w-auto duration-200">
                     </a>
                 </div>
                 <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mt-4">Menu</h5>
@@ -239,7 +239,7 @@ const showNavbar = () => {
         header.innerHTML += `
             <div class="w-40">
                 <a href="./index.html">
-                    <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto py-4">
+                    <img src="../assets/img/logo_samping.png" alt="logo">
                 </a>
             </div>
 
@@ -338,7 +338,7 @@ const showNavbar = () => {
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
                 <div class="border-b-4 border-green-300 pb-2 p-2">
                     <a href="./index.html">
-                        <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto duration-200">
+                        <img src="../assets/img/logo_samping.png" alt="logo" class="h-20 w-auto duration-200">
                     </a>
                 </div>
                 <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mt-4">Menu</h5>
@@ -469,7 +469,7 @@ const showNavbar = () => {
         header.innerHTML += `
             <div class="w-40">
                 <a href="./index.html">
-                    <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto py-4">
+                    <img src="../assets/img/logo_samping.png" alt="logo">
                 </a>
             </div>
 
@@ -530,7 +530,7 @@ const showNavbar = () => {
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
                 <div class="border-b-4 border-green-300 pb-2 p-2">
                     <a href="./index.html">
-                        <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto duration-200">
+                        <img src="../assets/img/logo_samping.png" alt="logo" class="h-20 w-auto duration-200">
                     </a>
                 </div>
                 <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mt-4">Menu</h5>
@@ -629,7 +629,7 @@ const showNavbar = () => {
         header.innerHTML += `
             <div class="w-40">
                 <a href="./index.html">
-                    <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto py-4">
+                    <img src="../assets/img/logo_samping.png" alt="logo">
                 </a>
             </div>
 
@@ -679,7 +679,7 @@ const showNavbar = () => {
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
                 <div class="border-b-4 border-green-300 pb-2 p-2">
                     <a href="./index.html">
-                        <img src="../assets/svg/logo_samping.svg" alt="logo" class="h-20 w-auto duration-200">
+                        <img src="../assets/img/logo_samping.png" alt="logo" class="h-20 w-auto duration-200">
                     </a>
                 </div>
                 <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mt-4">Menu</h5>
@@ -849,11 +849,8 @@ const showFooter = () => {
         <div class="mx-6 py-10 text-center md:text-left">
             <div class="grid-1 grid gap-8 md:grid-cols-2">
                 <div class="">
-                    <h6 class="text-green-500 mb-4 flex items-center justify-center font-bold uppercase md:justify-start">
-                        <span class="me-3 [&>svg]:h-4 [&>svg]:w-4">
-                            <img src="../assets/svg/logo.svg" alt="logo">
-                        </span>
-                        Peduli Anak
+                    <h6 class="text-2xl text-green-500 mb-4 flex items-center justify-center font-bold uppercase md:justify-start">
+                        <img src="../assets/img/logo_samping.png" alt="logo" class="w-auto h-28">
                     </h6>
                     <p>
                         Peduli Anak bertekad menciptakan masa depan lebih cerah bagi anak-anak Indonesia dengan memerangi stunting, kondisi gagal tumbuh akibat gizi kronis.
