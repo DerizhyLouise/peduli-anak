@@ -21,7 +21,7 @@
     </header>
 
     <div class="bg-[url('../assets/img/banner.png')] h-60 bg-cover">
-        <div class="h-80 pt-24 mx-10 sm:ml-20 lg:ml-40 lg:mr-96 xl:mr-[640px] z-30">
+        <div class="h-80 pt-28 mx-10 sm:ml-20 lg:ml-40 lg:mr-96 xl:mr-[640px] z-30">
             <h1 class="mb-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-none">
                 Dasbor Edukasi
             </h1>
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="group fixed bottom-5 right-5 p-2 flex items-end justify-end">
+    <div id="nakes" class="group fixed bottom-5 right-5 p-2 flex items-end justify-end">
         <a class="text-[#F1F7F6] shadow-xl flex items-center justify-center p-3 rounded-full bg-[#2CC295] border-2 border-[#03624C] z-50 absolute"
             href="./education-upload.html">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
@@ -160,6 +160,11 @@
         const role = sessionStorage.getItem("role");
         if (!role || role == "user") {
             window.location.href = "./index.html";
+        }
+
+        if (role != "nakes") {
+            const uploadButton = document.getElementById("nakes");
+            uploadButton.className = "hidden";
         }
 
         const nakes = document.getElementsByClassName("nakes");

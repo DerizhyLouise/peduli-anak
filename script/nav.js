@@ -69,9 +69,6 @@ const showNavbar = () => {
             <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="setting1">
                     <li>
-                        <a href="./profile.html" class="block px-4 py-2 hover:bg-[#2CC295]">Profil</a>
-                    </li>
-                    <li>
                         <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-[#2CC295]">Keluar</button>
                     </li>
                 </ul>
@@ -208,17 +205,6 @@ const showNavbar = () => {
                                         class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-[#2CC295]">Dasbor Publikasi</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li>
-                            <a href="./profile.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">     
-                                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-                                        <path
-                                            d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-                                    </svg>
-                                <span class="flex-1 ms-3 whitespace-nowrap">Profil</span>
-                            </a>
                         </li>
                         <li>
                             <button href="./login.html" onclick="logout()"
@@ -299,7 +285,7 @@ const showNavbar = () => {
             <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="setting1">
                     <li>
-                        <a href="./profile.html" class="block px-4 py-2 hover:bg-[#2CC295]">Profil</a>
+                        <a href="./profile-nakes.html" class="block px-4 py-2 hover:bg-[#2CC295]">Profil</a>
                     </li>
                     <li>
                         <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-[#2CC295]">Keluar</button>
@@ -440,7 +426,7 @@ const showNavbar = () => {
                             </ul>
                         </li>
                         <li>
-                            <a href="./profile.html"
+                            <a href="./profile-nakes.html"
                                 class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">     
                                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
@@ -498,7 +484,7 @@ const showNavbar = () => {
                     <li class="flex items-center duration-200 cursor-pointer">
                         <button id="setting1" data-dropdown-toggle="dropdown2" type="button" class="flex justify-center w-40 bg-[#2CC295] hover:bg-[#00DF81] rounded-3xl p-2">
                             <div class="text-xs">
-                                <p>Nama Pengguna</p>
+                                <p>John Doe</p>
                                 <p class="text-gray-700">Pengguna</p>
                             </div>
                         </a>
@@ -515,7 +501,7 @@ const showNavbar = () => {
             <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="setting1">
                     <li>
-                        <a href="./profile.html" class="block px-4 py-2 hover:bg-[#2CC295]">Profil</a>
+                        <a href="./profile-user.html" class="block px-4 py-2 hover:bg-[#2CC295]">Profil</a>
                     </li>
                     <li>
                         <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-[#2CC295]">Keluar</button>
@@ -600,7 +586,7 @@ const showNavbar = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="./profile.html"
+                            <a href="./profile-user.html"
                                 class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">     
                                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">

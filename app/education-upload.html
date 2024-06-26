@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <meta name="author" content="Louise Derizhy">
+    <title>Peduli Anak - Unggah Konten Edukasi</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css">
+    <link rel="icon" href="../../assets/img/logo.png" type="image/svg+xml">
+</head>
+
+<body>
+    <div class="fixed bg-[url('../assets/img/bg.jpg')] bg-slate-200 bg-blend-multiply bg-cover -z-10 w-screen h-screen">
+    </div>
+
+    <header id="topHeader"
+        class="w-full h-20 top-0 bg-white/90 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-[#2CC295]">
+    </header>
+
+    <div class="bg-[url('../assets/img/banner.png')] h-60 bg-cover">
+        <div class="h-80 pt-28 mx-10 sm:ml-20 lg:ml-40 lg:mr-96 xl:mr-[640px] z-30">
+            <h1 class="mb-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-none">
+                Unggah Konten Edukasi
+            </h1>
+            <p class="mb-8 text-lg font-normal lg:text-xl z-30">
+                Konten Anda dapat diunggah pada halaman ini.
+            </p>
+        </div>
+    </div>
+
+    <div class="my-12 mx-12 lg:mx-36 2xl:mx-60">
+        <div class="bg-white shadow-md rounded-lg p-12 overflow-x-auto">
+            <div>
+                <h2 class="text-4xl font-semibold mb-4">Unggah Konten Edukasi</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label for="judul"
+                            class="block text-md font-semibold text-gray-600 mb-1 w-1/2 xl:w-1/4">Judul</label>
+                        <input type="text" id="judul"
+                            class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
+                            placeholder="Judul">
+                    </div>
+                    <div>
+                        <label for="deskripsi"
+                            class="block text-md font-semibold text-gray-600 mb-1 w-1/2 xl:w-1/4">Deskripsi</label>
+                        <textarea id="deskripsi"
+                            class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
+                            placeholder="Deskirpsi"></textarea>
+                    </div>
+                    <div>
+                        <label for="video"
+                            class="block text-md font-semibold text-gray-600 mb-1 w-1/2 xl:w-1/4">Video</label>
+                        <input
+                            class="block w-full xl:w-80 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#2CC295] focus:border-[#2CC295]"
+                            id="video" type="file">
+                        <p class="mt-1 text-sm text-gray-500" id="file_input_help">MP4, MKV</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 mt-6">
+                    <button id="btnBatal"
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-400 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Batal</button>
+                    <button id="btnSimpan"
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-[#2CC295] hover:bg-[#2CC295] font-medium rounded-lg text-md px-5 py-2.5 mb-2">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const role = sessionStorage.getItem("role");
+        if (!role || role != "nakes") {
+            window.location.href = "./index.html";
+        }
+    </script>
+
+    <script src="../script/main.js"></script>
+    <script src="../script/nav.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
