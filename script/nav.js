@@ -1,12 +1,12 @@
 const showNavbar = () => {
-    const role = sessionStorage.getItem("role");
+	const role = sessionStorage.getItem("role");
 
-    const body = document.getElementsByTagName("body")[0];
-    const header = document.getElementById("topHeader");
-    const navbar = document.createElement("div");
+	const body = document.getElementsByTagName("body")[0];
+	const header = document.getElementById("topHeader");
+	const navbar = document.createElement("div");
 
-    if (role && role == "admin") {
-        header.innerHTML += `
+	if (role && role == "admin") {
+		header.innerHTML += `
             <div class="w-40">
                 <a href="./index.html">
                     <img src="../assets/img/logo_samping.png" alt="logo">
@@ -16,19 +16,19 @@ const showNavbar = () => {
             <nav class="font-semibold text-lg justify-self-end w-[768px] hidden lg:block">
                 <ul class="flex justify-end gap-4 lg:gap-12">
                     <li id="beranda"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./">Beranda</a>
                     </li>
                     <li id="kalkulator"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./calculator.html">Kalkulator</a>
                     </li>
                     <li id="diskusi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./discussion.html">Diskusi</a>
                     </li>
                     <li id="edukasi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <button id="dropdownEdu1" data-dropdown-toggle="dropdownEdu2" class="flex items-center">
                             Edukasi
                             <svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -39,7 +39,7 @@ const showNavbar = () => {
                         </a>
                     </li>
                     <li id="publikasi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <button id="dropdownPub1" data-dropdown-toggle="dropdownPub2" class="flex items-center">
                             Publikasi
                             <svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -50,7 +50,7 @@ const showNavbar = () => {
                         </a>
                     </li>
                     <li class="flex items-center duration-200 cursor-pointer">
-                        <button id="setting1" data-dropdown-toggle="dropdown2" type="button" class="flex justify-center w-40 bg-green-300 hover:bg-green-400 rounded-3xl p-2">
+                        <button id="setting1" data-dropdown-toggle="dropdown2" type="button" class="flex justify-center w-40 bg-[#2CC295] hover:bg-[#00DF81] rounded-3xl p-2">
                             <div class="text-xs">
                                 <p>System Admin</p>
                                 <p class="text-gray-700">Administrator</p>
@@ -60,7 +60,7 @@ const showNavbar = () => {
                 </ul>
             </nav>
             <div class="flex justify-end w-6/12 lg:hidden">
-                <button class="text-2xl hover:text-green-500 duration-200" type="button"
+                <button class="text-2xl hover:duration-200" type="button"
                     data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" data-drawer-placement="right"
                     aria-controls="drawer-navigation">
                     <i class="fa-solid fa-bars"></i>
@@ -69,10 +69,10 @@ const showNavbar = () => {
             <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="setting1">
                     <li>
-                        <a href="./profile.html" class="block px-4 py-2 hover:bg-green-300">Profil</a>
+                        <a href="./profile.html" class="block px-4 py-2 hover:bg-[#2CC295]">Profil</a>
                     </li>
                     <li>
-                        <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-green-300">Keluar</button>
+                        <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-[#2CC295]">Keluar</button>
                     </li>
                 </ul>
             </div>
@@ -80,11 +80,11 @@ const showNavbar = () => {
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownEdu1">
                     <li>
                         <a href="./education.html"
-                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Edukasi</a>
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-[#2CC295]">Edukasi</a>
                     </li>
                     <li>
                         <a href="./education-dashboard.html"
-                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Dasbor Edukasi</a>
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-[#2CC295]">Dasbor Edukasi</a>
                     </li>
                 </ul>
             </div>
@@ -92,28 +92,28 @@ const showNavbar = () => {
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownPub1">
                     <li>
                         <a href="./publication.html"
-                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Publikasi</a>
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-[#2CC295]">Publikasi</a>
                     </li>
                     <li>
                         <a href="./publication-dashboard.html"
-                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Dasbor Publikasi</a>
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-[#2CC295]">Dasbor Publikasi</a>
                     </li>
                 </ul>
             </div>
         `;
 
-        navbar.innerHTML = `
+		navbar.innerHTML = `
             <div id="drawer-navigation"
-                class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-64"
+                class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-72"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
-                <div class="border-b-4 border-green-300 pb-2 p-2">
+                <div class="border-b-4 border-[#2CC295] pb-2 p-2">
                     <a href="./index.html">
                         <img src="../assets/img/logo_samping.png" alt="logo" class="h-20 w-auto duration-200">
                     </a>
                 </div>
                 <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mt-4">Menu</h5>
                 <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
-                    class="text-gray-400 bg-transparent hover:bg-green-500 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
+                    class="text-gray-400 bg-transparent hover:bg-[#2CC295] hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
@@ -124,7 +124,7 @@ const showNavbar = () => {
                     <ul class="space-y-2 font-medium">
                         <li>
                             <a href="./index.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 576 512">
@@ -135,7 +135,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./calculator.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 384 512">
@@ -146,7 +146,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./discussion.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 20 18">
@@ -157,7 +157,7 @@ const showNavbar = () => {
                         </li>
                         <li>    
                             <button type="button"
-                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-green-500"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-[#2CC295]"
                                 aria-controls="dropdown-education" data-collapse-toggle="dropdown-education">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -174,17 +174,17 @@ const showNavbar = () => {
                             <ul id="dropdown-education" class="hidden py-2 space-y-2">
                                 <li>
                                     <a href="./education.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Edukasi</a>
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-[#2CC295]">Edukasi</a>
                                 </li>
                                 <li>
                                     <a href="./education-dashboard.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Dasbor Edukasi</a>
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-[#2CC295]">Dasbor Edukasi</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <button type="button"
-                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-green-500"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-[#2CC295]"
                                 aria-controls="dropdown-publication" data-collapse-toggle="dropdown-publication">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -201,17 +201,17 @@ const showNavbar = () => {
                             <ul id="dropdown-publication" class="hidden py-2 space-y-2">
                                 <li>
                                     <a href="./publication.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Publikasi</a>
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-[#2CC295]">Publikasi</a>
                                 </li>
                                 <li>
                                     <a href="./publication-dashboard.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Dasbor Publikasi</a>
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-[#2CC295]">Dasbor Publikasi</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a href="./profile.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">     
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">     
                                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
                                         <path
@@ -222,7 +222,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <button href="./login.html" onclick="logout()"
-                                class="flex items-center justify-start w-full p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center justify-start w-full p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -235,8 +235,8 @@ const showNavbar = () => {
                 </div>
             </div>
         `;
-    } else if (role && role == "nakes") {
-        header.innerHTML += `
+	} else if (role && role == "nakes") {
+		header.innerHTML += `
             <div class="w-40">
                 <a href="./index.html">
                     <img src="../assets/img/logo_samping.png" alt="logo">
@@ -246,19 +246,19 @@ const showNavbar = () => {
             <nav class="font-semibold text-lg justify-self-end w-[768px] hidden lg:block">
                 <ul class="flex justify-end gap-4 lg:gap-12">
                     <li id="beranda"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./">Beranda</a>
                     </li>
                     <li id="kalkulator"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./calculator.html">Kalkulator</a>
                     </li>
                     <li id="diskusi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./discussion.html">Diskusi</a>
                     </li>
                     <li id="edukasi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <button id="dropdownEdu1" data-dropdown-toggle="dropdownEdu2" class="flex items-center">
                             Edukasi
                             <svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -269,7 +269,7 @@ const showNavbar = () => {
                         </a>
                     </li>
                     <li id="publikasi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <button id="dropdownPub1" data-dropdown-toggle="dropdownPub2" class="flex items-center">
                             Publikasi
                             <svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -280,7 +280,7 @@ const showNavbar = () => {
                         </a>
                     </li>
                     <li class="flex items-center duration-200 cursor-pointer">
-                        <button id="setting1" data-dropdown-toggle="dropdown2" type="button" class="flex justify-center w-40 bg-green-300 hover:bg-green-400 rounded-3xl p-2">
+                        <button id="setting1" data-dropdown-toggle="dropdown2" type="button" class="flex justify-center w-40 bg-[#2CC295] hover:bg-[#00DF81] rounded-3xl p-2">
                             <div class="text-xs">
                                 <p>dr. Derizheese</p>
                                 <p class="text-gray-700">Tenaga Kesehatan</p>
@@ -290,7 +290,7 @@ const showNavbar = () => {
                 </ul>
             </nav>
             <div class="flex justify-end w-6/12 lg:hidden">
-                <button class="text-2xl hover:text-green-500 duration-200" type="button"
+                <button class="text-2xl hover:duration-200" type="button"
                     data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" data-drawer-placement="right"
                     aria-controls="drawer-navigation">
                     <i class="fa-solid fa-bars"></i>
@@ -299,10 +299,10 @@ const showNavbar = () => {
             <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="setting1">
                     <li>
-                        <a href="./profile.html" class="block px-4 py-2 hover:bg-green-300">Profil</a>
+                        <a href="./profile.html" class="block px-4 py-2 hover:bg-[#2CC295]">Profil</a>
                     </li>
                     <li>
-                        <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-green-300">Keluar</button>
+                        <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-[#2CC295]">Keluar</button>
                     </li>
                 </ul>
             </div>
@@ -310,11 +310,11 @@ const showNavbar = () => {
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownEdu1">
                     <li>
                         <a href="./education.html"
-                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Edukasi</a>
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-[#2CC295]">Edukasi</a>
                     </li>
                     <li>
                         <a href="./education-dashboard.html"
-                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Dasbor Edukasi</a>
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-[#2CC295]">Dasbor Edukasi</a>
                     </li>
                 </ul>
             </div>
@@ -322,28 +322,28 @@ const showNavbar = () => {
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownPub1">
                     <li>
                         <a href="./publication.html"
-                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Publikasi</a>
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-[#2CC295]">Publikasi</a>
                     </li>
                     <li>
                         <a href="./publication-dashboard.html"
-                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-green-300">Dasbor Publikasi</a>
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 group hover:bg-[#2CC295]">Dasbor Publikasi</a>
                     </li>
                 </ul>
             </div>
         `;
 
-        navbar.innerHTML = `
+		navbar.innerHTML = `
             <div id="drawer-navigation"
-                class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-64"
+                class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-72"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
-                <div class="border-b-4 border-green-300 pb-2 p-2">
+                <div class="border-b-4 border-[#2CC295] pb-2 p-2">
                     <a href="./index.html">
                         <img src="../assets/img/logo_samping.png" alt="logo" class="h-20 w-auto duration-200">
                     </a>
                 </div>
                 <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mt-4">Menu</h5>
                 <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
-                    class="text-gray-400 bg-transparent hover:bg-green-500 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
+                    class="text-gray-400 bg-transparent hover:bg-[#2CC295] hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
@@ -354,7 +354,7 @@ const showNavbar = () => {
                     <ul class="space-y-2 font-medium">
                         <li>
                             <a href="./index.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 576 512">
@@ -365,7 +365,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./calculator.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 384 512">
@@ -376,7 +376,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./discussion.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 20 18">
@@ -387,7 +387,7 @@ const showNavbar = () => {
                         </li>
                         <li>    
                             <button type="button"
-                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-green-500"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-[#2CC295]"
                                 aria-controls="dropdown-education" data-collapse-toggle="dropdown-education">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -404,17 +404,17 @@ const showNavbar = () => {
                             <ul id="dropdown-education" class="hidden py-2 space-y-2">
                                 <li>
                                     <a href="./education.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Edukasi</a>
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-[#2CC295]">Edukasi</a>
                                 </li>
                                 <li>
                                     <a href="./education-dashboard.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Dasbor Edukasi</a>
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-[#2CC295]">Dasbor Edukasi</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <button type="button"
-                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-green-500"
+                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-[#2CC295]"
                                 aria-controls="dropdown-publication" data-collapse-toggle="dropdown-publication">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -431,17 +431,17 @@ const showNavbar = () => {
                             <ul id="dropdown-publication" class="hidden py-2 space-y-2">
                                 <li>
                                     <a href="./publication.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Publikasi</a>
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-[#2CC295]">Publikasi</a>
                                 </li>
                                 <li>
                                     <a href="./publication-dashboard.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-green-500">Dasbor Publikasi</a>
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-[#2CC295]">Dasbor Publikasi</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a href="./profile.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">     
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">     
                                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
                                         <path
@@ -452,7 +452,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <button href="./login.html" onclick="logout()"
-                                class="flex items-center justify-start w-full p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center justify-start w-full p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -465,8 +465,8 @@ const showNavbar = () => {
                 </div>
             </div>
         `;
-    } else if (role && role == "user") {
-        header.innerHTML += `
+	} else if (role && role == "user") {
+		header.innerHTML += `
             <div class="w-40">
                 <a href="./index.html">
                     <img src="../assets/img/logo_samping.png" alt="logo">
@@ -476,27 +476,27 @@ const showNavbar = () => {
             <nav class="font-semibold text-lg justify-self-end w-[768px] hidden lg:block">
                 <ul class="flex justify-end gap-4 lg:gap-12">
                     <li id="beranda"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./">Beranda</a>
                     </li>
                     <li id="kalkulator"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./calculator.html">Kalkulator</a>
                     </li>
                     <li id="diskusi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./discussion.html">Diskusi</a>
                     </li>
                     <li id="edukasi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./education.html">Edukasi</a>
                     </li>
                     <li id="publikasi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./publication.html">Publikasi</a>
                     </li>
                     <li class="flex items-center duration-200 cursor-pointer">
-                        <button id="setting1" data-dropdown-toggle="dropdown2" type="button" class="flex justify-center w-40 bg-green-300 hover:bg-green-400 rounded-3xl p-2">
+                        <button id="setting1" data-dropdown-toggle="dropdown2" type="button" class="flex justify-center w-40 bg-[#2CC295] hover:bg-[#00DF81] rounded-3xl p-2">
                             <div class="text-xs">
                                 <p>Nama Pengguna</p>
                                 <p class="text-gray-700">Pengguna</p>
@@ -506,7 +506,7 @@ const showNavbar = () => {
                 </ul>
             </nav>
             <div class="flex justify-end w-6/12 lg:hidden">
-                <button class="text-2xl hover:text-green-500 duration-200" type="button"
+                <button class="text-2xl hover:duration-200" type="button"
                     data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" data-drawer-placement="right"
                     aria-controls="drawer-navigation">
                     <i class="fa-solid fa-bars"></i>
@@ -515,27 +515,27 @@ const showNavbar = () => {
             <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="setting1">
                     <li>
-                        <a href="./profile.html" class="block px-4 py-2 hover:bg-green-300">Profil</a>
+                        <a href="./profile.html" class="block px-4 py-2 hover:bg-[#2CC295]">Profil</a>
                     </li>
                     <li>
-                        <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-green-300">Keluar</button>
+                        <button onclick="logout()" class="block w-full text-left px-4 py-2 hover:bg-[#2CC295]">Keluar</button>
                     </li>
                 </ul>
             </div>
         `;
 
-        navbar.innerHTML = `
+		navbar.innerHTML = `
             <div id="drawer-navigation"
-                class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-64"
+                class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-72"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
-                <div class="border-b-4 border-green-300 pb-2 p-2">
+                <div class="border-b-4 border-[#2CC295] pb-2 p-2">
                     <a href="./index.html">
                         <img src="../assets/img/logo_samping.png" alt="logo" class="h-20 w-auto duration-200">
                     </a>
                 </div>
                 <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mt-4">Menu</h5>
                 <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
-                    class="text-gray-400 bg-transparent hover:bg-green-500 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
+                    class="text-gray-400 bg-transparent hover:bg-[#2CC295] hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
@@ -546,7 +546,7 @@ const showNavbar = () => {
                     <ul class="space-y-2 font-medium">
                         <li>
                             <a href="./index.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 576 512">
@@ -557,7 +557,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./calculator.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 384 512">
@@ -568,7 +568,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./discussion.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 20 18">
@@ -579,7 +579,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./education.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 448 512">
@@ -590,7 +590,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./publication.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 512 512">
@@ -601,7 +601,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./profile.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">     
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">     
                                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
                                         <path
@@ -612,7 +612,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <button href="./login.html" onclick="logout()"
-                                class="flex items-center justify-start w-full p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center justify-start w-full p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -625,8 +625,8 @@ const showNavbar = () => {
                 </div>
             </div>
         `;
-    } else {
-        header.innerHTML += `
+	} else {
+		header.innerHTML += `
             <div class="w-40">
                 <a href="./index.html">
                     <img src="../assets/img/logo_samping.png" alt="logo">
@@ -636,27 +636,27 @@ const showNavbar = () => {
             <nav class="font-semibold text-lg justify-self-end w-[768px] hidden lg:block">
                 <ul class="flex justify-end gap-4 lg:gap-12">
                     <li id="beranda"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./">Beranda</a>
                     </li>
                     <li id="kalkulator"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./calculator.html">Kalkulator</a>
                     </li>
                     <li id="diskusi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./discussion.html">Diskusi</a>
                     </li>
                     <li id="edukasi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./education.html">Edukasi</a>
                     </li>
                     <li id="publikasi"
-                        class="flex items-center border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                        class="flex items-center border-b-2 border-[#2CC295] border-opacity-0 hover:border-opacity-100 hover:duration-200 cursor-pointer">
                         <a href="./publication.html">Publikasi</a>
                     </li>
                     <li class="flex items-center duration-200 cursor-pointer">
-                        <button onclick="logout()" class="flex items-center justify-center h-10 w-20 bg-green-300 hover:bg-green-400 rounded-3xl p-2">
+                        <button onclick="logout()" class="flex items-center justify-center h-10 w-20 bg-[#2CC295] hover:bg-[#00DF81] rounded-3xl p-2">
                             <div class="text-xs">
                                 <p>Masuk</p>
                             </div>
@@ -665,7 +665,7 @@ const showNavbar = () => {
                 </ul>
             </nav>
             <div class="flex justify-end w-6/12 lg:hidden">
-                <button class="text-2xl hover:text-green-500 duration-200" type="button"
+                <button class="text-2xl hover:duration-200" type="button"
                     data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" data-drawer-placement="right"
                     aria-controls="drawer-navigation">
                     <i class="fa-solid fa-bars"></i>
@@ -673,18 +673,18 @@ const showNavbar = () => {
             </div>
         `;
 
-        navbar.innerHTML = `
+		navbar.innerHTML = `
             <div id="drawer-navigation"
-                class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-64"
+                class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-72"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
-                <div class="border-b-4 border-green-300 pb-2 p-2">
+                <div class="border-b-4 border-[#2CC295] pb-2 p-2">
                     <a href="./index.html">
                         <img src="../assets/img/logo_samping.png" alt="logo" class="h-20 w-auto duration-200">
                     </a>
                 </div>
                 <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mt-4">Menu</h5>
                 <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
-                    class="text-gray-400 bg-transparent hover:bg-green-500 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
+                    class="text-gray-400 bg-transparent hover:bg-[#2CC295] hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
@@ -695,7 +695,7 @@ const showNavbar = () => {
                     <ul class="space-y-2 font-medium">
                         <li>
                             <a href="./index.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 576 512">
@@ -706,7 +706,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./calculator.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 384 512">
@@ -717,7 +717,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./discussion.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 20 18">
@@ -728,7 +728,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./education.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 448 512">
@@ -739,7 +739,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./publication.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 512 512">
@@ -750,7 +750,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./profile.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">     
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">     
                                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
                                         <path
@@ -761,7 +761,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <button href="./login.html" onclick="logout()"
-                                class="flex items-center justify-start w-full p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center justify-start w-full p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -772,7 +772,7 @@ const showNavbar = () => {
                         </li>
                         <li>
                             <a href="./register.html"
-                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-green-500 group">
+                                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-[#2CC295] group">
                                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
                                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     viewBox="0 0 20 20">
@@ -789,19 +789,19 @@ const showNavbar = () => {
                 </div>
             </div>
         `;
-    }
+	}
 
-    body.appendChild(navbar);
+	body.appendChild(navbar);
 };
 
 const showFooter = () => {
-    const body = document.getElementsByTagName("body")[0];
-    const footer = document.createElement("footer");
-    footer.className = "bg-green-200 text-center text-surface/75 lg:text-left";
+	const body = document.getElementsByTagName("body")[0];
+	const footer = document.createElement("footer");
+	footer.className = "bg-[#2CC295] text-center text-surface/75 lg:text-left";
 
-    footer.innerHTML = `
+	footer.innerHTML = `
         <div
-            class="flex items-center justify-center border-b-2 border-gray-600 p-6 lg:justify-between">
+            class="flex items-center justify-center border-b-2 border-[#032221] p-6 lg:justify-between">
             <div class="me-12 hidden lg:block">
                 <span>Temukan kami pada media sosial kami:</span>
             </div>
@@ -849,7 +849,7 @@ const showFooter = () => {
         <div class="mx-6 py-10 text-center md:text-left">
             <div class="grid-1 grid gap-8 md:grid-cols-2">
                 <div class="">
-                    <h6 class="text-2xl text-green-500 mb-4 flex items-center justify-center font-bold uppercase md:justify-start">
+                    <h6 class="text-2xl mb-4 flex items-center justify-center font-bold uppercase md:justify-start">
                         <img src="../assets/img/logo_samping.png" alt="logo" class="w-auto h-28">
                     </h6>
                     <p>
@@ -858,7 +858,7 @@ const showFooter = () => {
                 </div>
                 
                 <div>
-                    <h6 class="text-green-500 mb-4 flex justify-center font-bold uppercase md:justify-start">
+                    <h6 class="mb-4 flex justify-center font-bold uppercase md:justify-start">
                         Kontak
                     </h6>
                     <p class="mb-4 flex items-center justify-center md:justify-start">
@@ -897,18 +897,18 @@ const showFooter = () => {
             </div>
         </div>
 
-        <div class="bg-green-00 p-6 text-center">
+        <div class="bg-[#17876D] p-6 text-center">
             <span>© 2024 Copyright:</span>
             <a class="font-semibold" href="#">Peduli Anak</a>
         </div>
     `;
 
-    body.appendChild(footer);
+	body.appendChild(footer);
 };
 
 const logout = () => {
-    sessionStorage.removeItem("role");
-    window.location.href = "./login.html";
+	sessionStorage.removeItem("role");
+	window.location.href = "./login.html";
 };
 
 showNavbar();

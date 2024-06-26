@@ -5,11 +5,12 @@ h2,
 h3,
 h4,
 h5,
+h6,
 span,
 p {
 	font-family: Poppins;
+	color: #032221;
 }
-
 
 .ellipsis-text {
 	display: -webkit-box;

@@ -14,7 +14,7 @@
 
 <body>
     <header id="topHeader"
-        class="w-full h-20 top-0 bg-white/90 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-green-200">
+        class="w-full h-20 top-0 bg-white/90 flex items-center justify-between px-20 py-2 fixed z-30 border-b-2 border-[#2CC295]">
     </header>
 
     <div class="bg-[url('../assets/img/banner.png')] h-60 bg-cover">
@@ -50,7 +50,7 @@
             <div class="relative p-6 bg-white rounded-lg border border-gray-200 shadow-lg">
                 <div>
                     <button onclick="changeProfile()"
-                        class="absolute top-2 right-2 self-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-50">
+                        class="absolute top-2 right-2 self-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-[#2CC295] focus:ring-2 focus:outline-none focus:ring-gray-50">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 text-gray-500"
                             aria-hidden="true">
                             <path
@@ -67,7 +67,7 @@
                                     Derizheese</label>
                             </div>
                             <input type="text" id="nama"
-                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
                                 placeholder="Nama">
                         </div>
                         <div>
@@ -79,7 +79,7 @@
                                     nakes@mail.com</label>
                             </div>
                             <input type="email" id="email"
-                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
                                 placeholder="Alamat Email">
                         </div>
                         <div>
@@ -91,7 +91,7 @@
                                     0899-9999-9999</label>
                             </div>
                             <input type="tel" id="telepon"
-                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
                                 placeholder="Nomor Telepon">
                         </div>
                         <div>
@@ -103,7 +103,7 @@
                                     2000</label>
                             </div>
                             <input type="date" id="tanggal_lahir"
-                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5">
+                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5">
                         </div>
                         <div>
                             <div class="w-full flex">
@@ -115,13 +115,13 @@
                             <div class="profile-inputs mt-2">
                                 <label class="inline-flex items-center">
                                     <input type="radio"
-                                        class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2"
+                                        class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-[#2CC295] focus:ring-2"
                                         name="jenis_kelamin" value="laki-laki">
                                     <span class="ml-2">Laki-laki</span>
                                 </label>
                                 <label class="inline-flex items-center ml-6">
                                     <input type="radio"
-                                        class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2"
+                                        class="form-radio w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-[#2CC295] focus:ring-2"
                                         name="jenis_kelamin" value="perempuan">
                                     <span class="ml-2">Perempuan</span>
                                 </label>
@@ -135,16 +135,16 @@
                                     18A</label>
                             </div>
                             <textarea id="alamat"
-                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                class="profile-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
                                 placeholder="Alamat"></textarea>
                         </div>
                     </div>
                     <!-- Tombol Simpan dan Batal -->
                     <div class="profile-inputs flex gap-4 mt-6">
                         <button id="btnBatal" onclick="showProfile()"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Batal</button>
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-400 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Batal</button>
                         <button id="btnSimpan" onclick="my_modal_3.showModal()"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Simpan</button>
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-[#2CC295] hover:bg-[#2CC295] font-medium rounded-lg text-md px-5 py-2.5 mb-2">Simpan</button>
                     </div>
                 </div>
             </div>
@@ -152,7 +152,7 @@
             <div id="nakes-section" class="relative p-6 bg-white rounded-lg border border-gray-200 shadow-lg">
                 <div>
                     <button onclick="changeNakesProfile()"
-                        class="absolute top-2 right-2 self-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-gray-50">
+                        class="absolute top-2 right-2 self-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-[#2CC295] focus:ring-2 focus:outline-none focus:ring-gray-50">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 text-gray-500"
                             aria-hidden="true">
                             <path
@@ -170,7 +170,7 @@
                                     Tbk</label>
                             </div>
                             <input type="text" id="institut"
-                                class="nakes-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                class="nakes-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
                                 placeholder="Nama Institut">
                         </div>
                         <div>
@@ -182,16 +182,16 @@
                                     1234567890</label>
                             </div>
                             <input type="nip" id="nip"
-                                class="nakes-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                class="nakes-inputs rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
                                 placeholder="NIP">
                         </div>
                     </div>
                     <!-- Tombol Simpan dan Batal -->
                     <div class="nakes-inputs flex gap-4 mt-6">
                         <button id="btnBatal" onclick="showNakesProfile()"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Batal</button>
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-400 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Batal</button>
                         <button id="btnSimpan" onclick="my_modal_3.showModal()"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Simpan</button>
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-[#2CC295] hover:bg-[#2CC295] font-medium rounded-lg text-md px-5 py-2.5 mb-2">Simpan</button>
                     </div>
                 </div>
             </div>
@@ -205,7 +205,7 @@
                                 Sandi
                                 Lama:</label>
                             <input type="password" id="password_lama"
-                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
                                 placeholder="Kata Sandi Lama">
                         </div>
                         <div>
@@ -213,7 +213,7 @@
                                 Sandi
                                 Baru:</label>
                             <input type="password" id="password_baru"
-                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
                                 placeholder="Kata Sandi Baru">
                         </div>
                         <div>
@@ -221,15 +221,15 @@
                                 class="block text-md font-semibold text-gray-600 mb-1">Konfirmasi Kata Sandi
                                 Baru:</label>
                             <input type="password" id="konfirmasi_password"
-                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-green-500 focus:border-green-500 block flex-1 min-w-0 w-full text-md p-2.5"
+                                class="rounded-lg border border-gray-300 text-gray-900 focus:ring-[#2CC295] focus:border-[#2CC295] block flex-1 min-w-0 w-full text-md p-2.5"
                                 placeholder="Konfirmasi Kata Sandi Baru">
                         </div>
                     </div>
                     <div class="flex gap-4 mt-6">
                         <button id="btnBatal"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Batal</button>
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-400 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Batal</button>
                         <button id="btnSimpan" onclick="my_modal_1.showModal()"
-                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Simpan</button>
+                            class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-[#2CC295] hover:bg-[#2CC295] font-medium rounded-lg text-md px-5 py-2.5 mb-2">Simpan</button>
                     </div>
                 </div>
             </div>
@@ -242,7 +242,7 @@
             <div class="modal-action w-full">
                 <form method="dialog" class="mt-4 w-full flex flex-col sm:flex-row sm:justify-center gap-4">
                     <button onclick="showProfile()"
-                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Selesai</button>
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-[#2CC295] hover:bg-[#2CC295] font-medium rounded-lg text-md px-5 py-2.5 mb-2">Selesai</button>
                 </form>
             </div>
         </div>
@@ -253,9 +253,9 @@
             <div class="modal-action w-full">
                 <form method="dialog" class="mt-4 w-full flex flex-col sm:flex-row sm:justify-center gap-4">
                     <button
-                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Tidak</button>
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-400 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Tidak</button>
                     <button onclick="my_modal_2.showModal()"
-                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Ya</button>
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-[#2CC295] hover:bg-[#2CC295] font-medium rounded-lg text-md px-5 py-2.5 mb-2">Ya</button>
                 </form>
             </div>
         </div>
@@ -266,7 +266,7 @@
             <div class="modal-action w-full">
                 <form method="dialog" class="mt-4 w-full flex flex-col sm:flex-row sm:justify-center gap-4">
                     <button onclick="showNakesProfile()"
-                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Selesai</button>
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-[#2CC295] hover:bg-[#2CC295] font-medium rounded-lg text-md px-5 py-2.5 mb-2">Selesai</button>
                 </form>
             </div>
         </div>
@@ -277,9 +277,9 @@
             <div class="modal-action w-full">
                 <form method="dialog" class="mt-4 w-full flex flex-col sm:flex-row sm:justify-center gap-4">
                     <button
-                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Tidak</button>
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-red-400 hover:bg-red-400 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Tidak</button>
                     <button onclick="my_modal_4.showModal()"
-                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-green-400 hover:bg-green-500 font-medium rounded-lg text-md px-5 py-2.5 mb-2">Ya</button>
+                        class="w-full md:w-6/12 text-gray-900 bg-white border-2 border-[#2CC295] hover:bg-[#2CC295] font-medium rounded-lg text-md px-5 py-2.5 mb-2">Ya</button>
                 </form>
             </div>
         </div>
