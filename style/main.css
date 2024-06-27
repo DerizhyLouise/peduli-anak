@@ -12,6 +12,10 @@ p {
 	color: #032221;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .ellipsis-text {
 	display: -webkit-box;
 	-webkit-line-clamp: 19;
