@@ -783,7 +783,7 @@ const showNavbar = () => {
 const showFooter = () => {
 	const body = document.getElementsByTagName("body")[0];
 	const footer = document.createElement("footer");
-	footer.className = "bg-[#2CC295] text-center text-surface/75 lg:text-left";
+	footer.className = "bg-[#03624C] text-center text-surface/75 lg:text-left";
 
 	footer.innerHTML = `
         <div
