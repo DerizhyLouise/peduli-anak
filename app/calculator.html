@@ -26,15 +26,13 @@
                 Kalkulator Stunting
             </h1>
             <p class="mb-8 text-lg font-normal lg:text-xl z-30">
-                Untuk mendeteksi stunting pada anak dengan mudah hanya dengan memasukkan data antropometri anak, seperti
-                usia, jenis kelamin,
-                tinggi badan, dan berat badan.
+                Deteksi stunting pada anak dengan mudah hanya di Peduli Anak!
             </p>
         </div>
     </div>
 
-    <section class="flex antialiased h-full -mt-40 min-[430px]:-mt-64 mb-6">
-        <div class="w-9/12 xl:w-1/2 sm:ml-20 lg:ml-40">
+    <div class="flex justify-center antialiased h-full -mt-40 min-[430px]:-mt-64 mb-6 gap-12">
+        <div class="w-9/12 lg:w-1/2">
             <div class="bg-[#F1F7F6] shadow-lg rounded-xl">
                 <form id="calculator" class="w-8/12 mx-auto flex flex-col gap-4 py-8">
                     <div>
@@ -132,7 +130,7 @@
                     <div>
                         <h3 class="text-lg font-semibold text-gray-900 mb-1">Perbandingan Data Anak Berjenis Kelamin
                             Laki-Laki dengan Referensi WHO</h3>
-                        <div class="overflow-x-auto">
+                        <div class="overflow-x-auto hidden md:block">
                             <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mb-4">
                                 <thead class="bg-[#2CC295] text-[#F1F7F6]">
                                     <tr>
@@ -160,6 +158,45 @@
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">82,3</td>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">3,1</td>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">-2,35</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Stunting</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="overflow-x-auto md:hidden">
+                            <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mb-4">
+                                <thead class="bg-[#2CC295] text-[#F1F7F6]">
+                                    <tr>
+                                        <th class="w-1/6 py-2 px-4">Parameter</th>
+                                        <th class="w-1/6 py-2 px-4">Berat Badan (kg)</th>
+                                        <th class="w-1/6 py-2 px-4">Tinggi Badan (cm)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Data Anak</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">10</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">75</td>
+                                    </tr>
+                                    <tr class="bg-gray-100">
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Rata-rata Referensi WHO</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">11,3</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">82,3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Standar Deviasi</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">1,1</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">3,1</td>
+                                    </tr>
+                                    <tr class="bg-gray-100">
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Z-score</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">-1,18</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">-2,35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Kesimpulan</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Berat badan di bawah
+                                            rata-rata</td>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">Stunting</td>
                                     </tr>
                                 </tbody>
@@ -206,7 +243,63 @@
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="hidden lg:block w-3/12 mb-10 bg-white rounded-lg shadow-lg p-4">
+            <div class="mt-2">
+                <div class="border-b-2 border-[#2CC295] pb-2 mb-4">
+                    <h2 class="font-semibold">Konten untuk Anda</h2>
+                </div>
+                <div class="flex xl:flex-col gap-4 justify-center xl:items-center flex-wrap">
+                    <div class="w-72 border-b-2 border-[#2CC295]">
+                        <div class="border border-slate-800">
+                            <a href="./education-detail-bahaya.html">
+                                <img class="w-72 h-54" src="../assets/img/edu1.jpg" alt="Edukasi" />
+                            </a>
+                        </div>
+                        <div class="py-5 px-2">
+                            <a href="./education-detail-bahaya.html">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Bahaya Stunting</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700">Kenali bahaya stunting di sini.</p>
+                            <a href="./education-detail-bahaya.html"
+                                class="inline-flex items-center text-sm font-bold hover:text-green-700">
+                                Pelajari
+                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-72">
+                        <div class="border border-slate-800">
+                            <a href="./education-detail-bahaya.html">
+                                <img class="w-72 h-54" src="../assets/img/edu2.jpg" alt="Edukasi" />
+                            </a>
+                        </div>
+                        <div class="py-5 px-2">
+                            <a href="./education-detail-bahaya.html">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Apa itu
+                                    Stunting?</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700">Di sini, Anda akan mempelajari tentang
+                                stunting hingga cara mengatasinya.</p>
+                            <a href="./education-detail-bahaya.html"
+                                class="inline-flex items-center text-sm font-bold hover:text-green-700">
+                                Pelajari
+                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         const submitResult = () => {
