@@ -36,8 +36,7 @@
             <div class="bg-[#F1F7F6] shadow-lg rounded-xl">
                 <form id="calculator" class="w-8/12 mx-auto flex flex-col gap-4 py-8">
                     <div>
-                        <label for="age" class="block mb-2 text-sm font-semibold text-gray-900">Jenis
-                            Kelamin</label>
+                        <label for="gender" class="block mb-2 text-sm font-semibold text-gray-900">Jenis Kelamin</label>
                         <div class="flex">
                             <span
                                 class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md">
@@ -50,18 +49,18 @@
                                 class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-r-lg xl:flex">
                                 <li class="w-full border-b border-gray-200 xl:border-b-0 sm:border-r">
                                     <div class="flex items-center pl-3">
-                                        <input id="horizontal-list-radio-id" type="radio" value="" name="list-radio"
+                                        <input id="horizontal-list-radio-female" type="radio" value="female"
+                                            name="gender"
                                             class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-[#2CC295] focus:ring-2">
-                                        <label for="horizontal-list-radio-girl"
+                                        <label for="horizontal-list-radio-female"
                                             class="w-full py-3 ml-2 text-sm font-medium text-gray-900">Perempuan</label>
                                     </div>
                                 </li>
                                 <li class="w-full border-b border-gray-200 xl:border-b-0 sm:border-r">
                                     <div class="flex items-center pl-3">
-                                        <input id="horizontal-list-radio-license" type="radio" value=""
-                                            name="list-radio"
+                                        <input id="horizontal-list-radio-male" type="radio" value="male" name="gender"
                                             class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-[#2CC295] focus:ring-2">
-                                        <label for="horizontal-list-radio-boy"
+                                        <label for="horizontal-list-radio-male"
                                             class="w-full py-3 ml-2 text-sm font-medium text-gray-900">Laki-laki</label>
                                     </div>
                                 </li>
@@ -119,7 +118,7 @@
                     <div class="flex gap-4 mt-4 max-md:flex-col">
                         <button type="button"
                             class="w-full md:w-6/12 text-gray-900 text-center bg-white/70 border-2 border-red-400 focus:outline-none hover:bg-red-400 focus:ring-2 focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5">Reset</button>
-                        <button type="button" onclick="submitResult()"
+                        <button type="submit" onclick="submitResult()"
                             class="w-full md:w-6/12 text-gray-900 text-center bg-white/70 border-2 border-[#2CC295] focus:outline-none hover:bg-[#2CC295] focus:ring-2 focus:ring-[#2CC295] font-medium rounded-lg text-sm px-5 py-2.5">
                             Kirim
                         </button>
@@ -128,8 +127,12 @@
 
                 <div id="calculatorResult" class="w-11/12 mx-auto flex flex-col gap-4 p-8 hidden">
                     <div>
+                        <h2 class="mb-4 font-extrabold tracking-tight leading-none text-4xl lg:text-5xl">
+                            Hasil Kalkulasi
+                        </h2>
                         <h3 class="text-lg font-semibold text-gray-900 mb-1">Perbandingan Data Anak Berjenis Kelamin
-                            Laki-Laki dengan Referensi WHO</h3>
+                            <span id="resultGender">Laki-Laki</span> dengan Referensi WHO
+                        </h3>
                         <div class="overflow-x-auto hidden md:block">
                             <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mb-4">
                                 <thead class="bg-[#2CC295] text-[#F1F7F6]">
@@ -144,21 +147,24 @@
                                 </thead>
                                 <tbody>
                                     <tr class="bg-gray-100">
-                                        <td class="py-2 px-4 border-b border-gray-200">Berat Badan (kg)</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">10</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">11,3</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">1,1</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">-1,18</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Berat badan di bawah
-                                            rata-rata</td>
+                                        <td class="py-2 px-4 border-b border-gray-200">Tinggi Badan (cm)</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="input1"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="avg1"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="sd1"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="z1"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center font-bold"
+                                            id="kesimpulan1">
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td class="py-2 px-4 border-b border-gray-200">Tinggi Badan (cm)</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">75</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">82,3</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">3,1</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">-2,35</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Stunting</td>
+                                        <td class="py-2 px-4 border-b border-gray-200">Berat Badan (kg)</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="input2"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="avg2"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="sd2"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="z2"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center font-bold"
+                                            id="kesimpulan2">
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -168,41 +174,45 @@
                                 <thead class="bg-[#2CC295] text-[#F1F7F6]">
                                     <tr>
                                         <th class="w-1/6 py-2 px-4">Parameter</th>
-                                        <th class="w-1/6 py-2 px-4">Berat Badan (kg)</th>
                                         <th class="w-1/6 py-2 px-4">Tinggi Badan (cm)</th>
+                                        <th class="w-1/6 py-2 px-4">Berat Badan (kg)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">Data Anak</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">10</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">75</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="input1"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="input2"></td>
                                     </tr>
                                     <tr class="bg-gray-100">
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Rata-rata Referensi WHO</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">11,3</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">82,3</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Rata-rata Referensi
+                                            WHO</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="avg1"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="avg2"></td>
                                     </tr>
                                     <tr>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">Standar Deviasi</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">1,1</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">3,1</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="sd1"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="sd2"></td>
                                     </tr>
                                     <tr class="bg-gray-100">
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">Z-score</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">-1,18</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">-2,35</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="z1"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="z2"></td>
                                     </tr>
                                     <tr>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">Kesimpulan</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Berat badan di bawah
-                                            rata-rata</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center">Stunting</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center font-bold"
+                                            id="kesimpulan2">
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center font-bold"
+                                            id="kesimpulan1">
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="h-full bg-[#2CC295]/30 shadow-lg rounded-lg my-6 px-4 py-6">
+                        <div class="h-full bg-[#2CC295]/30 shadow-lg rounded-lg my-6 px-4 py-6" id="ifWasted">
                             <h3 class="text-lg font-semibold text-gray-900 mb-1">Berat Anak: <span
                                     class="text-red-500">10kg, Berat Badan Kurang</span></h3>
                             <p class="mb-4">Berat badan anak di bawah rata-rata. Anak perlu diberi asupan gizi yang
@@ -218,7 +228,7 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="h-full bg-[#2CC295]/30 shadow-lg rounded-lg my-6 px-4 py-6">
+                        <div class="h-full bg-[#2CC295]/30 shadow-lg rounded-lg my-6 px-4 py-6" id="ifStunted">
                             <h3 class="text-lg font-semibold text-gray-900 mb-1">Tinggi Anak: <span
                                     class="text-red-500">75cm, Teridentifikasi Stunting</span></h3>
                             <p class="mb-4">Tinggi badan anak masih kurang. Anak memerlukan asupan gizi yang cukup untuk
@@ -303,38 +313,23 @@
 
     <script>
         const submitResult = () => {
+            event.preventDefault();
+            calculateAll();
+
             const form = document.getElementById("calculator");
             const result = document.getElementById("calculatorResult");
-            const title = document.getElementById("calcTitle");
             form.classList.add("hidden");
             result.classList.remove("hidden");
             result.classList.add("block");
             title.innerHTML = `Hasil Kalkulasi`;
 
             window.location.href = "#";
-        }
-
-        const calcAgain = () => {
-            const form = document.getElementById("calculator");
-            const result = document.getElementById("calculatorResult");
-            const title = document.getElementById("calcTitle");
-            form.classList.add("block");
-            form.classList.remove("hidden");
-            result.classList.add("hidden");
-            result.classList.remove("block");
-            title.innerHTML = `Kalkulator Stunting`;
-
-            window.location.href = "#";
-        }
-
-        const role = sessionStorage.getItem("role");
-        if (!role) {
-            window.location.href = "./login.html";
-        }
+        };
     </script>
 
     <script src="../script/main.js"></script>
     <script src="../script/nav.js"></script>
+    <script src="../script/calculator.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
