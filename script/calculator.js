@@ -36,11 +36,13 @@ const calculateStunting = (gender, height, age) => {
 	let stuntingResult = "";
 	if (zScoreHeight < -3) {
 		stuntingResult = "Sangat Stunting";
+		document.getElementById("ifStunted").classList.remove("hidden");
 	} else if (zScoreHeight < -2) {
 		stuntingResult = "Stunting";
+		document.getElementById("ifStunted").classList.remove("hidden");
 	} else {
 		stuntingResult = "Tidak Stunting";
-		document.getElementById("ifStunted").className = "hidden";
+		document.getElementById("ifStunted").classList.add("hidden");
 	}
 
 	document.getElementById("kesimpulan1").innerText = stuntingResult;
@@ -57,11 +59,13 @@ const calculateWasting = (gender, weight, age) => {
 	let wastingResult = "";
 	if (zScoreWeight < -3) {
 		wastingResult = "Berat Badan Sangat Kurang";
+		document.getElementById("ifWasted").classList.remove("hidden");
 	} else if (zScoreWeight < -2) {
 		wastingResult = "Berat Badan Kurang";
+		document.getElementById("ifWasted").classList.remove("hidden");
 	} else {
 		wastingResult = "Berat Badan Normal";
-		document.getElementById("ifWasted").className = "hidden";
+		document.getElementById("ifWasted").classList.add("hidden");
 	}
 
 	document.getElementById("kesimpulan2").innerText = wastingResult;
