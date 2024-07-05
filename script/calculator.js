@@ -26,6 +26,7 @@ const calculateAll = () => {
 
 	document.getElementById("resultGender").innerText =
 		gender == "male" ? "Laki-Laki" : "Perempuan";
+	document.getElementById("resultAge").innerText = age;
 };
 
 const calculateStunting = (gender, height, age) => {
