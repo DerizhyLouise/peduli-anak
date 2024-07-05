@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div id="nakes" class="group fixed bottom-5 right-5 p-2 flex items-end justify-end">
+    <div id="uploadButton" class="group fixed bottom-5 right-5 p-2 flex items-end justify-end">
         <a class="text-[#F1F7F6] shadow-xl flex items-center justify-center p-3 rounded-full bg-[#2CC295] border-2 border-[#03624C] z-50 absolute"
             href="./education-upload.html">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
@@ -69,11 +69,11 @@
                         </th>
                         <th
                             class="px-5 py-4 bg-[#2CC295] text-[#F1F7F6] text-center text-xs font-semibold uppercase tracking-wider">
-                            Validasi Konten (Nakes)
+                            Validasi
                         </th>
                         <th
                             class="px-5 py-4 bg-[#2CC295] text-[#F1F7F6] text-center text-xs font-semibold uppercase tracking-wider">
-                            Aksi (Admin)
+                            Aksi
                         </th>
                     </tr>
                 </thead>
@@ -87,8 +87,8 @@
                                 class="text-blue-600 hover:text-blue-900">video1.mp4</a>
                         </td>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm">12 Juni 2024</td>
+                        <td class="nakes2 px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                         <td class="nakes px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
-                        <td class="admin px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                     </tr>
                     <tr>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm text-center">2</td>
@@ -100,8 +100,8 @@
                                 class="text-blue-600 hover:text-blue-900">video2.mp4</a>
                         </td>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm">12 Juni 2024</td>
+                        <td class="nakes2 px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                         <td class="nakes px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
-                        <td class="admin px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                     </tr>
                     <tr>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm text-center">3</td>
@@ -112,8 +112,8 @@
                                 class="text-blue-600 hover:text-blue-900">video3.mp4</a>
                         </td>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm">12 Juni 2024</td>
+                        <td class="nakes2 px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                         <td class="nakes px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
-                        <td class="admin px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                     </tr>
                     <tr>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm text-center">4</td>
@@ -124,8 +124,8 @@
                                 class="text-blue-600 hover:text-blue-900">video3.mp4</a>
                         </td>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm">12 Juni 2024</td>
+                        <td class="nakes2 px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                         <td class="nakes px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
-                        <td class="admin px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                     </tr>
                     <tr>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm text-center">5</td>
@@ -136,8 +136,8 @@
                                 class="text-blue-600 hover:text-blue-900">video3.mp4</a>
                         </td>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm">12 Juni 2024</td>
+                        <td class="nakes2 px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                         <td class="nakes px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
-                        <td class="admin px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                     </tr>
                     <tr>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm text-center">6</td>
@@ -148,8 +148,8 @@
                                 class="text-blue-600 hover:text-blue-900">video3.mp4</a>
                         </td>
                         <td class="px-5 py-2 border-b border-[#2CC295] bg-white text-sm">12 Juni 2024</td>
+                        <td class="nakes2 px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                         <td class="nakes px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
-                        <td class="admin px-5 py-2 border-b border-[#2CC295] bg-white text-sm"></td>
                     </tr>
                 </tbody>
             </table>
@@ -162,37 +162,62 @@
             window.location.href = "./index.html";
         }
 
-        if (role != "nakes") {
-            const uploadButton = document.getElementById("nakes");
+        if (role != "admin") {
+            const uploadButton = document.getElementById("uploadButton");
             uploadButton.className = "hidden";
         }
 
         const nakes = document.getElementsByClassName("nakes");
-        const admin = document.getElementsByClassName("admin");
+        const nakes2 = document.getElementsByClassName("nakes2");
         if (role == "nakes") {
             for (let i = 0; i < nakes.length; i++) {
                 nakes[i].innerHTML = `
                     <button type="button"
-                        class="w-full text-gray-900 bg-white border-2 border-[#2CC295] focus:outline-none hover:bg-[#2CC295] font-medium rounded-lg text-sm px-2 py-2 mb-1">Terima</button>
-                    <button type="button"
-                        class="w-full text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-400 font-medium rounded-lg text-sm px-2 py-2">Tolak</button>
+                        class="w-full text-gray-900 bg-white border-2 border-[#2CC295] focus:outline-none hover:bg-[#2CC295] font-medium rounded-lg text-sm px-2 py-2 mb-1">Verifikasi Konten</button>
                 `;
 
-                admin[i].innerHTML = `
-                    Menunggu persetujuan admin
+                nakes2[i].innerHTML = `
+                    <div class="flex gap-2 items-center">
+                        <input type="checkbox" class="focus:ring-[#2CC295]" id="myCheckbox" name="myCheckbox">
+                        <label for="myCheckbox">Judul</label>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <input type="checkbox" class="focus:ring-[#2CC295]" id="myCheckbox" name="myCheckbox">
+                        <label for="myCheckbox">Deskripsi</label>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <input type="checkbox" class="focus:ring-[#2CC295]" id="myCheckbox" name="myCheckbox">
+                        <label for="myCheckbox">Konten</label>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <input type="checkbox" class="focus:ring-[#2CC295]" id="myCheckbox" name="myCheckbox">
+                        <label for="myCheckbox">Sumber</label>
+                    </div>
                 `;
             }
         }
         if (role == "admin") {
             for (let i = 0; i < nakes.length; i++) {
-                admin[i].innerHTML = `
-                    <button type="button"
-                        class="w-full text-gray-900 bg-white border-2 border-[#2CC295] focus:outline-none hover:bg-[#2CC295] font-medium rounded-lg text-sm px-2 py-2 mb-1">Terima</button>
-                    <button type="button"
-                        class="w-full text-gray-900 bg-white border-2 border-red-400 focus:outline-none hover:bg-red-400 font-medium rounded-lg text-sm px-2 py-2">Tolak</button>
+                nakes2[i].innerHTML = `
+                    <div class="flex gap-2 items-center">
+                        <input type="checkbox" disabled class="focus:ring-[#2CC295]" id="myCheckbox" name="myCheckbox">
+                        <label for="myCheckbox">Judul</label>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <input type="checkbox" disabled class="focus:ring-[#2CC295]" id="myCheckbox" name="myCheckbox">
+                        <label for="myCheckbox">Deskripsi</label>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <input type="checkbox" disabled class="focus:ring-[#2CC295]" id="myCheckbox" name="myCheckbox">
+                        <label for="myCheckbox">Konten</label>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <input type="checkbox" disabled class="focus:ring-[#2CC295]" id="myCheckbox" name="myCheckbox">
+                        <label for="myCheckbox">Sumber</label>
+                    </div>
                 `;
                 nakes[i].innerHTML = `
-                    Menunggu persetujuan nakes
+                    Menunggu Persetujuan
                 `;
             }
         }
