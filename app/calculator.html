@@ -130,7 +130,8 @@
                         <h2 class="mb-4 font-extrabold tracking-tight leading-none text-4xl lg:text-5xl">
                             Hasil Kalkulasi
                         </h2>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Perbandingan Data Anak Berumur <span id="resultAge"></span> Bulan Berjenis Kelamin
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Perbandingan Data Anak Berumur <span
+                                id="resultAge"></span> Bulan Berjenis Kelamin
                             <span id="resultGender">Laki-Laki</span> dengan Referensi WHO
                         </h3>
                         <div class="overflow-x-auto hidden md:block">
@@ -139,7 +140,7 @@
                                     <tr>
                                         <th class="w-1/6 py-2 px-4">Parameter</th>
                                         <th class="w-1/6 py-2 px-4">Data Anak</th>
-                                        <th class="w-1/6 py-2 px-4">Rata-rata Referensi WHO</th>
+                                        <th class="w-1/6 py-2 px-4">Median</th>
                                         <th class="w-1/6 py-2 px-4">Standar Deviasi</th>
                                         <th class="w-1/6 py-2 px-4">Z-score</th>
                                         <th class="w-1/6 py-2 px-4">Kesimpulan</th>
@@ -321,7 +322,6 @@
             form.classList.add("hidden");
             result.classList.remove("hidden");
             result.classList.add("block");
-            title.innerHTML = `Hasil Kalkulasi`;
 
             window.location.href = "#";
         };
