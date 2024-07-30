@@ -15,11 +15,23 @@ if (!role) {
 	window.location.href = "./login.html";
 }
 
+const reset = () => {
+	document.querySelector('input[name="gender"]:checked').value = "";
+	document.getElementById("height").value = "";
+	document.getElementById("weight").value = "";
+	document.getElementById("age").value = "";
+}
+
 const calculateAll = () => {
 	const gender = document.querySelector('input[name="gender"]:checked').value;
 	const height = parseFloat(document.getElementById("height").value);
 	const weight = parseFloat(document.getElementById("weight").value);
 	const age = parseFloat(document.getElementById("age").value);
+
+	if (age > 59 || age < 0) {
+		alert("Usia Maksimal 0 - 59 Bulan");
+		return;
+	}
 
 	calculateStunting(gender, height, age);
 	calculateWasting(gender, weight, age);
@@ -27,6 +39,14 @@ const calculateAll = () => {
 	document.getElementById("resultGender").innerText =
 		gender == "male" ? "Laki-Laki" : "Perempuan";
 	document.getElementById("resultAge").innerText = age;
+
+	const form = document.getElementById("calculator");
+	const result = document.getElementById("calculatorResult");
+	form.classList.add("hidden");
+	result.classList.remove("hidden");
+	result.classList.add("block");
+
+	window.location.href = "#";
 };
 
 const calculateStunting = (gender, height, age) => {
@@ -47,10 +67,15 @@ const calculateStunting = (gender, height, age) => {
 	}
 
 	document.getElementById("kesimpulan1").innerText = stuntingResult;
+	document.getElementById("kesimpulan11").innerText = stuntingResult;
 	document.getElementById("input1").innerText = height;
+	document.getElementById("input11").innerText = height;
 	document.getElementById("avg1").innerText = medianHeight;
+	document.getElementById("avg11").innerText = medianHeight;
 	document.getElementById("sd1").innerText = sdHeight;
+	document.getElementById("sd11").innerText = sdHeight;
 	document.getElementById("z1").innerText = zScoreHeight;
+	document.getElementById("z11").innerText = zScoreHeight;
 };
 
 const calculateWasting = (gender, weight, age) => {
@@ -70,10 +95,15 @@ const calculateWasting = (gender, weight, age) => {
 	}
 
 	document.getElementById("kesimpulan2").innerText = wastingResult;
+	document.getElementById("kesimpulan22").innerText = wastingResult;
 	document.getElementById("input2").innerText = weight;
+	document.getElementById("input22").innerText = weight;
 	document.getElementById("avg2").innerText = medianWeight;
+	document.getElementById("avg22").innerText = medianWeight;
 	document.getElementById("sd2").innerText = sdWeight;
+	document.getElementById("sd22").innerText = sdWeight;
 	document.getElementById("z2").innerText = zScoreWeight;
+	document.getElementById("z22").innerText = zScoreWeight;
 };
 
 const getMedianHeight = (gender, age) => {

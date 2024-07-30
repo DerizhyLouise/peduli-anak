@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <div class="flex gap-4 mt-4 max-md:flex-col">
-                        <button type="button"
+                        <button type="button" onclick="reset()"
                             class="w-full md:w-6/12 text-gray-900 text-center bg-white/70 border-2 border-red-400 focus:outline-none hover:bg-red-400 focus:ring-2 focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5">Reset</button>
                         <button type="submit" onclick="submitResult()"
                             class="w-full md:w-6/12 text-gray-900 text-center bg-white/70 border-2 border-[#2CC295] focus:outline-none hover:bg-[#2CC295] focus:ring-2 focus:ring-[#2CC295] font-medium rounded-lg text-sm px-5 py-2.5">
@@ -182,32 +182,32 @@
                                 <tbody>
                                     <tr>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">Data Anak</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="input1"></td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="input2"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="input11"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="input22"></td>
                                     </tr>
                                     <tr class="bg-gray-100">
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">Rata-rata Referensi
                                             WHO</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="avg1"></td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="avg2"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="avg11"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="avg22"></td>
                                     </tr>
                                     <tr>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">Standar Deviasi</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="sd1"></td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="sd2"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="sd11"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="sd22"></td>
                                     </tr>
                                     <tr class="bg-gray-100">
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">Z-score</td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="z1"></td>
-                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="z2"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="z11"></td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-center" id="z22"></td>
                                     </tr>
                                     <tr>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center">Kesimpulan</td>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center font-bold"
-                                            id="kesimpulan2">
+                                            id="kesimpulan22">
                                         </td>
                                         <td class="py-2 px-4 border-b border-gray-200 text-center font-bold"
-                                            id="kesimpulan1">
+                                            id="kesimpulan11">
                                         </td>
                                     </tr>
                                 </tbody>
@@ -316,14 +316,6 @@
         const submitResult = () => {
             event.preventDefault();
             calculateAll();
-
-            const form = document.getElementById("calculator");
-            const result = document.getElementById("calculatorResult");
-            form.classList.add("hidden");
-            result.classList.remove("hidden");
-            result.classList.add("block");
-
-            window.location.href = "#";
         };
     </script>
 
